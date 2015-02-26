@@ -119,6 +119,7 @@ describe('YouTube v3', function () {
     });
 
     it('should search the next page when provided', function (done) {
+        this.timeout(10000); // lol the API is slow
         var query = 'Mystery Skulls Ghost Animated';
         var firstPage;
         youtube.search(query).then(function (result) {
@@ -130,6 +131,22 @@ describe('YouTube v3', function () {
             done();
         }).catch(function (e) {
             throw e;
+        });
+    });
+
+    it('should retrieve all items on a playlist', function (done) {
+        this.timeout(10000); // lol the API is slow
+        youtube.lookupPlaylist('PLVXq77mXV539VYxMIcXeQMOv3Ffo22z5E')
+                .then(function (videos) {
+            assert.ok(videos.length > 50);
+            videos.forEach(function (video) {
+                assert.ok(!!video.id);
+                assert.equal(video.type, 'youtube');
+                assert.ok(!!video.title);
+                assert.ok(!!video.duration);
+                assert.ok(!!video.meta.thumbnail);
+            });
+            done();
         });
     });
 });

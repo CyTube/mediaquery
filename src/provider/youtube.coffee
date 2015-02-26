@@ -14,6 +14,11 @@ DURATION_SCALE = [
     [/(\d+)S/, 1]
 ]
 
+###
+# Parse an ISO 8601 time duration (the format used by YouTube).
+# In the interest of sanity, only days, hours, minutes, and seconds are
+# considered.
+###
 parseDuration = (duration) ->
     time = 0
     for [regex, scale] in DURATION_SCALE
@@ -22,6 +27,11 @@ parseDuration = (duration) ->
 
     return time
 
+###
+# Retrieve metadata for a single YouTube video.
+#
+# Returns a Media object
+###
 exports.lookup = lookup = (id) ->
     if not API_KEY
         return Promise.reject(new Error('API key not set for YouTube v3 API'))
@@ -61,6 +71,14 @@ exports.lookup = lookup = (id) ->
         return new Media(data)
     )
 
+###
+# Retrieve metadata for multiple YouTube videos.  As this is intended for use
+# by the search and playlist retrieval, it does not check for failed video IDs.
+# If a video is private, removed, or non-embeddable, its information simply
+# doesn't appear in the results.
+#
+# Returns a list of Media objects
+###
 exports.lookupMany = lookupMany = (ids) ->
     if not API_KEY
         return Promise.reject(new Error('API key not set for YouTube v3 API'))
@@ -92,6 +110,12 @@ exports.lookupMany = lookupMany = (ids) ->
         )
     )
 
+###
+# Search for YouTube videos.  Optionally provide the ID of the page of results
+# to retrieve.
+#
+# Returns { nextPage: (string: next page token), results: (list of Media) }
+###
 exports.search = search = (query, nextPage = false) ->
     if not API_KEY
         return Promise.reject(new Error('API key not set for YouTube v3 API'))
@@ -119,6 +143,44 @@ exports.search = search = (query, nextPage = false) ->
                 nextPage: result.nextPageToken or false
                 results: videos
             }
+        )
+    )
+
+###
+# Retrieve metadata for all items on a YouTube playlist.  For playlists longer
+# than 50 videos, it recurses to retrieve every page of results.
+#
+# Returns a list of Media objects
+###
+exports.lookupPlaylist = lookupPlaylist = (id, nextPage = false) ->
+    if not API_KEY
+        return Promise.reject(new Error('API key not set for YouTube v3 API'))
+
+    params =
+        key: API_KEY
+        part: 'contentDetails'
+        maxResults: 50
+        playlistId: id
+
+    if nextPage
+        params.pageToken = nextPage
+
+    params = querystring.stringify(params)
+
+    url = "https://www.googleapis.com/youtube/v3/playlistItems?#{params}"
+
+    return getJSON(url).then((result) ->
+        return lookupMany(result.items.map((item) -> item.contentDetails.videoId))
+                .then((videos) ->
+            if result.nextPageToken
+                # Retrieve the rest of the results, then concatenate them with the current
+                # page
+                return lookupPlaylist(id, result.nextPageToken).then((other) ->
+                    return videos.concat(other)
+                )
+            else
+                # No more pages of results
+                return videos
         )
     )
 

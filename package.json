@@ -1,0 +1,20 @@
+{
+  "name": "cytube-mediaquery",
+  "version": "0.0.0",
+  "description": "Media provider metadata queries for CyTube",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "coffee -cmo lib src",
+    "test": "mocha --recursive"
+  },
+  "author": "Calvin Montgomery",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.12",
+    "source-map-support": "^0.2.9"
+  }
+}

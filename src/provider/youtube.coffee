@@ -1,5 +1,6 @@
 Promise = require 'bluebird'
 querystring = require 'querystring'
+urlparse = require 'url'
 
 { getJSON } = require '../request'
 Media = require '../media'
@@ -183,6 +184,46 @@ exports.lookupPlaylist = lookupPlaylist = (id, nextPage = false) ->
                 return videos
         )
     )
+
+###
+# Attempts to parse a YouTube URL following one of the following forms:
+#   - youtu.be/(video id)
+#   - [www.]youtube.com/watch?v=(video id)
+#   - [www.]youtube.com/playllist?list=(playlist id)
+#
+# Returns {
+#           id: video or playlist id
+#           kind: 'single' or 'playlist'
+#           type: 'youtube'
+#         }
+# or null if the URL is invalid.
+###
+exports.parseUrl = (url) ->
+    data = urlparse.parse(url, true)
+
+    if data.hostname is 'youtu.be'
+        return {
+            type: 'youtube'
+            kind: 'single'
+            id: data.pathname.replace(/^\//, '')
+        }
+    else if data.hostname not in ['www.youtube.com', 'youtube.com']
+        return null
+
+    if data.pathname is '/watch'
+        return {
+            type: 'youtube'
+            kind: 'single'
+            id: data.query.v
+        }
+    else if data.pathname is '/playlist'
+        return {
+            type: 'youtube'
+            kind: 'playlist'
+            id: data.query.list
+        }
+    else
+        return null
 
 exports.setApiKey = (key) ->
     API_KEY = key

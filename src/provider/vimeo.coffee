@@ -1,6 +1,13 @@
+urlparse = require 'url'
+
 { getJSON } = require '../request'
 Media = require '../media'
 
+###
+# Retrieves video data from Vimeo anonymously.
+#
+# Returns a Media object
+###
 lookupAnonymous = (id) ->
     return getJSON("https://vimeo.com/api/v2/video/#{id}.json").then((result) ->
         video = result[0]
@@ -15,3 +22,28 @@ lookupAnonymous = (id) ->
     )
 
 exports.lookup = lookup = lookupAnonymous
+
+###
+# Attempts to parse a Vimeo URL of the form vimeo.com/(video id)
+#
+# Returns {
+#           id: video id
+#           kind: 'single'
+#           type: 'vimeo'
+#         }
+# or null if the URL is invalid.
+###
+exports.parseUrl = (url) ->
+    data = urlparse.parse(url)
+
+    if data.hostname isnt 'vimeo.com'
+        return null
+
+    if not data.pathname.match(/^\/\d+$/)
+        return null
+
+    return {
+        type: 'vimeo'
+        kind: 'single'
+        id: data.pathname.replace(/^\//, '')
+    }

@@ -1,6 +1,7 @@
 http = require 'http'
 https = require 'https'
 urlparse = require 'url'
+Promise = require 'bluebird'
 
 exports.request = request = (url) ->
     return new Promise((resolve, reject) ->

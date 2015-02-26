@@ -61,5 +61,66 @@ exports.lookup = lookup = (id) ->
         return new Media(data)
     )
 
+exports.lookupMany = lookupMany = (ids) ->
+    if not API_KEY
+        return Promise.reject(new Error('API key not set for YouTube v3 API'))
+
+    params = querystring.stringify(
+        key: API_KEY
+        part: 'contentDetails,status,snippet'
+        id: ids.join(',')
+    )
+
+    url = "https://www.googleapis.com/youtube/v3/videos?#{params}"
+
+    return getJSON(url).then((result) ->
+        return result.items.filter((video) -> video.status.embeddable).map((video) ->
+            data =
+                id: video.id
+                type: 'youtube'
+                title: video.snippet.title
+                duration: parseDuration(video.contentDetails.duration)
+                meta:
+                    thumbnail: video.snippet.thumbnails.default.url
+
+            if video.contentDetails.regionRestriction
+                restriction = video.contentDetails.regionRestriction
+                data.meta.blocked = restriction.blocked if restriction.blocked
+                data.meta.allowed = restriction.allowed if restriction.allowed
+
+            return new Media(data)
+        )
+    )
+
+exports.search = search = (query, nextPage = false) ->
+    if not API_KEY
+        return Promise.reject(new Error('API key not set for YouTube v3 API'))
+
+    query = query.replace(/%20/g, '+')
+
+    params =
+        key: API_KEY
+        part: 'id'
+        maxResults: 25
+        q: query
+        type: 'video'
+
+    if nextPage
+        params.pageToken = nextPage
+
+    params = querystring.stringify(params)
+
+    url = "https://www.googleapis.com/youtube/v3/search?#{params}"
+
+    return getJSON(url).then((result) ->
+        # https://code.google.com/p/gdata-issues/issues/detail?id=4294
+        return lookupMany(result.items.map((item) -> item.id.videoId)).then((videos) ->
+            return {
+                nextPage: result.nextPageToken or false
+                results: videos
+            }
+        )
+    )
+
 exports.setApiKey = (key) ->
     API_KEY = key

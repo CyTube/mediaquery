@@ -4,7 +4,13 @@ var path = require('path');
 
 var youtube = require('../../lib/provider/youtube');
 
-var API_KEY = fs.readFileSync(path.join(__dirname, '..', 'keys', 'youtube')) + '';
+var API_KEY;
+
+try {
+    API_KEY = fs.readFileSync(path.join(__dirname, '..', 'keys', 'youtube')) + '';
+} catch (e) {
+    console.error('Warning: API_KEY could not be loaded for YouTube, tests will fail!');
+}
 
 describe('YouTube v3', function () {
     beforeEach(function () {

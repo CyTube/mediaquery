@@ -17,6 +17,11 @@ var tests = {
         id: '59859181',
         kind: 'single',
         type: 'vimeo'
+    },
+    'http://www.dailymotion.com/video/x2j9c73_watch-nasa-test-the-largest-most-powerful-rocket-booster-ever-built_travel': {
+        id: 'x2j9c73',
+        kind: 'single',
+        type: 'dailymotion'
     }
 };
 

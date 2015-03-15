@@ -1,6 +1,7 @@
 providers = [
     require './provider/youtube'
     require './provider/vimeo'
+    require './provider/dailymotion'
 ]
 
 module.exports = (url) ->

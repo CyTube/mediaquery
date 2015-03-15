@@ -1,4 +1,5 @@
 querystring = require 'querystring'
+urlparse = require 'url'
 
 { getJSON } = require '../request'
 Media = require '../media'
@@ -11,6 +12,11 @@ DM_FIELDS = [
     'status'
 ].join(',')
 
+###
+# Retrieves video data for a Dailymotion video
+#
+# Returns a Media object
+###
 exports.lookup = lookup = (id) ->
     id = id.split('_')[0]
 
@@ -34,3 +40,29 @@ exports.lookup = lookup = (id) ->
 
         return new Media(data)
     )
+
+###
+# Attempts to parse a Dailymotion URL of the form dailymotion.com/video/(video id)
+#
+# Returns {
+#           id: video id
+#           kind: 'single'
+#           type: 'dailymotion'
+#         }
+# or null if the URL is invalid
+###
+exports.parseUrl = (url) ->
+    data = urlparse.parse(url)
+
+    if data.hostname not in ['www.dailymotion.com', 'dailymotion.com']
+        return null
+
+    m = data.pathname.match(/^\/video\/([a-zA-Z0-9]+)/)
+    if not m
+        return null
+
+    return {
+        id: m[1]
+        kind: 'single'
+        type: 'dailymotion'
+    }

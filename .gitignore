@@ -2,4 +2,3 @@ test/keys/*
 node_modules
 lib
 *.swp
-index.js

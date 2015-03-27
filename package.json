@@ -4,7 +4,7 @@
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
-    "preinstall": "coffee -cmo lib src",
+    "postinstall": "coffee -cmo lib src",
     "test": "mocha --recursive"
   },
   "author": "Calvin Montgomery",

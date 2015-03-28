@@ -4,17 +4,17 @@
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/coffee-script/bin/coffee -cmo lib src",
+    "postinstall": "coffee -cmo lib src",
     "test": "mocha --recursive"
   },
   "author": "Calvin Montgomery",
   "license": "MIT",
   "devDependencies": {
-    "coffee-script": "^1.9.1",
     "mocha": "^2.1.0"
   },
   "dependencies": {
     "bluebird": "^2.9.12",
+    "coffee-script": "^1.9.1",
     "source-map-support": "^0.2.9"
   }
 }

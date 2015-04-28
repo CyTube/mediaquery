@@ -39,3 +39,10 @@ exports.getJSON = getJSON = (url) ->
 
         return data
     )
+
+exports.__testpatch = (newRequest) ->
+    exports._request = exports.request
+    exports.request = request = newRequest
+
+exports.__untestpatch = ->
+    exports.request = request = exports._request

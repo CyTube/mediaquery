@@ -34,7 +34,6 @@ exports.lookup = lookup = (id) ->
 
     url = "https://picasaweb.google.com/data/feed/api/user/#{uid}/albumid/#{aid}/\
           photoid/#{pid}?kind=tag&alt=json"
-    console.log url
 
     return getJSON(url).then((result) ->
         $ = result.feed
@@ -51,6 +50,7 @@ exports.lookup = lookup = (id) ->
 
         duration = $.gphoto$originalvideo.duration
         title = $.media$group.media$title.$t
+        thumbnails = $.media$group.media$thumbnail
 
         videos =
             1080: []
@@ -85,7 +85,7 @@ exports.lookup = lookup = (id) ->
             title: title
             duration: duration
             meta:
-                # TODO: extract thumbnail
+                thumbnail: thumbnails[thumbnails.length - 1].url
                 direct: videos
 
         return new Media(data)

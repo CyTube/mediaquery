@@ -34,6 +34,14 @@ exports.lookup = lookup = lookupAnonymous
 # or null if the URL is invalid.
 ###
 exports.parseUrl = (url) ->
+    m = url.match(/^vi:(\d+)/)
+    if m
+        return {
+            type: 'vimeo'
+            kind: 'single'
+            id: m[1]
+        }
+
     data = urlparse.parse(url)
 
     if data.hostname isnt 'vimeo.com'

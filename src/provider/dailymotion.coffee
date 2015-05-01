@@ -52,6 +52,14 @@ exports.lookup = lookup = (id) ->
 # or null if the URL is invalid
 ###
 exports.parseUrl = (url) ->
+    m = url.match(/^dm:([a-zA-Z0-9]+)/)
+    if m
+        return {
+            type: 'dailymotion'
+            kind: 'single'
+            id: m[1]
+        }
+
     data = urlparse.parse(url)
 
     if data.hostname not in ['www.dailymotion.com', 'dailymotion.com']

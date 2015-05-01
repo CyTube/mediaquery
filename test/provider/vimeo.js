@@ -42,5 +42,14 @@ describe('Vimeo', function () {
             var result = vimeo.parseUrl('https://vimeo.com/staff');
             assert.deepEqual(result, null);
         });
+
+        it('should parse a shorthand link', function () {
+            var result = vimeo.parseUrl('vi:59859181');
+            assert.deepEqual(result, {
+                type: 'vimeo',
+                kind: 'single',
+                id: '59859181'
+            });
+        });
     });
 });

@@ -207,5 +207,23 @@ describe('YouTube v3', function () {
             var result = youtube.parseUrl('https://www.youtube.com/user/JonTronShow');
             assert.deepEqual(result, null);
         });
+
+        it('should parse a shorthand link', function () {
+            var result = youtube.parseUrl('yt:000al7ru3ms');
+            assert.deepEqual(result, {
+                id: '000al7ru3ms',
+                type: 'youtube',
+                kind: 'single'
+            });
+        });
+
+        it('should parse a shorthand link for playlists', function () {
+            var result = youtube.parseUrl('yp:PLVXq77mXV539VYxMIcXeQMOv3Ffo22z5E');
+            assert.deepEqual(result, {
+                id: 'PLVXq77mXV539VYxMIcXeQMOv3Ffo22z5E',
+                type: 'youtube',
+                kind: 'playlist'
+            });
+        });
     });
 });

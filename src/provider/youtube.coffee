@@ -199,6 +199,22 @@ exports.lookupPlaylist = lookupPlaylist = (id, nextPage = false) ->
 # or null if the URL is invalid.
 ###
 exports.parseUrl = (url) ->
+    m = url.match(/^yt:(.*)/)
+    if m
+        return {
+            type: 'youtube'
+            kind: 'single'
+            id: m[1]
+        }
+
+    m = url.match(/^yp:(.*)/)
+    if m
+        return {
+            type: 'youtube'
+            kind: 'playlist'
+            id: m[1]
+        }
+
     data = urlparse.parse(url, true)
 
     if data.hostname is 'youtu.be'

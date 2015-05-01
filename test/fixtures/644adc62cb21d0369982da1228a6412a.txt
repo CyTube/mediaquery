@@ -1,0 +1,1447 @@
+HTTP/1.1 200 OK
+
+{
+ "kind": "youtube#videoListResponse",
+ "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/4ofpUIw-joKlYp3G0fUzzHBftWw\"",
+ "pageInfo": {
+  "totalResults": 25,
+  "resultsPerPage": 25
+ },
+ "items": [
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/qUXg_uj5WMdNmEXvvj0p3cQi8Ds\"",
+   "id": "YlEb3L1PIco",
+   "snippet": {
+    "publishedAt": "2014-10-27T05:00:00.000Z",
+    "channelId": "UCT2SpyOpcX7nt6VAfmiQdzg",
+    "title": "Mystery Skulls Animated - Ghost",
+    "description": "http://smarturl.it/msforever  \nGet the newest Mystery Skulls album now!\n\nAnimation\n\nBen Mangum\nhttp:\\\\mysterybensmysteryblog.tumblr.com\n\nIsaiah Kim\nhttps://www.youtube.com/user/isaiahdjkim/\nhttp:\\\\isaiahdjstuff.tumblr.com\n\nBlake Hudson\nhttp:\\\\koalacola.tumblr.com/\n\nBACKGROUDNS/PROPS\n\nKressent Rhodes\nhttp:\\\\kressentrhodes.carbonmade.com\nhttp:\\\\artsyfeathersartsyblog.tumblr.com\n\nJames Workman\n\nJourdan Lasko\nhttp:\\\\heilos.deviantart.com\nhttp:\\\\heilos.tumblr.com\n\nEFFECTS\n\nPatrick Rantala",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/YlEb3L1PIco/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/YlEb3L1PIco/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/YlEb3L1PIco/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/YlEb3L1PIco/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/YlEb3L1PIco/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "MysteryBen27",
+    "categoryId": "1",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls Animated - Ghost",
+     "description": "http://smarturl.it/msforever  \nGet the newest Mystery Skulls album now!\n\nAnimation\n\nBen Mangum\nhttp:\\\\mysterybensmysteryblog.tumblr.com\n\nIsaiah Kim\nhttps://www.youtube.com/user/isaiahdjkim/\nhttp:\\\\isaiahdjstuff.tumblr.com\n\nBlake Hudson\nhttp:\\\\koalacola.tumblr.com/\n\nBACKGROUDNS/PROPS\n\nKressent Rhodes\nhttp:\\\\kressentrhodes.carbonmade.com\nhttp:\\\\artsyfeathersartsyblog.tumblr.com\n\nJames Workman\n\nJourdan Lasko\nhttp:\\\\heilos.deviantart.com\nhttp:\\\\heilos.tumblr.com\n\nEFFECTS\n\nPatrick Rantala"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M36S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "true",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/hmdZLEhf1uNIbRc8HE8Ymrx6M1w\"",
+   "id": "tt1MMS32Vg4",
+   "snippet": {
+    "publishedAt": "2014-12-20T22:17:27.000Z",
+    "channelId": "UCDHd_chhzsfzHr1DgpXX5lg",
+    "title": "Mystery Skulls Animated - Ghost 1 Hour long",
+    "description": "Story: Lewis wants to say his love to Vivi(light blue character) which in the beginning it shows the dashboard with purple sparks causing them to stop by a mansion in the dark wood. The group which consist of Vivi, Arthur(Yellow), and Mystery(Dog) to enter the mansion Vivi is astonish of the mansion, Arthur is afraid of it and Mystery is getting a weird but familiar vibe from the place. Upon falling from a never ending hole it show three mirrors to the group. For Vivi it shows her reflection but without her eyes. For Arthur it shows him without his robot arm and for Mystery it doesn't show because it cracks meaning to hide his true self. after the mirrors, Arthur is pulled down instead of Vivi by mistake. Which Arthur is frightened for life when see the coffin and the being exiting the coffin. Which is Ghost Lewis thinking it was Vivi until he had a good look at him and cursed at him. He got agroed and lit the lamps and his hair before chasing Arthur then the other two. Upon the chase Mystery stopped in front of a strange mirror playing a memory from the past. Explaining everything that happened. Starting with the van then Lewis,when he was alive, driving, Vivi sitting in the middle next to Lewis and Mystery. And Arthur in the back which he started to sulk when Vivi and Lewis looked at each other. They stop to an up coming spooky cave and wanted to investigate.  Lewis dumb founded about the place, Vivi curious about the cave, Arthur not wanting to be there and Mystery getting a strange vibe.the group split into two Vivi and Mystery taking the right path while Lewis and Arthur taking the left path. Seeing it that Lewis led a dead end he still wanted to check its depth. Vivi is shown at the  bottom of the cave floor without Mystery because he was behind Arthur to check on him. Which Mystery hunch was right about the strange vibe which an evil ghost possesses Arthur making him push Lewis. When Lewis dies Lewis becomes the skull ghost, Vivi loses her memories about him and incident, Arthur loses his left arm and at the end it show Mystery's true self of be a nine tail fox with a severed arm in his mouth. Back to the present Ghost Lewis continues to chase after the group mainly Arthur for pay back but Vivi intervenes causing Ghost Lewis to stop and get closer to Vivi. Once they were close enough Ghost Lewis tries to offer his floating pulse heart to Vivi but Arthur stopped by pulling her away. Which caused the heart to fall and crack and for Ghost Lewis to charge his powers to a ball of flames of his color and shoot across the hallway. Luckily the group fled in the van safely. Ghost Lewis watched go as the camera goes to show the heart to reveal its a locket with a photo with Lewis and Vivi. Ghost Lewis reverts back to normal Lewis with a tear falling down before he disappears then the mansion which is where the cave was.\n\nMystery is Arthur's Dog because of the yellow glasses that he is wearing.\nVivi was Lewis' soon to be or already girlfriend because of the purple glasses.\n\nAt 1:12 of the video it show four visible paintings. A noble, a masked wrestler on the left. on the right a madam and a priest. The priest is from the original Mystery Skulls - Ghost.\n\n\nLyrics:\n'Cause the world might do me in\nIt's all right cause I'm with friends\nCause I'm giving up again\nIt doesn't matter\n\nAnd I'm feeling like a ghost\nAnd it's what I hate the most\n'Cause I'm giving up again\nAnd this time (this time, this time)\n\nThis time I might just disappear (oh yeah)\noh-ho-oh\nThis time I might just dis-\nNo-no-no oh no-no-no(oh yeah)\nNo-no-no oh\nThis time I might just disappear\noh-ho-oh\nThis time I might just dis-\nNo-no-no oh no-no-no(oh yeah)\nNo-no-no oh\n\nTry and hear me then I'm done\n'Cause I might just say this once\nSeen this played out in my dream\nIt doesn't matter (hmm-hmm-hmm)\n\nTime for givin' up the ghost\nFuck, it's you I hate the most\nAnd there is no guarantee\nIt doesn't matter\n\n(x3)\nThis time I might just disappear(oh yeah) \noh-ho-oh\nThis time I might just dis\nNo-no-no oh no-no-no(oh yeah)\nNo-no-no oh\nThis time I might just disappear\noh-ho-oh\nThis time I might just dis\nNo-no-no oh no-no-no(oh yeah)\nNo-no-no oh\n\n\n\nI do not own the footage or music in the background. all rights go to MysteryBen27 and Mystery Skulls.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/tt1MMS32Vg4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/tt1MMS32Vg4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/tt1MMS32Vg4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/tt1MMS32Vg4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/tt1MMS32Vg4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "dimitri teme",
+    "categoryId": "1",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls Animated - Ghost 1 Hour long",
+     "description": "Story: Lewis wants to say his love to Vivi(light blue character) which in the beginning it shows the dashboard with purple sparks causing them to stop by a mansion in the dark wood. The group which consist of Vivi, Arthur(Yellow), and Mystery(Dog) to enter the mansion Vivi is astonish of the mansion, Arthur is afraid of it and Mystery is getting a weird but familiar vibe from the place. Upon falling from a never ending hole it show three mirrors to the group. For Vivi it shows her reflection but without her eyes. For Arthur it shows him without his robot arm and for Mystery it doesn't show because it cracks meaning to hide his true self. after the mirrors, Arthur is pulled down instead of Vivi by mistake. Which Arthur is frightened for life when see the coffin and the being exiting the coffin. Which is Ghost Lewis thinking it was Vivi until he had a good look at him and cursed at him. He got agroed and lit the lamps and his hair before chasing Arthur then the other two. Upon the chase Mystery stopped in front of a strange mirror playing a memory from the past. Explaining everything that happened. Starting with the van then Lewis,when he was alive, driving, Vivi sitting in the middle next to Lewis and Mystery. And Arthur in the back which he started to sulk when Vivi and Lewis looked at each other. They stop to an up coming spooky cave and wanted to investigate.  Lewis dumb founded about the place, Vivi curious about the cave, Arthur not wanting to be there and Mystery getting a strange vibe.the group split into two Vivi and Mystery taking the right path while Lewis and Arthur taking the left path. Seeing it that Lewis led a dead end he still wanted to check its depth. Vivi is shown at the  bottom of the cave floor without Mystery because he was behind Arthur to check on him. Which Mystery hunch was right about the strange vibe which an evil ghost possesses Arthur making him push Lewis. When Lewis dies Lewis becomes the skull ghost, Vivi loses her memories about him and incident, Arthur loses his left arm and at the end it show Mystery's true self of be a nine tail fox with a severed arm in his mouth. Back to the present Ghost Lewis continues to chase after the group mainly Arthur for pay back but Vivi intervenes causing Ghost Lewis to stop and get closer to Vivi. Once they were close enough Ghost Lewis tries to offer his floating pulse heart to Vivi but Arthur stopped by pulling her away. Which caused the heart to fall and crack and for Ghost Lewis to charge his powers to a ball of flames of his color and shoot across the hallway. Luckily the group fled in the van safely. Ghost Lewis watched go as the camera goes to show the heart to reveal its a locket with a photo with Lewis and Vivi. Ghost Lewis reverts back to normal Lewis with a tear falling down before he disappears then the mansion which is where the cave was.\n\nMystery is Arthur's Dog because of the yellow glasses that he is wearing.\nVivi was Lewis' soon to be or already girlfriend because of the purple glasses.\n\nAt 1:12 of the video it show four visible paintings. A noble, a masked wrestler on the left. on the right a madam and a priest. The priest is from the original Mystery Skulls - Ghost.\n\n\nLyrics:\n'Cause the world might do me in\nIt's all right cause I'm with friends\nCause I'm giving up again\nIt doesn't matter\n\nAnd I'm feeling like a ghost\nAnd it's what I hate the most\n'Cause I'm giving up again\nAnd this time (this time, this time)\n\nThis time I might just disappear (oh yeah)\noh-ho-oh\nThis time I might just dis-\nNo-no-no oh no-no-no(oh yeah)\nNo-no-no oh\nThis time I might just disappear\noh-ho-oh\nThis time I might just dis-\nNo-no-no oh no-no-no(oh yeah)\nNo-no-no oh\n\nTry and hear me then I'm done\n'Cause I might just say this once\nSeen this played out in my dream\nIt doesn't matter (hmm-hmm-hmm)\n\nTime for givin' up the ghost\nFuck, it's you I hate the most\nAnd there is no guarantee\nIt doesn't matter\n\n(x3)\nThis time I might just disappear(oh yeah) \noh-ho-oh\nThis time I might just dis\nNo-no-no oh no-no-no(oh yeah)\nNo-no-no oh\nThis time I might just disappear\noh-ho-oh\nThis time I might just dis\nNo-no-no oh no-no-no(oh yeah)\nNo-no-no oh\n\n\n\nI do not own the footage or music in the background. all rights go to MysteryBen27 and Mystery Skulls."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H6S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/nj_BT9ZiBGIGRAN10tx-JI5Tj0I\"",
+   "id": "Or2g2NCpPPM",
+   "snippet": {
+    "publishedAt": "2015-02-18T18:25:38.000Z",
+    "channelId": "UCG5kMICcdFXNhhK5KyggloA",
+    "title": "Mystery Skulls Animated - Ghost REACTION! | HEART OF A GHOST! |",
+    "description": "We watch the video \"Mystery Skulls Animated - Ghost\", a song made by Myster Skulls! DAMN, it's a good song and the animation is beautiful. Enjoy the story of a ghost... Enjoy!\n\nOriginal video:\nhttps://www.youtube.com/watch?v=YlEb3L1PIco\n\nDon't forget to SUBSCRIBE, LIKE, FAVORITE AND SHARE!\n\nSubscribe: http://bit.ly/17dj9j8\nFacebook: https://www.facebook.com/Zalzar\nTwitter: https://twitter.com/ZalzarYoutube\nTwitch: http://secure.twitch.tv/zalzar\n\nToodeloo!\n____________________________\n\nIntro + Music: \nFan Made Intro for Zalzar by Sir Nassz\nhttps://www.youtube.com/user/TheOfficialNassz\n+\nSugar Rush by PIXL (Monstercat, Roalty-Free Music)\nhttps://www.youtube.com/watch?v=-WR0o7NWUy8\n_______________________________________\n\nOutro Music: \nMy Heart by Different Heaven & EH!DE (NoCopyRightSounds) Royalty-Free Music)\nhttps://www.youtube.com/watch?v=jK2aIUmmdP4\n_______________________________________\n\nOutro: The Reckoning Day by RavenProDesign\nhttp://www.RavenProDesign.com\n________",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Or2g2NCpPPM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Or2g2NCpPPM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Or2g2NCpPPM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/Or2g2NCpPPM/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/Or2g2NCpPPM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Zalzar",
+    "categoryId": "20",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls Animated - Ghost REACTION! | HEART OF A GHOST! |",
+     "description": "We watch the video \"Mystery Skulls Animated - Ghost\", a song made by Myster Skulls! DAMN, it's a good song and the animation is beautiful. Enjoy the story of a ghost... Enjoy!\n\nOriginal video:\nhttps://www.youtube.com/watch?v=YlEb3L1PIco\n\nDon't forget to SUBSCRIBE, LIKE, FAVORITE AND SHARE!\n\nSubscribe: http://bit.ly/17dj9j8\nFacebook: https://www.facebook.com/Zalzar\nTwitter: https://twitter.com/ZalzarYoutube\nTwitch: http://secure.twitch.tv/zalzar\n\nToodeloo!\n____________________________\n\nIntro + Music: \nFan Made Intro for Zalzar by Sir Nassz\nhttps://www.youtube.com/user/TheOfficialNassz\n+\nSugar Rush by PIXL (Monstercat, Roalty-Free Music)\nhttps://www.youtube.com/watch?v=-WR0o7NWUy8\n_______________________________________\n\nOutro Music: \nMy Heart by Different Heaven & EH!DE (NoCopyRightSounds) Royalty-Free Music)\nhttps://www.youtube.com/watch?v=jK2aIUmmdP4\n_______________________________________\n\nOutro: The Reckoning Day by RavenProDesign\nhttp://www.RavenProDesign.com\n________"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT6M41S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/c6PedV33bC8KSrpvbAnI4ZvfOUM\"",
+   "id": "2VilyUDuovc",
+   "snippet": {
+    "publishedAt": "2015-01-30T18:00:02.000Z",
+    "channelId": "UCAV5TC68-2NaJ7Y3_LDnH0A",
+    "title": "Nozz Reacts: Mystery Skulls Animated - Ghost",
+    "description": "Scooby Doo confirmed for the devil.\nOriginal Video: https://www.youtube.com/watch?v=YlEb3L1PIco\nFollow me at these places! \n\nTwitter:https://twitter.com/nozzivix\n\nand support me here, if you'd like to... : http://www.patreon.com/Nozzivix",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/2VilyUDuovc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/2VilyUDuovc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/2VilyUDuovc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/2VilyUDuovc/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/2VilyUDuovc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Nozzivix",
+    "categoryId": "20",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Nozz Reacts: Mystery Skulls Animated - Ghost",
+     "description": "Scooby Doo confirmed for the devil.\nOriginal Video: https://www.youtube.com/watch?v=YlEb3L1PIco\nFollow me at these places! \n\nTwitter:https://twitter.com/nozzivix\n\nand support me here, if you'd like to... : http://www.patreon.com/Nozzivix"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT13M10S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/uAx67l3aKUnT88EoH2TYyYXLrz4\"",
+   "id": "0XM8m53MdmE",
+   "snippet": {
+    "publishedAt": "2015-04-02T18:36:07.000Z",
+    "channelId": "UC1WMrxyVbxZQh9xtxGT5vZA",
+    "title": "Mystery skulls animated Northwest mansion mystery style | Ghost amv",
+    "description": "I herd the people want a GF parody of this music video so im a supply it son! Yeah!!!\n\n\nSong: Ghost by mystery skulls\nImages: drawn by MEEEEEEEEE\nFootage: gravity falls northwest mantion mystery\n\nEditing software: iMovie and youtube capture\n\nI own none of the footage or audio I own nothing but my editing skills\nI do however own the drawings ;3 ain't they perty\n\nMy deviantart:\nhttp://rubythecat953da.deviantart.com/\n\nMy vine: https://v.cdn.vine.co/r/avatars/BD88210B131111443597120950272_2aaa789e27f.2.1.jpg?versionId=Bhr0zK06S6qED_ClJOC1xQCCyX9kxoPC\n\nMy twitter: \nRuby the Tuesday \n\nPlease don't respond to hate or troll comments.  I'll deal with them!  \n\nThanks for all the support and love guys! *hugs*",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/0XM8m53MdmE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/0XM8m53MdmE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/0XM8m53MdmE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/0XM8m53MdmE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/0XM8m53MdmE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "rubythecat953",
+    "categoryId": "22",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery skulls animated Northwest mansion mystery style | Ghost amv",
+     "description": "I herd the people want a GF parody of this music video so im a supply it son! Yeah!!!\n\n\nSong: Ghost by mystery skulls\nImages: drawn by MEEEEEEEEE\nFootage: gravity falls northwest mantion mystery\n\nEditing software: iMovie and youtube capture\n\nI own none of the footage or audio I own nothing but my editing skills\nI do however own the drawings ;3 ain't they perty\n\nMy deviantart:\nhttp://rubythecat953da.deviantart.com/\n\nMy vine: https://v.cdn.vine.co/r/avatars/BD88210B131111443597120950272_2aaa789e27f.2.1.jpg?versionId=Bhr0zK06S6qED_ClJOC1xQCCyX9kxoPC\n\nMy twitter: \nRuby the Tuesday \n\nPlease don't respond to hate or troll comments.  I'll deal with them!  \n\nThanks for all the support and love guys! *hugs*"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M16S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/u79Pd5SEYgL00Vbk95Msk4JUZhQ\"",
+   "id": "NM_YSVp8cl0",
+   "snippet": {
+    "publishedAt": "2014-11-17T11:08:42.000Z",
+    "channelId": "UCg_TcB8ES8xnkvJzgigXHdg",
+    "title": "Mystery Skulls - Ghost 8-Bit",
+    "description": "Ok, so I said I wouldn't work on music for a while. And then I heard Ghost and saw the animation that was going around. This is an exception. I'm still on hiatus. So here's a song.\n\n(You don't want to know how long it took to pixelate the image)\n\nDOWNLOAD: http://www.mediafire.com/download/efcg7k711e1zu6d/Ghost_8-Bit.mp3\n\nTHE ORIGINAL ANIMATION:  http://www.youtube.com/watch?v=YlEb3L1PIco\n\nSocial Stuff That Goes On EVERY Video:\nTumblr: http://tf2brony98.tumblr.com\nDeviantArt: http://soroxas98.deviantart.com\nSoundcloud: http://www.soundcloud.com/tf2brony98\nSteam: http://steamcommunity.com/id/TF2_With_Ponies\n\nEnjoy!",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/NM_YSVp8cl0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/NM_YSVp8cl0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/NM_YSVp8cl0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/NM_YSVp8cl0/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "TF2Brony98",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls - Ghost 8-Bit",
+     "description": "Ok, so I said I wouldn't work on music for a while. And then I heard Ghost and saw the animation that was going around. This is an exception. I'm still on hiatus. So here's a song.\n\n(You don't want to know how long it took to pixelate the image)\n\nDOWNLOAD: http://www.mediafire.com/download/efcg7k711e1zu6d/Ghost_8-Bit.mp3\n\nTHE ORIGINAL ANIMATION:  http://www.youtube.com/watch?v=YlEb3L1PIco\n\nSocial Stuff That Goes On EVERY Video:\nTumblr: http://tf2brony98.tumblr.com\nDeviantArt: http://soroxas98.deviantart.com\nSoundcloud: http://www.soundcloud.com/tf2brony98\nSteam: http://steamcommunity.com/id/TF2_With_Ponies\n\nEnjoy!"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M21S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/fqeDYkTwwi1lR-c6gk0gEPBZtA8\"",
+   "id": "80SKuF9wX2M",
+   "snippet": {
+    "publishedAt": "2014-11-02T04:35:31.000Z",
+    "channelId": "UCQBHz1w8q3qzOv6bBusFUmw",
+    "title": "Mystery Skulls - Ghost (lyrics)",
+    "description": "lyrics:\nCause the world might do me in\nIt's all right cause I'm with friends\nCause I'm giving up again\nIt doesn't matter\n\nAnd I'm feeling like a ghost\nAnd it's what I hate the most\nCause I'm giving up again\nAnd this time (this time, this time)\n\nThis time I might just disappear\nThis time I might just disappear\nThis time I might just disappear\nThis time I might just disappear\n\nTry and hear me then I'm done\nCause I might just say this once\nSeen this played out in my dream\nIt doesn't matter\n\nTime for givin' up the ghost\nFuck, it's you I hated the most\nAnd there is no guarantee\nIt doesn't matter\n\nThis time I might just disappear\nThis time I might just disappear\nThis time I might just disappear\nThis time I might just disappear",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/80SKuF9wX2M/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/80SKuF9wX2M/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/80SKuF9wX2M/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/80SKuF9wX2M/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/80SKuF9wX2M/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "TheProjectMJ",
+    "categoryId": "22",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls - Ghost (lyrics)",
+     "description": "lyrics:\nCause the world might do me in\nIt's all right cause I'm with friends\nCause I'm giving up again\nIt doesn't matter\n\nAnd I'm feeling like a ghost\nAnd it's what I hate the most\nCause I'm giving up again\nAnd this time (this time, this time)\n\nThis time I might just disappear\nThis time I might just disappear\nThis time I might just disappear\nThis time I might just disappear\n\nTry and hear me then I'm done\nCause I might just say this once\nSeen this played out in my dream\nIt doesn't matter\n\nTime for givin' up the ghost\nFuck, it's you I hated the most\nAnd there is no guarantee\nIt doesn't matter\n\nThis time I might just disappear\nThis time I might just disappear\nThis time I might just disappear\nThis time I might just disappear"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M18S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/kV7mjQLsIQgJQdByg_uqZaS115E\"",
+   "id": "iMl5yz1RDw8",
+   "snippet": {
+    "publishedAt": "2015-01-15T21:38:39.000Z",
+    "channelId": "UCW7SLklN6pwBicbhjbLafSw",
+    "title": "5000 Sub Special React (part 3): Mystery Skulls Animated - Ghost",
+    "description": "Mystery Skulls Animated - Ghost: https://www.youtube.com/watch?v=YlEb3L1PIco&index=4&list=PLyAswbTgFpP3MbkCjgg8G3JBtDgoQSoVH\n\nWow. I honestly can't say enough about this animation. The animation is beautiful and cute, the music is addictive as heck, and the story... My gosh, the story! So much is going on in this animation is unbelievable. The story is powerful, emotional, deep, and will do more than tug at your heartstrings.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/iMl5yz1RDw8/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/iMl5yz1RDw8/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/iMl5yz1RDw8/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/iMl5yz1RDw8/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/iMl5yz1RDw8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "PonyvilleRanger",
+    "categoryId": "24",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "5000 Sub Special React (part 3): Mystery Skulls Animated - Ghost",
+     "description": "Mystery Skulls Animated - Ghost: https://www.youtube.com/watch?v=YlEb3L1PIco&index=4&list=PLyAswbTgFpP3MbkCjgg8G3JBtDgoQSoVH\n\nWow. I honestly can't say enough about this animation. The animation is beautiful and cute, the music is addictive as heck, and the story... My gosh, the story! So much is going on in this animation is unbelievable. The story is powerful, emotional, deep, and will do more than tug at your heartstrings."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT10M20S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/qScDblRUeA-B8E5lSkmvfqs6ggo\"",
+   "id": "h-9PKpRzsp8",
+   "snippet": {
+    "publishedAt": "2014-11-04T15:02:22.000Z",
+    "channelId": "UCGzrP0Z-MgjRRZlYoSUef-Q",
+    "title": "Chol Talks Over Mystery Skulls Animated Ghost",
+    "description": "Mystery Skulls website: http://mysteryskulls.com/\nOriginal Video: http://youtu.be/YlEb3L1PIco\n\nMiku in the Thumbnail was drawn by EnterMeun (edited by me)\ncheck out his art: http://entermeun.deviantart.com/\ncheck out his videos: https://www.youtube.com/user/YAYGamingVideos\n\nMien Twitter: https://twitter.com/CholYerlow2\nMien Facebook: https://www.facebook.com/chol.yerlow\nMien Tumblr: http://cholsanimationanalysis.tumblr.com/",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/h-9PKpRzsp8/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/h-9PKpRzsp8/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/h-9PKpRzsp8/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/h-9PKpRzsp8/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/h-9PKpRzsp8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Chol .Yerlow",
+    "categoryId": "1",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Chol Talks Over Mystery Skulls Animated Ghost",
+     "description": "Mystery Skulls website: http://mysteryskulls.com/\nOriginal Video: http://youtu.be/YlEb3L1PIco\n\nMiku in the Thumbnail was drawn by EnterMeun (edited by me)\ncheck out his art: http://entermeun.deviantart.com/\ncheck out his videos: https://www.youtube.com/user/YAYGamingVideos\n\nMien Twitter: https://twitter.com/CholYerlow2\nMien Facebook: https://www.facebook.com/chol.yerlow\nMien Tumblr: http://cholsanimationanalysis.tumblr.com/"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M10S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/ygFw8hEUCbkW_kLFdyOk4MLa06s\"",
+   "id": "DL5UPB_yFTs",
+   "snippet": {
+    "publishedAt": "2015-02-07T03:49:19.000Z",
+    "channelId": "UCm3b9SyXutP4C2bxoGRl8EQ",
+    "title": "Rajma Reacts: Mystery Skulls Animated - Ghost  (MysteryBen27)",
+    "description": "Good Story, Song, AND Animation! If it's a series then I would like to see it!\n\nWatch it here: https://www.youtube.com/watch?v=YlEb3L1PIco\n\nYou want freedom?  You got it! Join Freedom! today!:\n\nhttps://www.freedom.tm/via/RajmaRose\n\nCheck out these awesome people:\n\nMasterMax888:\n\nhttps://www.youtube.com/user/Mastermax888\n\nPieDislikerSwag:\n\nhttps://www.youtube.com/user/PieDislikerSwag\n\nTower Smash:\n\nhttps://www.youtube.com/user/Chucky911111\n\nSir Sonic HD:\n\nhttps://www.youtube.com/user/Sirsonic20\n\nJayman1178:\n\nhttps://www.youtube.com/channel/UCGnVJfZPCo1IE2VYYEPP8Ww\n\nIt's WAY better than what I have!\n\nWant to watch me stream? Follow me here: http://www.twitch.tv/rajma_rose\n.\nWant me to react to something? Send me an email at rajmareacts@yahoo.com or let me know in the comments below, I do check both!\n\nMore content is one the way so be sure to check in every once in a while!",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/DL5UPB_yFTs/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/DL5UPB_yFTs/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/DL5UPB_yFTs/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "The Gaming Rose",
+    "categoryId": "1",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Rajma Reacts: Mystery Skulls Animated - Ghost  (MysteryBen27)",
+     "description": "Good Story, Song, AND Animation! If it's a series then I would like to see it!\n\nWatch it here: https://www.youtube.com/watch?v=YlEb3L1PIco\n\nYou want freedom?  You got it! Join Freedom! today!:\n\nhttps://www.freedom.tm/via/RajmaRose\n\nCheck out these awesome people:\n\nMasterMax888:\n\nhttps://www.youtube.com/user/Mastermax888\n\nPieDislikerSwag:\n\nhttps://www.youtube.com/user/PieDislikerSwag\n\nTower Smash:\n\nhttps://www.youtube.com/user/Chucky911111\n\nSir Sonic HD:\n\nhttps://www.youtube.com/user/Sirsonic20\n\nJayman1178:\n\nhttps://www.youtube.com/channel/UCGnVJfZPCo1IE2VYYEPP8Ww\n\nIt's WAY better than what I have!\n\nWant to watch me stream? Follow me here: http://www.twitch.tv/rajma_rose\n.\nWant me to react to something? Send me an email at rajmareacts@yahoo.com or let me know in the comments below, I do check both!\n\nMore content is one the way so be sure to check in every once in a while!"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT14M48S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/ZdUcGYLxKD_xYzhEhVjGXyFJGrA\"",
+   "id": "PrKYSL2_psQ",
+   "snippet": {
+    "publishedAt": "2014-02-06T06:02:09.000Z",
+    "channelId": "UC0jd1RjiMOAbs4CikoADJGA",
+    "title": "Mystery Skulls - Ghost [Official Music Video]",
+    "description": "Pre-order the new album 'Forever' and get \"Paralyzed,\" \"Ghost,\" and \"Hellbent\" immediately.\nPre-order with FREE signed EP: http://forever.mysteryskulls.com\nPre-order on iTunes: http://smarturl.it/msforever \n\nDirector - Josh Thomas \n\nConnect with Mystery Skulls:\nWebsite: http://www.mysteryskulls.com\nFacebook: http://facebook.com/mysteryskulls\nTwitter: http://twitter.com/mysteryskulls\n\nMystery Skulls - Ghost (Official Music Video)\n\n\n\nMade by Oh Yeah Wow: http://ohyeahwow.com\nLike us on facebook: http://facebook.com/ohyeahwow\n\nProducer: Nicky Pastore\n\nCinematographer: Ed Goldner\n1st AC: Brad Andrew\nGaffer / Grip: Tom Savige\n1st AD: Jack Doherty\n\nArt Director: Christina Remnant\nArt Department Assistant: Simon Dall \nWardrobe: Paige Prendergast\nHair and Make-Up: Marleen Olson\nSet Construction: Ben Brayshaw\nPool supervisors: Darcy Prendergast, Seamus Spilsbury, Sam Lewis.\nSFX & VFX Supervisor: Josh Thomas\nSFX & VFX Co-ordinator: Andrew Goldsmith\n\nColourist: Josh Thomas\nEditor: Josh Thomas\nPriest: Robert Pill\nPossessed Girl: Donna Yeatman\nMum: Genevieve Frew\nDad:  Max Clark\nOld Priest: Karl Peschek\n\nLocation: Georgia Anderson\n\nSpecial Thanks: James Bailey, Michael Greaney, Aster Caplan\n\nGhost, Exorcism, Poltergeist, The Excorcist",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/PrKYSL2_psQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/PrKYSL2_psQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/PrKYSL2_psQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/PrKYSL2_psQ/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/PrKYSL2_psQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Mystery Skulls",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls - Ghost [Official Music Video]",
+     "description": "Pre-order the new album 'Forever' and get \"Paralyzed,\" \"Ghost,\" and \"Hellbent\" immediately.\nPre-order with FREE signed EP: http://forever.mysteryskulls.com\nPre-order on iTunes: http://smarturl.it/msforever \n\nDirector - Josh Thomas \n\nConnect with Mystery Skulls:\nWebsite: http://www.mysteryskulls.com\nFacebook: http://facebook.com/mysteryskulls\nTwitter: http://twitter.com/mysteryskulls\n\nMystery Skulls - Ghost (Official Music Video)\n\n\n\nMade by Oh Yeah Wow: http://ohyeahwow.com\nLike us on facebook: http://facebook.com/ohyeahwow\n\nProducer: Nicky Pastore\n\nCinematographer: Ed Goldner\n1st AC: Brad Andrew\nGaffer / Grip: Tom Savige\n1st AD: Jack Doherty\n\nArt Director: Christina Remnant\nArt Department Assistant: Simon Dall \nWardrobe: Paige Prendergast\nHair and Make-Up: Marleen Olson\nSet Construction: Ben Brayshaw\nPool supervisors: Darcy Prendergast, Seamus Spilsbury, Sam Lewis.\nSFX & VFX Supervisor: Josh Thomas\nSFX & VFX Co-ordinator: Andrew Goldsmith\n\nColourist: Josh Thomas\nEditor: Josh Thomas\nPriest: Robert Pill\nPossessed Girl: Donna Yeatman\nMum: Genevieve Frew\nDad:  Max Clark\nOld Priest: Karl Peschek\n\nLocation: Georgia Anderson\n\nSpecial Thanks: James Bailey, Michael Greaney, Aster Caplan\n\nGhost, Exorcism, Poltergeist, The Excorcist"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M35S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/6v6rbbFm_T34WEh-gGzVicHvpQM\"",
+   "id": "nQAz_Ter-Ao",
+   "snippet": {
+    "publishedAt": "2015-02-06T23:44:19.000Z",
+    "channelId": "UCYsXHss5vOnGNIFMtESlw6g",
+    "title": "Ghost Mystery skulls reaction  by ariandjose",
+    "description": "This reaction video was created by the ReactorTV mobile app. Please go to http://reactortv.com to download the app or find out more.\n\nReaction video for &quot;Mystery Skulls Animated - Ghost&quot;\n\n\n\nWatch the original video here: http://youtu.be/YlEb3L1PIco\n\nNo copyright infringement intended. The ReactorTV app is intended to allow users to add journalistic commentary to Youtube videos. Please contact us at hello at reactr.tv for any questions.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/nQAz_Ter-Ao/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/nQAz_Ter-Ao/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/nQAz_Ter-Ao/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/nQAz_Ter-Ao/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/nQAz_Ter-Ao/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "ariandjose vill",
+    "categoryId": "1",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Ghost Mystery skulls reaction  by ariandjose",
+     "description": "This reaction video was created by the ReactorTV mobile app. Please go to http://reactortv.com to download the app or find out more.\n\nReaction video for &quot;Mystery Skulls Animated - Ghost&quot;\n\n\n\nWatch the original video here: http://youtu.be/YlEb3L1PIco\n\nNo copyright infringement intended. The ReactorTV app is intended to allow users to add journalistic commentary to Youtube videos. Please contact us at hello at reactr.tv for any questions."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT7M4S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/lnlpIjZnMWXolTg2QvkNkw6f-BI\"",
+   "id": "l57wTsLQhh0",
+   "snippet": {
+    "publishedAt": "2015-01-05T13:29:45.000Z",
+    "channelId": "UCY2nGegO14Pi1RXEaAHwfuA",
+    "title": "Blind Reaction to: Mystery Skulls Animated - Ghost",
+    "description": "Maybe the house is the body of the 23rd president of the USA and in the past he forgot to pay rent and he was run out of by Beyonce's great grandmother who was apparently a robot and she saved the world from the completely real aliens that live in everyone's shower, thus puts a damper on the dog, wolf, fox things gimmick of being an anti hero and also a positive villain and makes gingerbread men for the Blond haired dude that was heckler to them so he tuck his anger out on the purple dude and the blue haired chick actually doesn't exist in the same plan of existence and actually manifest as a astrolabe projection visitation of.... you know what forget it..... but this is the most accurate theory I had so far.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/l57wTsLQhh0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/l57wTsLQhh0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/l57wTsLQhh0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/l57wTsLQhh0/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/l57wTsLQhh0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "DYWTBA_Brony",
+    "categoryId": "22",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Blind Reaction to: Mystery Skulls Animated - Ghost",
+     "description": "Maybe the house is the body of the 23rd president of the USA and in the past he forgot to pay rent and he was run out of by Beyonce's great grandmother who was apparently a robot and she saved the world from the completely real aliens that live in everyone's shower, thus puts a damper on the dog, wolf, fox things gimmick of being an anti hero and also a positive villain and makes gingerbread men for the Blond haired dude that was heckler to them so he tuck his anger out on the purple dude and the blue haired chick actually doesn't exist in the same plan of existence and actually manifest as a astrolabe projection visitation of.... you know what forget it..... but this is the most accurate theory I had so far."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT53M46S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/TLE60tFxK0l89jN8zJYtit28QoU\"",
+   "id": "g_lejox7eng",
+   "snippet": {
+    "publishedAt": "2014-12-01T12:35:19.000Z",
+    "channelId": "UCKFILvZRM4thHP6Nmu--9Ew",
+    "title": "Lewis Is Goddamn Fabulous",
+    "description": "WTF i'm doing with my life. \nBut i couldn't stop myself. \"Ghost\" is just too fabulous. \nVivi. Please. You are creeping me out.\n\nCharacters and music belong to their rightful owners. \nCharacters:\n\"Mystery Skulls Animated - Ghost\" - https://www.youtube.com/watch?v=YlEb3L1PIco&index=2&list=LLKFILvZRM4thHP6Nmu--9Ew\nMusic:\nSporty 0 – Let me hit it",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/g_lejox7eng/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/g_lejox7eng/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/g_lejox7eng/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/g_lejox7eng/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/g_lejox7eng/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "NastasiaSolitude",
+    "categoryId": "1",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Lewis Is Goddamn Fabulous",
+     "description": "WTF i'm doing with my life. \nBut i couldn't stop myself. \"Ghost\" is just too fabulous. \nVivi. Please. You are creeping me out.\n\nCharacters and music belong to their rightful owners. \nCharacters:\n\"Mystery Skulls Animated - Ghost\" - https://www.youtube.com/watch?v=YlEb3L1PIco&index=2&list=LLKFILvZRM4thHP6Nmu--9Ew\nMusic:\nSporty 0 – Let me hit it"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT31S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/OVoBej2SucmjUWdLuwd-qEw0k34\"",
+   "id": "0Hkf1uEgD6c",
+   "snippet": {
+    "publishedAt": "2015-02-20T22:34:35.000Z",
+    "channelId": "UCNiulLdO10l9jMw67Ll1tKA",
+    "title": "Stormlight Reacts to: Rhythm is Magic, The Turntable Turnabout and Mystery Skulls Animated - Ghosts",
+    "description": "Today I react to Rhythm is Magic - Remix Apple Apple Apple, The Turntable Turnabout (Mystery Skulls - Money) and Mystery Skulls Animated - Ghosts. Make sure to like this video and subscribe to this channel for more videos. Leave a comment below suggesting what video I should react to next! :)\n\nI do not own these videos or any content used in them. They belong to their respected owners.\n\nRhythm is Magic - Remix Apple Apple Apple: https://www.youtube.com/watch?v=w1zbGFGQTq0\n\nThe Turntable Turnabout (Mystery Skulls - Money): https://www.youtube.com/watch?v=lhjk5x54bsE\n\nMystery Skulls Animated - Ghosts: https://www.youtube.com/watch?v=YlEb3L1PIco\n\nIntro song: The L-Train - Rainbow Dash's Theme (MandoPony cover): https://www.youtube.com/watch?v=42GCX1xERMI\n\nOutro by RainBowCreepyReacts 1: https://www.youtube.com/channel/UCkTyYjuQtiWBJ0lSBE5qLCA/videos\n\nFacebook page: https://www.facebook.com/mrcteddy\nTumblr: http://www.tumblr.com/blog/mrcteddy20\nDeviantart: http://mrcteddy.deviantart.com/",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/0Hkf1uEgD6c/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/0Hkf1uEgD6c/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/0Hkf1uEgD6c/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/0Hkf1uEgD6c/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/0Hkf1uEgD6c/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Stormlight",
+    "categoryId": "24",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Stormlight Reacts to: Rhythm is Magic, The Turntable Turnabout and Mystery Skulls Animated - Ghosts",
+     "description": "Today I react to Rhythm is Magic - Remix Apple Apple Apple, The Turntable Turnabout (Mystery Skulls - Money) and Mystery Skulls Animated - Ghosts. Make sure to like this video and subscribe to this channel for more videos. Leave a comment below suggesting what video I should react to next! :)\n\nI do not own these videos or any content used in them. They belong to their respected owners.\n\nRhythm is Magic - Remix Apple Apple Apple: https://www.youtube.com/watch?v=w1zbGFGQTq0\n\nThe Turntable Turnabout (Mystery Skulls - Money): https://www.youtube.com/watch?v=lhjk5x54bsE\n\nMystery Skulls Animated - Ghosts: https://www.youtube.com/watch?v=YlEb3L1PIco\n\nIntro song: The L-Train - Rainbow Dash's Theme (MandoPony cover): https://www.youtube.com/watch?v=42GCX1xERMI\n\nOutro by RainBowCreepyReacts 1: https://www.youtube.com/channel/UCkTyYjuQtiWBJ0lSBE5qLCA/videos\n\nFacebook page: https://www.facebook.com/mrcteddy\nTumblr: http://www.tumblr.com/blog/mrcteddy20\nDeviantart: http://mrcteddy.deviantart.com/"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT16M27S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/YlXI-lJNrkron_5FagPLU0RETWU\"",
+   "id": "co_KOSLPvxI",
+   "snippet": {
+    "publishedAt": "2015-01-22T18:23:49.000Z",
+    "channelId": "UCtyPPHHxKDD1XmAGQa6cn4g",
+    "title": "Mystery Skulls Animated-Ghost (Solidisco Remix)",
+    "description": "Well, since MSA is somewhat getting popular nowadays, I've decided to do a music video featuring the many remixes of the song \"Ghost\".\n\nI do not own the rights to the music, nor the animation, I just did this for entertainment purposes. \n\nLink to the original music video https://www.youtube.com/watch?v=YlEb3L1PIco\n\nMystery Skulls Channel https://www.youtube.com/user/mysteryskullstv",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/co_KOSLPvxI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/co_KOSLPvxI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/co_KOSLPvxI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/co_KOSLPvxI/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/co_KOSLPvxI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "AlyTheRaygirl",
+    "categoryId": "24",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls Animated-Ghost (Solidisco Remix)",
+     "description": "Well, since MSA is somewhat getting popular nowadays, I've decided to do a music video featuring the many remixes of the song \"Ghost\".\n\nI do not own the rights to the music, nor the animation, I just did this for entertainment purposes. \n\nLink to the original music video https://www.youtube.com/watch?v=YlEb3L1PIco\n\nMystery Skulls Channel https://www.youtube.com/user/mysteryskullstv"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT3M29S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/kYiYEG7UjzhlPLhqGfw7asmXBeM\"",
+   "id": "lhjk5x54bsE",
+   "snippet": {
+    "publishedAt": "2012-05-06T10:10:37.000Z",
+    "channelId": "UCT2SpyOpcX7nt6VAfmiQdzg",
+    "title": "The Turntable Turnabout (Mystery Skulls - Money)",
+    "description": "http://mysteryskulls.bandcamp.com/\nhttp://mysteryskulls.tumblr.com/\n\nRhythm Court is in sessions for DJ-DA.\n__________________________________\n\nSo I imagine this will have a fair amount of questions.\n\nA couple months ago I found that \"Dumb Running Sonic\" video with another song from these guys attached and I've been hooked on them since.  The hook was so strong that I *HAD* to get an animation out of my system about it.\n\nAlso, I had just watched someone play through Phoenix Wright and somewhere along the lines I got the mental image of the beats coming from the hand slamming, and, well, here we are.\n\nWhat, the glasses?  They're on loan. What?  Stop looking at me like that.\n\nP.S.\nYo Capcom, how about them Ace Attorney Investigations: Miles Edgeworth 2 and Phoenix Wright 5?",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/lhjk5x54bsE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/lhjk5x54bsE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/lhjk5x54bsE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/lhjk5x54bsE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/lhjk5x54bsE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "MysteryBen27",
+    "categoryId": "1",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "The Turntable Turnabout (Mystery Skulls - Money)",
+     "description": "http://mysteryskulls.bandcamp.com/\nhttp://mysteryskulls.tumblr.com/\n\nRhythm Court is in sessions for DJ-DA.\n__________________________________\n\nSo I imagine this will have a fair amount of questions.\n\nA couple months ago I found that \"Dumb Running Sonic\" video with another song from these guys attached and I've been hooked on them since.  The hook was so strong that I *HAD* to get an animation out of my system about it.\n\nAlso, I had just watched someone play through Phoenix Wright and somewhere along the lines I got the mental image of the beats coming from the hand slamming, and, well, here we are.\n\nWhat, the glasses?  They're on loan. What?  Stop looking at me like that.\n\nP.S.\nYo Capcom, how about them Ace Attorney Investigations: Miles Edgeworth 2 and Phoenix Wright 5?"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT3M44S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/tL7Buf19MFtmhAolQJBg_BSQQWs\"",
+   "id": "LogykQSC_-4",
+   "snippet": {
+    "publishedAt": "2014-11-25T21:52:02.000Z",
+    "channelId": "UCPOkUcvFdmQ9DEi1-YeJROw",
+    "title": "Ghost - Mystery Skulls『Lyrics PV』",
+    "description": ".::::KATHY-CHAN AMVs/PVs::::.\n\"This time I might just disappear.\"\nHEY GUYS LONG TIME NO SEE OR HEAR! LEMME BRING YOU SOMETHING COOL AND TOTALLY NOT BANDWAGON ヽ(*・ω・)ﾉ\n\nHey guys! Thanks for the 6k subs! I couldn't have done it without you! Don't worry, this isn't my 6k video, but it's something I have been fanning about and decided to share! It's pretty short and I'm so FRIGGIN' SORRY, but this is just to cool down the fangirls inside me. 8'D Ghosts has been in my head ever since I first heard it and I have fallen in love with the story and it's adorable characters! Lewis and Vivi have been my favorite couple right now. Arthur and Ben are just too interesting. Mystery Skulls and Mystery Ben are a killer duo if you ask me! Consider this a small tribute to this HUGE fandom.\n\nEnjoy! ヽ(*・ω・)ﾉ♥\n\n\n★CREDITS★\nMusic: Ghost\nVocals: Mystery Skulls\nhttps://www.youtube.com/mysteryskullstv\nCharacters originally made by Mystery Ben\nhttps://www.youtube.com/MysteryBen27\nPV: Kathy-chan\n► Here is the original song used: \nhttps://www.youtube.com/watch?v=PrKYSL2_psQ\nHere is MysteryBen's video for it:\n►https://www.youtube.com/watch?v=YlEb3L1PIco\n\nCharacters: Lewis/Pink || Vivi/Blue || Arthur/Yellow || Ben/Dog\nAll the art I used is from Deviantart:\nkatestrife\nyuramec\nnaimly\nmiss_mixi\ntransientday http://www.deviantart.com/art/Mystery-Skulls-Ghost-491831177\nplease lemme know if any of this art is yours, so I can add it here!\n\nヽ(*・ω・)ﾉCONTACT ME: \n☆FACEBOOKIE: https://www.facebook.com/animerocker246 ☆\n☆TWITTER BIRD THINGY: https://twitter.com/SmangoKat246 ☆\n\"Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for \"fair use\" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, education or personal use tips the balance in favor of fair use.\"",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/LogykQSC_-4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/LogykQSC_-4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/LogykQSC_-4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/LogykQSC_-4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Kathy-chan ★",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Ghost - Mystery Skulls『Lyrics PV』",
+     "description": ".::::KATHY-CHAN AMVs/PVs::::.\n\"This time I might just disappear.\"\nHEY GUYS LONG TIME NO SEE OR HEAR! LEMME BRING YOU SOMETHING COOL AND TOTALLY NOT BANDWAGON ヽ(*・ω・)ﾉ\n\nHey guys! Thanks for the 6k subs! I couldn't have done it without you! Don't worry, this isn't my 6k video, but it's something I have been fanning about and decided to share! It's pretty short and I'm so FRIGGIN' SORRY, but this is just to cool down the fangirls inside me. 8'D Ghosts has been in my head ever since I first heard it and I have fallen in love with the story and it's adorable characters! Lewis and Vivi have been my favorite couple right now. Arthur and Ben are just too interesting. Mystery Skulls and Mystery Ben are a killer duo if you ask me! Consider this a small tribute to this HUGE fandom.\n\nEnjoy! ヽ(*・ω・)ﾉ♥\n\n\n★CREDITS★\nMusic: Ghost\nVocals: Mystery Skulls\nhttps://www.youtube.com/mysteryskullstv\nCharacters originally made by Mystery Ben\nhttps://www.youtube.com/MysteryBen27\nPV: Kathy-chan\n► Here is the original song used: \nhttps://www.youtube.com/watch?v=PrKYSL2_psQ\nHere is MysteryBen's video for it:\n►https://www.youtube.com/watch?v=YlEb3L1PIco\n\nCharacters: Lewis/Pink || Vivi/Blue || Arthur/Yellow || Ben/Dog\nAll the art I used is from Deviantart:\nkatestrife\nyuramec\nnaimly\nmiss_mixi\ntransientday http://www.deviantart.com/art/Mystery-Skulls-Ghost-491831177\nplease lemme know if any of this art is yours, so I can add it here!\n\nヽ(*・ω・)ﾉCONTACT ME: \n☆FACEBOOKIE: https://www.facebook.com/animerocker246 ☆\n☆TWITTER BIRD THINGY: https://twitter.com/SmangoKat246 ☆\n\"Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for \"fair use\" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, education or personal use tips the balance in favor of fair use.\""
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1M36S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/D6Nz0sfvQzU8gzKvEWa687cELY8\"",
+   "id": "XQLq2S1W2_4",
+   "snippet": {
+    "publishedAt": "2014-12-01T22:32:43.000Z",
+    "channelId": "UC6FD6AfeFC2vEXk2i9TA49A",
+    "title": "Reasons We Love Mystery Skulls-Ghost animated",
+    "description": "The video Mystery Skulls-Ghost has been getting pretty popular.  Im talking Fan-Art, Fan-fiction, the works you know.\n\nThere are tons of reasons to love that music video!  But i'll just name a few me and a friend named \"turtlekisskiss\" could think off.  \n\nIf you feel were missing a couple of awesome things about the video let me now in the comments!\nAlso if you want me to go more in depth into the characters back stories and histories also let me know!\n\nheres a like to the amazing video that started it all\nhttps://www.youtube.com/watch?v=YlEb3L1PIco",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/XQLq2S1W2_4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/XQLq2S1W2_4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/XQLq2S1W2_4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Krazy Stargazer",
+    "categoryId": "24",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Reasons We Love Mystery Skulls-Ghost animated",
+     "description": "The video Mystery Skulls-Ghost has been getting pretty popular.  Im talking Fan-Art, Fan-fiction, the works you know.\n\nThere are tons of reasons to love that music video!  But i'll just name a few me and a friend named \"turtlekisskiss\" could think off.  \n\nIf you feel were missing a couple of awesome things about the video let me now in the comments!\nAlso if you want me to go more in depth into the characters back stories and histories also let me know!\n\nheres a like to the amazing video that started it all\nhttps://www.youtube.com/watch?v=YlEb3L1PIco"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT3M24S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/9CCUjJ6wi0SWS7UvROHi-F1EHpQ\"",
+   "id": "mGKw1jGkVQs",
+   "snippet": {
+    "publishedAt": "2015-02-06T20:57:36.000Z",
+    "channelId": "UCDSp1bj55Arfy3GfMTVLpAg",
+    "title": "Mystery Skulls Animated - Ghost Soildisco remix",
+    "description": "I've decided to make mystery skulls ghost animated  to have solidisco remix theme\n(Watch the original video) http://www.youtube.com/MysteryBen27",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/mGKw1jGkVQs/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/mGKw1jGkVQs/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/mGKw1jGkVQs/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/mGKw1jGkVQs/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/mGKw1jGkVQs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Skyfaller3D",
+    "categoryId": "22",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls Animated - Ghost Soildisco remix",
+     "description": "I've decided to make mystery skulls ghost animated  to have solidisco remix theme\n(Watch the original video) http://www.youtube.com/MysteryBen27"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT3M38S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/_TX9dXmjYBA9qSKsOEz6cCHaokY\"",
+   "id": "d7-VYs8tPnI",
+   "snippet": {
+    "publishedAt": "2014-12-05T19:21:57.000Z",
+    "channelId": "UC8R7VXxk1VQvc32EdJu5pxg",
+    "title": "Mystery skulls animated-Ghost:Lewis Is damn Fabulous FOR 1 HOUR",
+    "description": "I DID NOT MAKE THIS I JUST LOOPED IT TO GO FOR A HOUR CAUSE THIS IS AWESOME THE CREATOR OF THIS VIDEO IS \"NastasiaSolitude\" PLEASE SUBSCRIBE! Hope you guys enjoy a full hour of this! lol \nTwitter: https://twitter.com/Novastar057\nDeviantart: http://novastar101.deviantart.com/",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/d7-VYs8tPnI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/d7-VYs8tPnI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/d7-VYs8tPnI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/d7-VYs8tPnI/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/d7-VYs8tPnI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Novastar057",
+    "categoryId": "1",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery skulls animated-Ghost:Lewis Is damn Fabulous FOR 1 HOUR",
+     "description": "I DID NOT MAKE THIS I JUST LOOPED IT TO GO FOR A HOUR CAUSE THIS IS AWESOME THE CREATOR OF THIS VIDEO IS \"NastasiaSolitude\" PLEASE SUBSCRIBE! Hope you guys enjoy a full hour of this! lol \nTwitter: https://twitter.com/Novastar057\nDeviantart: http://novastar101.deviantart.com/"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H3S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/qE2Fv00MsIDDEaz3Sk3a6_Ou2UI\"",
+   "id": "srFFj8Ef9h4",
+   "snippet": {
+    "publishedAt": "2014-11-14T04:27:30.000Z",
+    "channelId": "UCFIrMZlbBYaRvAoydHW7YDw",
+    "title": "Kushowa Reacts to  Mystery Skulls Animated - Ghost & Batman meets MLP & [SFM] 5 Year Olds FNAF",
+    "description": "High Five to all my Brothers and Sisters!\nClick Down below to Subscribe!\nhttps://www.youtube.com/channel/UCFIrMZlbBYaRvAoydHW7YDw\n\nOriginal Video:https://www.youtube.com/watch?v=YlEb3L1PIco\nSecond Video:https://www.youtube.com/watch?v=p3kAFfgsa4s&app=desktop\nThird Video:https://www.youtube.com/watch?v=a6iHiVn4Jx4\nPlease:Leave Comment and Rate the video! I appreciated!",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/srFFj8Ef9h4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/srFFj8Ef9h4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/srFFj8Ef9h4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/srFFj8Ef9h4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/srFFj8Ef9h4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Kushowa",
+    "categoryId": "23",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Kushowa Reacts to  Mystery Skulls Animated - Ghost & Batman meets MLP & [SFM] 5 Year Olds FNAF",
+     "description": "High Five to all my Brothers and Sisters!\nClick Down below to Subscribe!\nhttps://www.youtube.com/channel/UCFIrMZlbBYaRvAoydHW7YDw\n\nOriginal Video:https://www.youtube.com/watch?v=YlEb3L1PIco\nSecond Video:https://www.youtube.com/watch?v=p3kAFfgsa4s&app=desktop\nThird Video:https://www.youtube.com/watch?v=a6iHiVn4Jx4\nPlease:Leave Comment and Rate the video! I appreciated!"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT11M15S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/7Tuvnkj_XVBtHRM89IGzkt0bBlw\"",
+   "id": "-W3spSBo_KE",
+   "snippet": {
+    "publishedAt": "2015-02-25T23:00:57.000Z",
+    "channelId": "UCNiulLdO10l9jMw67Ll1tKA",
+    "title": "Mystery Skulls Animated - Ghost: OBJECTION!",
+    "description": "I can't believe I didn't notice a certain hand gesture that Lewis made in the Mystery Skulls Animated - Ghost video but someone helped point it out to me so I decided to make a specific video out of it! :)\n\nI do not own any content used in this video. They belong to their respected owners.\n\nClip used from:\n- Mystery Skulls Animated - Ghost: https://www.youtube.com/watch?v=YlEb3L1PIco\n\nAudio used from:\n- Phoenix Wright: Ace Attorney",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/-W3spSBo_KE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/-W3spSBo_KE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/-W3spSBo_KE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/-W3spSBo_KE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/-W3spSBo_KE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Stormlight",
+    "categoryId": "24",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mystery Skulls Animated - Ghost: OBJECTION!",
+     "description": "I can't believe I didn't notice a certain hand gesture that Lewis made in the Mystery Skulls Animated - Ghost video but someone helped point it out to me so I decided to make a specific video out of it! :)\n\nI do not own any content used in this video. They belong to their respected owners.\n\nClip used from:\n- Mystery Skulls Animated - Ghost: https://www.youtube.com/watch?v=YlEb3L1PIco\n\nAudio used from:\n- Phoenix Wright: Ace Attorney"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT2S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/NcKannHMCxtbJ11fcOq47HQm7Fo\"",
+   "id": "Z1CQ4WdWmIU",
+   "snippet": {
+    "publishedAt": "2014-11-06T15:16:24.000Z",
+    "channelId": "UCQEC-WYNdbbq5wd0kuTk6bA",
+    "title": "Skids Reviews: Mystery Skulls-GHOST",
+    "description": "Video Link: Ghost\nhttps://www.youtube.com/watch?v=YlEb3L1PIco\n\nMusic:\nMystery Skulls-Ghost\nhttps://itunes.apple.com/us/album/forever/id920951980\nMystery Skulls-Beautiful\nhttp://mysteryskulls.bandcamp.com/\n\nCome and join me on Facebook and Twitter as well!\n\nhttps://twitter.com/MisterSkids\n\nhttps://www.facebook.com/MisterSkids",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Z1CQ4WdWmIU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Z1CQ4WdWmIU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Z1CQ4WdWmIU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "MisterSkids",
+    "categoryId": "20",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Skids Reviews: Mystery Skulls-GHOST",
+     "description": "Video Link: Ghost\nhttps://www.youtube.com/watch?v=YlEb3L1PIco\n\nMusic:\nMystery Skulls-Ghost\nhttps://itunes.apple.com/us/album/forever/id920951980\nMystery Skulls-Beautiful\nhttp://mysteryskulls.bandcamp.com/\n\nCome and join me on Facebook and Twitter as well!\n\nhttps://twitter.com/MisterSkids\n\nhttps://www.facebook.com/MisterSkids"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT11M37S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/pRQAsnTEVWonGVqvzDI6Jw5RzDM\"",
+   "id": "JpedpCAyiYI",
+   "snippet": {
+    "publishedAt": "2015-01-24T11:19:56.000Z",
+    "channelId": "UCJKRTeJzAlys8hfdf38O09A",
+    "title": "Perhaps198 React to YTP,WTPony Season2 and Mystery Skulls-Ghost",
+    "description": "well then ytp huh #YOLO\n\nreaction start at:1:15\n\ni dont own the video of YTP video *name too long* made by CloudChaser530\ni dont own the video of WTPony - Season 2 in a Nutshell made by Skiddlez\ni dont own the video of Mystery Skulls-Ghost made by MysteryBen27\n\nYTP : https://www.youtube.com/watch?v=hggcEHnPjxw\nWTPony Season 2 :https://www.youtube.com/watch?v=TrAu-cqQkxw\nMystery Skulls Animated - Ghost :https://www.youtube.com/watch?v=YlEb3L1PIco",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/JpedpCAyiYI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/JpedpCAyiYI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/JpedpCAyiYI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/JpedpCAyiYI/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Perhaps198",
+    "categoryId": "24",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Perhaps198 React to YTP,WTPony Season2 and Mystery Skulls-Ghost",
+     "description": "well then ytp huh #YOLO\n\nreaction start at:1:15\n\ni dont own the video of YTP video *name too long* made by CloudChaser530\ni dont own the video of WTPony - Season 2 in a Nutshell made by Skiddlez\ni dont own the video of Mystery Skulls-Ghost made by MysteryBen27\n\nYTP : https://www.youtube.com/watch?v=hggcEHnPjxw\nWTPony Season 2 :https://www.youtube.com/watch?v=TrAu-cqQkxw\nMystery Skulls Animated - Ghost :https://www.youtube.com/watch?v=YlEb3L1PIco"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT17M8S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  }
+ ]
+}

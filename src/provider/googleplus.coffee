@@ -90,3 +90,17 @@ exports.lookup = lookup = (id) ->
 
         return new Media(data)
     )
+
+exports.parseUrl = (url) ->
+    data = urlparse.parse(url, true)
+
+    if data.hostname isnt 'plus.google.com'
+        return null
+
+    m = data.pathname.match(/(?:u\/\d+\/)?photos\/(\d+)\/albums\/(\d+)\/(\d+)/)
+    if m
+        return {
+            type: 'google+'
+            kind: 'single'
+            id: m.slice().join('_')
+        }

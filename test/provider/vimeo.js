@@ -1,8 +1,12 @@
 var assert = require('assert');
 
+var fakerequest = require('./fakerequest');
 var vimeo = require('../../lib/provider/vimeo');
 
 describe('Vimeo', function () {
+    before(fakerequest.init);
+    after(fakerequest.reset);
+
     describe('#lookup', function () {
         it('should query a video', function (done) {
             var t = {

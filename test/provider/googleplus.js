@@ -3,9 +3,6 @@ var fs = require('fs');
 var path = require('path');
 
 var fakerequest = require('./fakerequest');
-fakerequest(function (url) {
-    return url.match(/(\d+)/g).slice().join('_');
-});
 
 var googleplus = require('../../lib/provider/googleplus');
 
@@ -16,15 +13,16 @@ function verify(actual, id) {
 }
 
 describe('Google+', function () {
+    before(fakerequest.init);
+    after(fakerequest.reset);
+
     describe('#lookup', function () {
-        var id = '100620752621750099557_6017240248591052001_6017261392637740978';
         it('should look up a video correctly', function (done) {
+            var id = '100620752621750099557_6017240248591052001_6017261392637740978';
             googleplus.lookup(id).then(function (video) {
                 verify(video, id);
                 done();
             });
         });
     });
-
-    after(fakerequest.reset);
 });

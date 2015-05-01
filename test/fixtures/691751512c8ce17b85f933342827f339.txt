@@ -1,0 +1,2805 @@
+HTTP/1.1 200 OK
+
+{
+ "kind": "youtube#videoListResponse",
+ "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/-V_IKVsZW6kY7WwoeBpR1YIyKTc\"",
+ "pageInfo": {
+  "totalResults": 50,
+  "resultsPerPage": 50
+ },
+ "items": [
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/_sfrpIVvoLNtmil6G7ylqqIdVdY\"",
+   "id": "Rb0UmrCXxVA",
+   "snippet": {
+    "publishedAt": "2013-01-08T15:15:34.000Z",
+    "channelId": "UCyOfqgtsQaM3S-VZnsYnHjQ",
+    "title": "The Best of Mozart",
+    "description": "FOLLOW US ON SPOTIFY http://open.spotify.com/user/halidon\nPLAYLIST The Best of Classical Music http://open.spotify.com/user/halidon/playlist/5E4CbUOCiUXw2Fh8Foq51V\n▶ BUY - HALIDONMUSIC: http://bit.ly/VBXCMa   ● SPECIAL OFFER NOW !!! € 2,99 ●\n▶ BUY iTunes: http://bit.ly/1ndQyo6\n▶ BUY Amazon: http://amzn.to/1nZ16WYù\n▶ BUY Google Play: http://bit.ly/1tvmpAI\n\nvisit our page on facebook \n▶ http://on.fb.me/1bzVvBp\n\nWolfgang Amadeus Mozart - The Best of Mozart\nK.P.M. Philarmonic Orchestra\nTracklist:\n1. Eine Kleine Nachtmusik Movt 1   \n2. Eine Kleine Nachtmusik Movt 2  ( 7:45 ) \n3. Eine Kleine Nachtmusik Movt 3  ( 12:50 )  \n4. Eine Kleine Nachtmusik Movt 4  ( 14:50 )  \n5. Symphony No 35 \"Haffner Symphony\" Movt 1  ( 20:08 ) \n6. Symphony No 35 \"Haffner Symphony\" Movt 4  ( 25:54 )\n7. Symphony No 40 Movement 1 \"Molto Allegro\"  ( 29:53 )\n8. Magic Flute \"Overture\"  ( 37:29 )\n9. Marriage of Figaro \"Overture\"  ( 44:41 )\n10. String Quartet No 23 K 590 Movt 1  ( 49:12 )\n11. String Quartet No 23 K 590 Movt 4  ( 58:13 )\n12. String Quartet No 20 K 499 \"Minuet\"  ( 1:03:17 ) \n13. Violin Sonata K378 \"Rondeau\"  ( 1:06:38 )\n14. Piano Concerto No 21 \"Andante\"  ( 1:10:46 )\n15. Piano Concerto No 23 Movt 1  ( 1:16:25 )\n16. Turkish March Piano Sonata No 11 ( 1:27:15 )\n17. Clarinet Concerto Movt 2  ( 1:29:35 )\n18. Violin Concerto No 3 K 216 Movt 1  ( 1:36:36 )\n19. Flute Concerto No 2 K 314 Movt 2  ( 1:46:08 )\n20. Horn Concerto No 3 K 447 Movt 2  ( 1:51:36 )",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Rb0UmrCXxVA/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Rb0UmrCXxVA/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Rb0UmrCXxVA/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/Rb0UmrCXxVA/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "HALIDONMUSIC",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "The Best of Mozart",
+     "description": "FOLLOW US ON SPOTIFY http://open.spotify.com/user/halidon\nPLAYLIST The Best of Classical Music http://open.spotify.com/user/halidon/playlist/5E4CbUOCiUXw2Fh8Foq51V\n▶ BUY - HALIDONMUSIC: http://bit.ly/VBXCMa   ● SPECIAL OFFER NOW !!! € 2,99 ●\n▶ BUY iTunes: http://bit.ly/1ndQyo6\n▶ BUY Amazon: http://amzn.to/1nZ16WYù\n▶ BUY Google Play: http://bit.ly/1tvmpAI\n\nvisit our page on facebook \n▶ http://on.fb.me/1bzVvBp\n\nWolfgang Amadeus Mozart - The Best of Mozart\nK.P.M. Philarmonic Orchestra\nTracklist:\n1. Eine Kleine Nachtmusik Movt 1   \n2. Eine Kleine Nachtmusik Movt 2  ( 7:45 ) \n3. Eine Kleine Nachtmusik Movt 3  ( 12:50 )  \n4. Eine Kleine Nachtmusik Movt 4  ( 14:50 )  \n5. Symphony No 35 \"Haffner Symphony\" Movt 1  ( 20:08 ) \n6. Symphony No 35 \"Haffner Symphony\" Movt 4  ( 25:54 )\n7. Symphony No 40 Movement 1 \"Molto Allegro\"  ( 29:53 )\n8. Magic Flute \"Overture\"  ( 37:29 )\n9. Marriage of Figaro \"Overture\"  ( 44:41 )\n10. String Quartet No 23 K 590 Movt 1  ( 49:12 )\n11. String Quartet No 23 K 590 Movt 4  ( 58:13 )\n12. String Quartet No 20 K 499 \"Minuet\"  ( 1:03:17 ) \n13. Violin Sonata K378 \"Rondeau\"  ( 1:06:38 )\n14. Piano Concerto No 21 \"Andante\"  ( 1:10:46 )\n15. Piano Concerto No 23 Movt 1  ( 1:16:25 )\n16. Turkish March Piano Sonata No 11 ( 1:27:15 )\n17. Clarinet Concerto Movt 2  ( 1:29:35 )\n18. Violin Concerto No 3 K 216 Movt 1  ( 1:36:36 )\n19. Flute Concerto No 2 K 314 Movt 2  ( 1:46:08 )\n20. Horn Concerto No 3 K 447 Movt 2  ( 1:51:36 )"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H56M2S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": true,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": false
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/voHCwZ-8rAjLz3CPyn8PCM-YSLE\"",
+   "id": "ABNzpKv_2AI",
+   "snippet": {
+    "publishedAt": "2014-02-28T23:53:54.000Z",
+    "channelId": "UCvQI6QKWZ0wQuRx3JcIWfmQ",
+    "title": "★★ 5 Hours ★★ The Best of Wolfgang Amadeus Mozart ( part 1/2 )",
+    "description": "Serenade in G Major K 525\n  1 I Allegro 0:01 \n  2 II Romance 7:57\n  3 III Minuetto , allegretto  14:41\n  4 IV Rondeau Allegro 16:55\n\nSerenade in D Major K 250\n  5 I Allegro maestoso, allegro molto 22:25\n  6 II Andante 31:45\n  7 III Minuetto 43:46\n  8 IV Rondeau allegro 47:12\n  9 V Minuetto galante 55:07\n10 VI Adagio 1:01:53\n\nSymphony No.35 K 385\n11 I Allegro con spirito 1:08:28\n12 II Andante 1:16:22\n13 III Minuetto 1:26:16\n14 IV Finale Presto 1:29:24\n\nSymphony No.39 K 543\n15 I Adagio allegro 1:33:30\n16 II Andante con moto 1:42:17\n17 III Minuetto allegretto 1:51:34\n18 IV Finale Allegro 1:55:36\n\nSymphony No.40 in G minor K 550\n19 I Molto allegro 2:01:30\n20 II Andante 2:09:36\n21 III Minuetto allegretto 2:19:01\n22 IV Finale allegro assai  2:23:15\n\nSymphony No.41 in C Major K 551\n23 I Allegro vivace 2:30:15\n24 II Andante cantabile 2:42:02\n25 III Minuetto allegretto 2:50:06\n26 IV Finale molto allegro 2:54:40\n\nSerenade No. 6 in D Major K 239\n27 I Marcia maestoso 3:01:37\n28 II Minuetto 3:07:06\n29 III Rondeau 3:10:58\n\nDivertimento in B flat Major K 287\n30 I Allegro 3:15:29\n31 II Andante grazioso 3:24:37\n32 III Minuetto 3:32:47\n33 IV Adagio 3:36:10\n34 V Minuetto 3:44:39\n35 VI Andante allegro molto 3:48:20\n\nThe marriage of Figaro K 492\n36 Overture 3:55:37\n37 Susanna & Figaro's duetto 3:59:41\n38 Cerubino's aria 4:02:26\n\nDon Giovanni K 527\n39 Overture 4:05:20\n40 Aria of Don Giovanni 4:11:37\n41 Duet of Zerlina and Don Giovanni 4:12:58\n42 Aria of Zelina 4:16:38\n43 Aria of Leporello 4:20:54\n\nThe magic flute K 620\n44 Overture 4:26:47\n45 Aria of Papageno 4:34:20\n46 Aria of the Queen of the night 4:36:54 \n47 Aria of Sarastro 4:40:06\n48 Aria of Pamina 4:43:14\n49 Duet Papageno and Papagena 4:48:00 \n\nThe abduction from the Seraglio K 384\n50 Overture 4:50:35",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/ABNzpKv_2AI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/ABNzpKv_2AI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/ABNzpKv_2AI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Classical Tunes",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "★★ 5 Hours ★★ The Best of Wolfgang Amadeus Mozart ( part 1/2 )",
+     "description": "Serenade in G Major K 525\n  1 I Allegro 0:01 \n  2 II Romance 7:57\n  3 III Minuetto , allegretto  14:41\n  4 IV Rondeau Allegro 16:55\n\nSerenade in D Major K 250\n  5 I Allegro maestoso, allegro molto 22:25\n  6 II Andante 31:45\n  7 III Minuetto 43:46\n  8 IV Rondeau allegro 47:12\n  9 V Minuetto galante 55:07\n10 VI Adagio 1:01:53\n\nSymphony No.35 K 385\n11 I Allegro con spirito 1:08:28\n12 II Andante 1:16:22\n13 III Minuetto 1:26:16\n14 IV Finale Presto 1:29:24\n\nSymphony No.39 K 543\n15 I Adagio allegro 1:33:30\n16 II Andante con moto 1:42:17\n17 III Minuetto allegretto 1:51:34\n18 IV Finale Allegro 1:55:36\n\nSymphony No.40 in G minor K 550\n19 I Molto allegro 2:01:30\n20 II Andante 2:09:36\n21 III Minuetto allegretto 2:19:01\n22 IV Finale allegro assai  2:23:15\n\nSymphony No.41 in C Major K 551\n23 I Allegro vivace 2:30:15\n24 II Andante cantabile 2:42:02\n25 III Minuetto allegretto 2:50:06\n26 IV Finale molto allegro 2:54:40\n\nSerenade No. 6 in D Major K 239\n27 I Marcia maestoso 3:01:37\n28 II Minuetto 3:07:06\n29 III Rondeau 3:10:58\n\nDivertimento in B flat Major K 287\n30 I Allegro 3:15:29\n31 II Andante grazioso 3:24:37\n32 III Minuetto 3:32:47\n33 IV Adagio 3:36:10\n34 V Minuetto 3:44:39\n35 VI Andante allegro molto 3:48:20\n\nThe marriage of Figaro K 492\n36 Overture 3:55:37\n37 Susanna & Figaro's duetto 3:59:41\n38 Cerubino's aria 4:02:26\n\nDon Giovanni K 527\n39 Overture 4:05:20\n40 Aria of Don Giovanni 4:11:37\n41 Duet of Zerlina and Don Giovanni 4:12:58\n42 Aria of Zelina 4:16:38\n43 Aria of Leporello 4:20:54\n\nThe magic flute K 620\n44 Overture 4:26:47\n45 Aria of Papageno 4:34:20\n46 Aria of the Queen of the night 4:36:54 \n47 Aria of Sarastro 4:40:06\n48 Aria of Pamina 4:43:14\n49 Duet Papageno and Papagena 4:48:00 \n\nThe abduction from the Seraglio K 384\n50 Overture 4:50:35"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4H56M25S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": true,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/RLuJLwnPlwykHfA3qyY8u3H3L-Q\"",
+   "id": "df-eLzao63I",
+   "snippet": {
+    "publishedAt": "2008-01-14T23:53:31.000Z",
+    "channelId": "UCE--3AdaYrpOFwVkUU00KfA",
+    "title": "Wolfgang Amadeus Mozart - Piano Concerto No. 21 - Andante",
+    "description": "Piano Concerto No. 21 - Andante \"Elvira Madigan\"",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/df-eLzao63I/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/df-eLzao63I/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/df-eLzao63I/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "poloshia",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Piano Concerto No. 21 - Andante",
+     "description": "Piano Concerto No. 21 - Andante \"Elvira Madigan\""
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M52S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/fKuDF41XMYWO4KkDN2WdJkcIcmE\"",
+   "id": "7lC1lRz5Z_s",
+   "snippet": {
+    "publishedAt": "2008-05-15T04:06:58.000Z",
+    "channelId": "UCTpZwvr9WC60bpO3-ncagYQ",
+    "title": "Wolfgang Amadeus Mozart - Symphony No. 25 in G minor",
+    "description": "Composed  by Wolfgang Amadeus Mozart \r\nPerformed by Academy of St. Martin-in-the-Fields \r\nConducted by Neville Marriner",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/7lC1lRz5Z_s/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/7lC1lRz5Z_s/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/7lC1lRz5Z_s/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "nocturnefm",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Symphony No. 25 in G minor",
+     "description": "Composed  by Wolfgang Amadeus Mozart \r\nPerformed by Academy of St. Martin-in-the-Fields \r\nConducted by Neville Marriner"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT7M50S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/KvdAUpz3cQTq9HoTSxH9lKaKgQY\"",
+   "id": "qQlHyohGjxs",
+   "snippet": {
+    "publishedAt": "2014-03-01T12:13:20.000Z",
+    "channelId": "UCvQI6QKWZ0wQuRx3JcIWfmQ",
+    "title": "Wolfgang Amadeus Mozart /// Piano concertos ( ★★ 2 Hours ★★ Non Stop Classical Music )",
+    "description": "Piano Concerto No.9 K 271\n 1 I Allegro 0:02\n 2 II Andantino 10:04\n 3 III Rondo 21:12\n\nPiano Concerto No.17 K 453\n  4 I Allegro 32:48 \n  5 II Andante 44:42\n  6 III Allegretto 54:49\n\nPiano Concerto No.20 K 466\n  7 I Allegro 1:02:50\n  8 II Romance 1:16:40\n  9 III Rondo 1:27:28\n\nPiano Concerto No. 21 K 467\n10 I Allegro maestoso 1:34:51\n11 II Andante 1:49:20\n12 III Allegro vivace 1:56:58\n\nWolfgang Amadeus Mozart wrote 27 concertos for piano and orchestra. These works, many of which Mozart composed for himself to play in the Vienna concert series of 1784--86, held a special place for him; indeed, Mozart's father apparently interrupted him composing a \"harpsichord concerto\" at age 4. For a long time relatively neglected, they have come to be seen as containing some of his greatest achievements. Tovey championed them in his Essay on the Classical Concerto in 1903, and later came the famous books by Cuthbert Girdlestone and Arthur Hutchings in 1940 (originally published in French) and 1948, respectively. Hans Tischler published a structural and thematic analysis of the concertos in 1966, followed by the works by Charles Rosen, and Leeson and Robert Levin.[1] In recent years, two of the concertos have also been covered in the Cambridge Music Handbook series. The first complete edition was not until that of Richault from around 1850; and since then the scores and autographs have become widely available through the publications of, among others, Norton, Eulenberg and Dover.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/qQlHyohGjxs/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/qQlHyohGjxs/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/qQlHyohGjxs/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Classical Tunes",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart /// Piano concertos ( ★★ 2 Hours ★★ Non Stop Classical Music )",
+     "description": "Piano Concerto No.9 K 271\n 1 I Allegro 0:02\n 2 II Andantino 10:04\n 3 III Rondo 21:12\n\nPiano Concerto No.17 K 453\n  4 I Allegro 32:48 \n  5 II Andante 44:42\n  6 III Allegretto 54:49\n\nPiano Concerto No.20 K 466\n  7 I Allegro 1:02:50\n  8 II Romance 1:16:40\n  9 III Rondo 1:27:28\n\nPiano Concerto No. 21 K 467\n10 I Allegro maestoso 1:34:51\n11 II Andante 1:49:20\n12 III Allegro vivace 1:56:58\n\nWolfgang Amadeus Mozart wrote 27 concertos for piano and orchestra. These works, many of which Mozart composed for himself to play in the Vienna concert series of 1784--86, held a special place for him; indeed, Mozart's father apparently interrupted him composing a \"harpsichord concerto\" at age 4. For a long time relatively neglected, they have come to be seen as containing some of his greatest achievements. Tovey championed them in his Essay on the Classical Concerto in 1903, and later came the famous books by Cuthbert Girdlestone and Arthur Hutchings in 1940 (originally published in French) and 1948, respectively. Hans Tischler published a structural and thematic analysis of the concertos in 1966, followed by the works by Charles Rosen, and Leeson and Robert Levin.[1] In recent years, two of the concertos have also been covered in the Cambridge Music Handbook series. The first complete edition was not until that of Richault from around 1850; and since then the scores and autographs have become widely available through the publications of, among others, Norton, Eulenberg and Dover."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT2H3M14S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": true,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/U1dGDpA4vDr8dXCJttJMkFhbC84\"",
+   "id": "d9cnzPOXAto",
+   "snippet": {
+    "publishedAt": "2013-03-28T16:30:05.000Z",
+    "channelId": "UCXt1rezieL5ZFE2aWhN127Q",
+    "title": "Wolfgang Amadeus Mozart para Estudiar (Excelente)",
+    "description": "Relajantes sonidos de playa y truenos acompañados de excelentes melodías procedentes de una mente maravillosa como la de Wolfgang Amadeus Mozart. - Beach and relaxing sounds of thunder accompanied by fine tunes from a beautiful mind like that of Wolfgang Amadeus Mozart.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/d9cnzPOXAto/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/d9cnzPOXAto/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/d9cnzPOXAto/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/d9cnzPOXAto/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Miusica Clasic Ca",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart para Estudiar (Excelente)",
+     "description": "Relajantes sonidos de playa y truenos acompañados de excelentes melodías procedentes de una mente maravillosa como la de Wolfgang Amadeus Mozart. - Beach and relaxing sounds of thunder accompanied by fine tunes from a beautiful mind like that of Wolfgang Amadeus Mozart."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H5M",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/F-VG5mYS82-42IgJi62jR0Vx3XQ\"",
+   "id": "sPlhKP0nZII",
+   "snippet": {
+    "publishedAt": "2012-02-12T10:30:02.000Z",
+    "channelId": "UCTSoiTyzl4yNuz5bgeBjUdw",
+    "title": "Mozart - Requiem in D minor (Complete/Full) [HD]",
+    "description": "Wolfgang Amadeus Mozart:  Requiem in D minor (K.626) -- Live Version.\r\n\r\nI. Introitus: Requiem aeternam (choir with soprano solo)\r\nII. Kyrie (choir)\r\nIII. Sequentia:\r\n- Dies irae (choir)\r\n- Tuba mirum (solo quartet)\r\n- Rex tremendae majestatis (choir) \r\n- Recordare, Jesu pie (solo quartet)\r\n- Confutatis maledictis (choir)\r\n- Lacrimosa dies illa (choir) \r\nIV. Offertorium:\r\n- Domine Jesu Christe (choir with solo quartet) \r\n- Versus: Hostias et preces (choir) \r\nV. Sanctus & Benedictus:\r\n- Sanctus (choir)\r\n- Benedictus (solo quartet and choir)\r\nVI. Agnus Dei (choir) \r\nVII. Communio:\r\n- Lux aeterna (soprano solo and choir)",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/sPlhKP0nZII/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/sPlhKP0nZII/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/sPlhKP0nZII/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/sPlhKP0nZII/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/sPlhKP0nZII/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "ControversialTruth",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mozart - Requiem in D minor (Complete/Full) [HD]",
+     "description": "Wolfgang Amadeus Mozart:  Requiem in D minor (K.626) -- Live Version.\r\n\r\nI. Introitus: Requiem aeternam (choir with soprano solo)\r\nII. Kyrie (choir)\r\nIII. Sequentia:\r\n- Dies irae (choir)\r\n- Tuba mirum (solo quartet)\r\n- Rex tremendae majestatis (choir) \r\n- Recordare, Jesu pie (solo quartet)\r\n- Confutatis maledictis (choir)\r\n- Lacrimosa dies illa (choir) \r\nIV. Offertorium:\r\n- Domine Jesu Christe (choir with solo quartet) \r\n- Versus: Hostias et preces (choir) \r\nV. Sanctus & Benedictus:\r\n- Sanctus (choir)\r\n- Benedictus (solo quartet and choir)\r\nVI. Agnus Dei (choir) \r\nVII. Communio:\r\n- Lux aeterna (soprano solo and choir)"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT55M15S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "GB"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/XKVgUskNXS2rni8qv71m471ZJWY\"",
+   "id": "sHZu9kWuB-g",
+   "snippet": {
+    "publishedAt": "2011-03-04T00:49:08.000Z",
+    "channelId": "UCi4yKCZEUykO-nz2GInuh7A",
+    "title": "Wolfgang Amadeus Mozart BBC Documentary Part 1/18",
+    "description": "Wolfgang Amadeus Mozart (German: [ˈvɔlfɡaŋ amaˈdeus ˈmoːtsaʁt], English see fn.),[1] baptismal name Johannes Chrysostomus Wolfgangus Theophilus Mozart[2] (27 January 1756 -- 5 December 1791), was a prolific and influential composer of the Classical era. He composed over 600 works, many acknowledged as pinnacles of symphonic, concertante, chamber, piano, operatic, and choral music. He is among the most enduringly popular of classical composers.\nMozart showed prodigious ability from his earliest childhood in Salzburg. Already competent on keyboard and violin, he composed from the age of five and performed before European royalty. At 17, he was engaged as a court musician in Salzburg, but grew restless and travelled in search of a better position, always composing abundantly. While visiting Vienna in 1781, he was dismissed from his Salzburg position. He chose to stay in the capital, where he achieved fame but little financial security. During his final years in Vienna, he composed many of his best-known symphonies, concertos, and operas, and portions of the Requiem, which was largely unfinished at the time of Mozart's death. The circumstances of his early death have been much mythologized. He was survived by his wife Constanze and two sons.\nMozart learned voraciously from others, and developed a brilliance and maturity of style that encompassed the light and graceful along with the dark and passionate. His influence on subsequent Western art music is profound. Beethoven wrote his own early compositions in the shadow of Mozart, of whom Joseph Haydn wrote that \"posterity will not see such a talent again in 100 years.\"[3]",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/sHZu9kWuB-g/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/sHZu9kWuB-g/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/sHZu9kWuB-g/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Shahzad Raja",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart BBC Documentary Part 1/18",
+     "description": "Wolfgang Amadeus Mozart (German: [ˈvɔlfɡaŋ amaˈdeus ˈmoːtsaʁt], English see fn.),[1] baptismal name Johannes Chrysostomus Wolfgangus Theophilus Mozart[2] (27 January 1756 -- 5 December 1791), was a prolific and influential composer of the Classical era. He composed over 600 works, many acknowledged as pinnacles of symphonic, concertante, chamber, piano, operatic, and choral music. He is among the most enduringly popular of classical composers.\nMozart showed prodigious ability from his earliest childhood in Salzburg. Already competent on keyboard and violin, he composed from the age of five and performed before European royalty. At 17, he was engaged as a court musician in Salzburg, but grew restless and travelled in search of a better position, always composing abundantly. While visiting Vienna in 1781, he was dismissed from his Salzburg position. He chose to stay in the capital, where he achieved fame but little financial security. During his final years in Vienna, he composed many of his best-known symphonies, concertos, and operas, and portions of the Requiem, which was largely unfinished at the time of Mozart's death. The circumstances of his early death have been much mythologized. He was survived by his wife Constanze and two sons.\nMozart learned voraciously from others, and developed a brilliance and maturity of style that encompassed the light and graceful along with the dark and passionate. His influence on subsequent Western art music is profound. Beethoven wrote his own early compositions in the shadow of Mozart, of whom Joseph Haydn wrote that \"posterity will not see such a talent again in 100 years.\"[3]"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT9M56S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/OojYJHhoqMSNl3qTBUuGeiopwsg\"",
+   "id": "hcpM0yN7p0c",
+   "snippet": {
+    "publishedAt": "2007-09-13T14:15:09.000Z",
+    "channelId": "UCvnG-BcSYPf6f73hlRhKlPw",
+    "title": "Wolfgang Amadeus Mozart: Eine kleine Nachtmusik",
+    "description": "Wolfgang Amadeus Mozart: Eine kleine Nachtmusik",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/hcpM0yN7p0c/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/hcpM0yN7p0c/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/hcpM0yN7p0c/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "masterofacdcsuckaS",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart: Eine kleine Nachtmusik",
+     "description": "Wolfgang Amadeus Mozart: Eine kleine Nachtmusik"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M45S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": false
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/raHLSPtAMQudT5OS8dmC541OkTw\"",
+   "id": "39P0-iuWk4k",
+   "snippet": {
+    "publishedAt": "2013-03-22T14:54:37.000Z",
+    "channelId": "UCSCaZ35tILTtFOMN6mgeuSg",
+    "title": "Wolfgang Amadeus Mozart, Serenade No. 13 in G major, K. 525, \"Eine kleine Nachtmusik\", I. Allegro",
+    "description": "Wolfgang Amadeus Mozart\nCapella Istropolitana, Wolfgang Sobotka, Capella Istropolitana\nSerenade No. 13 in G major, K. 525, \"Eine kleine Nachtmusik\"\nMozart: Kleine Nachtmusik (Eine) / Serenata Notturna / Divertimento No. 10\n8.550026\nhttp://www.classicsonline.com/catalogue/product.aspx?pid=1111156\nhttp://www.naxoslicensing.com/",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/39P0-iuWk4k/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/39P0-iuWk4k/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/39P0-iuWk4k/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/39P0-iuWk4k/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/39P0-iuWk4k/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "naxosorchestral",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart, Serenade No. 13 in G major, K. 525, \"Eine kleine Nachtmusik\", I. Allegro",
+     "description": "Wolfgang Amadeus Mozart\nCapella Istropolitana, Wolfgang Sobotka, Capella Istropolitana\nSerenade No. 13 in G major, K. 525, \"Eine kleine Nachtmusik\"\nMozart: Kleine Nachtmusik (Eine) / Serenata Notturna / Divertimento No. 10\n8.550026\nhttp://www.classicsonline.com/catalogue/product.aspx?pid=1111156\nhttp://www.naxoslicensing.com/"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M52S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/Z32yeRIZZnsrgaUdbw4ENJOSxZI\"",
+   "id": "e3cp9863zuo",
+   "snippet": {
+    "publishedAt": "2014-12-11T15:36:07.000Z",
+    "channelId": "UCyOfqgtsQaM3S-VZnsYnHjQ",
+    "title": "Best Classical Music for Babies : Wolfgang Amadeus Mozart ( The Mozart Effect )",
+    "description": "FOLLOW US ON SPOTIFY http://open.spotify.com/user/halidon\nPLAYLIST The Best of Classical Music http://open.spotify.com/user/halidon/playlist/5E4CbUOCiUXw2Fh8Foq51V\n▶ BUY - HALIDONMUSIC: http://bit.ly/1CNWysc ● SPECIAL OFFER NOW € 2,99 !!! ●\nvisit our page on facebook \n▶ http://on.fb.me/1bzVvBp\n\nWolfgang Amadeus Mozart\n\nPiano Sonata No. 15 in F Major, K. 533: I. Allegro ( 00:00)\nPiano Sonata No. 13 in B-Flat Major, K. 333: III. Allegretto grazioso ( 03:03 )\nPiano Sonata No. 11 in A Major, K. 331 \"Alla turca\": III. Rondo alla turca. Allegretto ( 08:50 )\nEine kleine Nachtmusik in G Major, K. 525: II. Romanza. Andante ( 12:24 )\nSonata No. 1 for Harpsichord, Flute and Cello in B-Flat Major, K. 10: II. Andante ( 19:03 )\nDivertissement No. 17, in D Major, K 334 ( 22:48 )\nPiano Concerto No. 19 in F Major, K. 459: III. Allegro assai ( 26:03 )\nFlute Concerto No. 1 in G Major, K. 313: III. Rondò - Minuetto ( 33:32 )\nFlute and Harp Concerto in C Major, K. 299: II. Andantino ( 41:18 )\nClarinet and Orchestra Concerto in A Major ( 49:29 )\nBastien und Bastienne, K. 50: Ouverture ( 56:30 )\nViolin and Orchestra Concerto No. 5 in A Major, K 219: II. Adagio ( 58:28 )\nHorn and Orchestra Concerto No. 3 in E-Flat Major, K. 447 \"II\": Larghetto. ( 01:03:20 )",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/e3cp9863zuo/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/e3cp9863zuo/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/e3cp9863zuo/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "HALIDONMUSIC",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Best Classical Music for Babies : Wolfgang Amadeus Mozart ( The Mozart Effect )",
+     "description": "FOLLOW US ON SPOTIFY http://open.spotify.com/user/halidon\nPLAYLIST The Best of Classical Music http://open.spotify.com/user/halidon/playlist/5E4CbUOCiUXw2Fh8Foq51V\n▶ BUY - HALIDONMUSIC: http://bit.ly/1CNWysc ● SPECIAL OFFER NOW € 2,99 !!! ●\nvisit our page on facebook \n▶ http://on.fb.me/1bzVvBp\n\nWolfgang Amadeus Mozart\n\nPiano Sonata No. 15 in F Major, K. 533: I. Allegro ( 00:00)\nPiano Sonata No. 13 in B-Flat Major, K. 333: III. Allegretto grazioso ( 03:03 )\nPiano Sonata No. 11 in A Major, K. 331 \"Alla turca\": III. Rondo alla turca. Allegretto ( 08:50 )\nEine kleine Nachtmusik in G Major, K. 525: II. Romanza. Andante ( 12:24 )\nSonata No. 1 for Harpsichord, Flute and Cello in B-Flat Major, K. 10: II. Andante ( 19:03 )\nDivertissement No. 17, in D Major, K 334 ( 22:48 )\nPiano Concerto No. 19 in F Major, K. 459: III. Allegro assai ( 26:03 )\nFlute Concerto No. 1 in G Major, K. 313: III. Rondò - Minuetto ( 33:32 )\nFlute and Harp Concerto in C Major, K. 299: II. Andantino ( 41:18 )\nClarinet and Orchestra Concerto in A Major ( 49:29 )\nBastien und Bastienne, K. 50: Ouverture ( 56:30 )\nViolin and Orchestra Concerto No. 5 in A Major, K 219: II. Adagio ( 58:28 )\nHorn and Orchestra Concerto No. 3 in E-Flat Major, K. 447 \"II\": Larghetto. ( 01:03:20 )"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H7M44S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": true,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": false
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/rsljI9so5pOKl8DVclEvHCz5Dc0\"",
+   "id": "FVTXlRxVdEY",
+   "snippet": {
+    "publishedAt": "2009-02-09T19:24:13.000Z",
+    "channelId": "UC73agnekAaJ9eBjvNeheTug",
+    "title": "A Little Night Music - Wolfgang Amadeus Mozart",
+    "description": "Serenade in G major, K. 525\n\nEine kleine Nachtmusik by Wolfgang Amadeus Mozart. \nMozart wrote it in 1787 in Vienna while working on Don Giovanni.\nIt is not known why or for whom he wrote this piece.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/FVTXlRxVdEY/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/FVTXlRxVdEY/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/FVTXlRxVdEY/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "BeautifulFight",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "A Little Night Music - Wolfgang Amadeus Mozart",
+     "description": "Serenade in G major, K. 525\n\nEine kleine Nachtmusik by Wolfgang Amadeus Mozart. \nMozart wrote it in 1787 in Vienna while working on Don Giovanni.\nIt is not known why or for whom he wrote this piece."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M51S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/1I_BYFcUKxBc7uCkLe5v5IVvW1c\"",
+   "id": "Y13Dvnbc4mU",
+   "snippet": {
+    "publishedAt": "2014-03-01T21:45:15.000Z",
+    "channelId": "UCvQI6QKWZ0wQuRx3JcIWfmQ",
+    "title": "★★ 4 Hours ★★ The Best of Wolfgang Amadeus Mozart ( part 2/2 )",
+    "description": "Piano Concerto No.9 K 271\n 1 I Allegro 0:02\n 2 II Andandito 10:04\n 3 III Rondo 21:12\n\nPiano Concerto No.17 K 453\n  4 I Allegro 32:48 \n  5 II Andante 44:42\n  6 III Allegretto 54:49\n\nPiano Concerto No.20 K 466\n  7 I Allegro 1:02:50\n  8 II Romance 1:16:40\n  9 III Rondo 1:27:28\n\nPiano Concerto No. 21 K 467\n10 I Allegro maestoso 1:34:51\n11 II Andante 1:49:20\n12 III Allegro vivace 1:56:58\n\nViolin Concerto No.5 K 218\n13 I Allegro 2:03:11\n14 II Andante Cantabile 2:12:04\n15 III Rondeau andante grazioso allegro ma non troppo 2:19:30\n\nViolin Concerto No.5 K 219\n16 I Allegro aperto 2:26:59\n17 II Adagio 2:36:18\n18 III Rondeau 2:46:37\n\nFlute concerto No.1 K 313\n19 I Allegro 2:55:28\n20 II Adagio non troppo 3:04:10\n21 III Rondo tempo di minuetto 3:12:40\n\nFlute concerto No.2 K 314\n22 I Allagro aperto 3:19:53\n23 II Andante ma non troppo 3:27:46\n24 III Allegro 3:33:41\n\n25 Andante for Flute and orchestra K 315 3:39:03\n26 Rondo for violin and orchestra K 373 3:45:24\n\n27 Clarinet quintet K 581 Larghetto 3:52:09\n\nQuartet for flute and strings K 285 \n28 I Allegro 3:57:57\n29 II Adagio 4:04:50\n30 III Rondeau 4:08:08\n\n31 Rondo K 511 4:12:35\n32 Piano Sonata K 331 Finale 4:23:15",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Y13Dvnbc4mU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Y13Dvnbc4mU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Y13Dvnbc4mU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Classical Tunes",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "★★ 4 Hours ★★ The Best of Wolfgang Amadeus Mozart ( part 2/2 )",
+     "description": "Piano Concerto No.9 K 271\n 1 I Allegro 0:02\n 2 II Andandito 10:04\n 3 III Rondo 21:12\n\nPiano Concerto No.17 K 453\n  4 I Allegro 32:48 \n  5 II Andante 44:42\n  6 III Allegretto 54:49\n\nPiano Concerto No.20 K 466\n  7 I Allegro 1:02:50\n  8 II Romance 1:16:40\n  9 III Rondo 1:27:28\n\nPiano Concerto No. 21 K 467\n10 I Allegro maestoso 1:34:51\n11 II Andante 1:49:20\n12 III Allegro vivace 1:56:58\n\nViolin Concerto No.5 K 218\n13 I Allegro 2:03:11\n14 II Andante Cantabile 2:12:04\n15 III Rondeau andante grazioso allegro ma non troppo 2:19:30\n\nViolin Concerto No.5 K 219\n16 I Allegro aperto 2:26:59\n17 II Adagio 2:36:18\n18 III Rondeau 2:46:37\n\nFlute concerto No.1 K 313\n19 I Allegro 2:55:28\n20 II Adagio non troppo 3:04:10\n21 III Rondo tempo di minuetto 3:12:40\n\nFlute concerto No.2 K 314\n22 I Allagro aperto 3:19:53\n23 II Andante ma non troppo 3:27:46\n24 III Allegro 3:33:41\n\n25 Andante for Flute and orchestra K 315 3:39:03\n26 Rondo for violin and orchestra K 373 3:45:24\n\n27 Clarinet quintet K 581 Larghetto 3:52:09\n\nQuartet for flute and strings K 285 \n28 I Allegro 3:57:57\n29 II Adagio 4:04:50\n30 III Rondeau 4:08:08\n\n31 Rondo K 511 4:12:35\n32 Piano Sonata K 331 Finale 4:23:15"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4H26M39S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": true,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/srPT0qrHR2MWQcUqmhMYSw1jrls\"",
+   "id": "7iujEGfBbmA",
+   "snippet": {
+    "publishedAt": "2013-02-09T23:54:02.000Z",
+    "channelId": "UC5gV5BN_323lhBXrwgpcKkA",
+    "title": "Vladimir Horowitz. Wolfgang Amadeus Mozart - Piano Concerto №23",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/7iujEGfBbmA/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/7iujEGfBbmA/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/7iujEGfBbmA/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/7iujEGfBbmA/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Didrol Camfield",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Vladimir Horowitz. Wolfgang Amadeus Mozart - Piano Concerto №23",
+     "description": ""
+    }
+   },
+   "contentDetails": {
+    "duration": "PT50M15S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/IajiGjcTD18NNJz_hLb4C_I3Hqk\"",
+   "id": "vrXpzOFknN0",
+   "snippet": {
+    "publishedAt": "2011-12-06T10:20:36.000Z",
+    "channelId": "UCRTF4urMJbe8DN_nGtaNPFg",
+    "title": "Mozart Documentary - The Genius of Mozart 1/3 \"Miracle of Nature\"",
+    "description": "Great BBC documentary of the musical genius Wolfgang Amadeus Mozart!\n\nThe story begins with the composer's father Leopold with whom Mozart conducted a passionate and tortured correspondence. It is Leopold who knows Mozart's secrets. And there is another voice: that of the music itself. Music is the key to unlocking the emotions of Mozart, starting in this film with the great piano works. Without this key, how can we ever understand the emotions that gave birth to some of the most beautiful sounds the world has ever heard? The first great phase of Mozart's brief life was that of the travelling child prodigy - gifted as a performer and writer of music - who grew into the genius who, working within the restrictions of his time, began to rewrite the musical rules.But there was another facet to Mozart - the adult thinker aware of the bigger picture, passionately attached to the progressive values of the Enlightenment - impressively well-read, a speaker of most European languages (even a little English), an Austrian Catholic, a Freemason and above all a composer at the height of his formidable powers, determined to succeed in the most difficult and lucrative area of all - Opera. Towards the end of his life, Mozart mastered the language of instrumental and orchestral writing - and how both love and loss provoked in him an extraordinary burst of creativity. This was essentially crystallised in three ambitious works that changed the future course of music: his last, great trilogy of symphonies - numbers 39, 40 and 41 - which he wrote in six short weeks. Written by BBC.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/vrXpzOFknN0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/vrXpzOFknN0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/vrXpzOFknN0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/vrXpzOFknN0/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "BoschPianoMusic",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mozart Documentary - The Genius of Mozart 1/3 \"Miracle of Nature\"",
+     "description": "Great BBC documentary of the musical genius Wolfgang Amadeus Mozart!\n\nThe story begins with the composer's father Leopold with whom Mozart conducted a passionate and tortured correspondence. It is Leopold who knows Mozart's secrets. And there is another voice: that of the music itself. Music is the key to unlocking the emotions of Mozart, starting in this film with the great piano works. Without this key, how can we ever understand the emotions that gave birth to some of the most beautiful sounds the world has ever heard? The first great phase of Mozart's brief life was that of the travelling child prodigy - gifted as a performer and writer of music - who grew into the genius who, working within the restrictions of his time, began to rewrite the musical rules.But there was another facet to Mozart - the adult thinker aware of the bigger picture, passionately attached to the progressive values of the Enlightenment - impressively well-read, a speaker of most European languages (even a little English), an Austrian Catholic, a Freemason and above all a composer at the height of his formidable powers, determined to succeed in the most difficult and lucrative area of all - Opera. Towards the end of his life, Mozart mastered the language of instrumental and orchestral writing - and how both love and loss provoked in him an extraordinary burst of creativity. This was essentially crystallised in three ambitious works that changed the future course of music: his last, great trilogy of symphonies - numbers 39, 40 and 41 - which he wrote in six short weeks. Written by BBC."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT58M56S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/xSlOA3L_Gx3XvPbGF2dJ4u8_j1s\"",
+   "id": "PVCcmpIkrLc",
+   "snippet": {
+    "publishedAt": "2013-05-04T06:34:18.000Z",
+    "channelId": "UCDKZrMg73FoDCX1k4a9JlmQ",
+    "title": "Wolfgang Amadeus Mozart: Sonata for Two Pianos in D Major, KV 448",
+    "description": "Vlatseslav Novikov piano, Anastasia Injushina piano (www.anastasiainjushina.com) \n\nWolfgang Amadeus Mozart (1756--1791) designed his early sonatas for two pianos, four hands for him and his big sister Nannerl to play together and to show off their dazzling Wunderkind virtuosity. The two are captured in a well-known painting showing brother and sister seated at the same keyboard, performing difficult crossed-hand passages under the watchful eye of father Leopold. The challenge is slightly different with two pianos, and the Sonata in D Major for Two Pianos, KV 448, performed with Josepha Auernhammer in November 1781 represents the crowning glory of Mozart's compositions for two pianos in its panache and its irresistible drive.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/PVCcmpIkrLc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/PVCcmpIkrLc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/PVCcmpIkrLc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/PVCcmpIkrLc/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/PVCcmpIkrLc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "SpringLightMusic",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart: Sonata for Two Pianos in D Major, KV 448",
+     "description": "Vlatseslav Novikov piano, Anastasia Injushina piano (www.anastasiainjushina.com) \n\nWolfgang Amadeus Mozart (1756--1791) designed his early sonatas for two pianos, four hands for him and his big sister Nannerl to play together and to show off their dazzling Wunderkind virtuosity. The two are captured in a well-known painting showing brother and sister seated at the same keyboard, performing difficult crossed-hand passages under the watchful eye of father Leopold. The challenge is slightly different with two pianos, and the Sonata in D Major for Two Pianos, KV 448, performed with Josepha Auernhammer in November 1781 represents the crowning glory of Mozart's compositions for two pianos in its panache and its irresistible drive."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT24M4S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/JcJNsFTUSlcuJ7VUn2MdCfnlauc\"",
+   "id": "8OZCyp-LcGw",
+   "snippet": {
+    "publishedAt": "2008-06-08T17:07:51.000Z",
+    "channelId": "UC24opCcmmj3aoYZz9J43Vmw",
+    "title": "Mozart-The Marriage of Figaro",
+    "description": "One of Wolfgang Amadeus Mozart's most well-known pieces, \"The Marriage of Figaro,\" is performed here by an unknown symphonic orchestra. The picture is one of Mozart himself. Enjoy and thanks for watching.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/8OZCyp-LcGw/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/8OZCyp-LcGw/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/8OZCyp-LcGw/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "wmd10",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mozart-The Marriage of Figaro",
+     "description": "One of Wolfgang Amadeus Mozart's most well-known pieces, \"The Marriage of Figaro,\" is performed here by an unknown symphonic orchestra. The picture is one of Mozart himself. Enjoy and thanks for watching."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M51S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/CeiaWUgO0qa7OPwRcscFSDAdfBw\"",
+   "id": "GvzgSaEF5Xk",
+   "snippet": {
+    "publishedAt": "2014-04-05T14:56:43.000Z",
+    "channelId": "UCo_5umUea-INIXpdj-cfO4g",
+    "title": "Wolfgang Amadeus Mozart A little night musicUne petite musique de nuit",
+    "description": "Wolfgang Amadeus Mozart,A little Night Music__Une petite musique de nuit\nsee more works here:http://classicalnovels.blogspot.com",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/GvzgSaEF5Xk/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/GvzgSaEF5Xk/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/GvzgSaEF5Xk/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/GvzgSaEF5Xk/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Khaled hamza",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart A little night musicUne petite musique de nuit",
+     "description": "Wolfgang Amadeus Mozart,A little Night Music__Une petite musique de nuit\nsee more works here:http://classicalnovels.blogspot.com"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M50S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/gZUMoJmtMvpk_zrkM5xjPI9gWMc\"",
+   "id": "XZRIgUiOJ4o",
+   "snippet": {
+    "publishedAt": "2012-01-23T17:22:32.000Z",
+    "channelId": "UCMRyQBQOTB_hq2AUL8FY5xQ",
+    "title": "Wolfgang Amadeus Mozart - Requiem in D minor K.626",
+    "description": "Joannes Chrysostomus Wolfgangus Theophilus Mozart.\r\n\r\nWolfgang Amadeus Mozart: Requiem, K.626. \r\n\r\nHerbert von Karajan , Berlin Philharmonic Orchestra. \r\n\r\nAgnes Baltsa, alt/contralto.\r\nAnna Tomowa-Sintow, soprano. \r\nWerner Krenn, tenor.\r\nJosé van Dam, bass. \r\nWiener Singverein.\r\nRudolf Scholz, organ.\r\n\r\nBetween 1961 and 1986, Herbert von Karajan made three recordings of the Mozart Requiem for Deutsche Grammophon, with little change in his conception of the piece over the years. This recording, from 1975, is, on balance, the best of them. The approach is Romantic, broad, and sustained, marked by a thoroughly homogenized blend of chorus and orchestra, a remarkable richness of tone, striking power, and an almost marmoreal polish. Karajan viewed the Requiem as idealized church music rather than a confessional statement awash in operatic expressiveness. In this account, the orchestra is paramount, followed in importance by the chorus, then the soloists. Not surprisingly, the singing of the solo quartet sounds somewhat reined-in, especially considering these singers' pedigrees. By contrast, the Vienna Singverein, always Karajan's favorite chorus, sings with a huge dynamic range and great intensity, though with an emotional detachment nonetheless. Perfection, if not passion or poignancy, is the watchword. The Berlin orchestra plays majestically, and the sound is pleasingly vivid. \r\n \r\n\r\nTrack listing\r\n \r\n\r\n1. I. INTROITUS Requiem\r\n \r\n2. II. KYRIE\r\n \r\nIII. SEQUENZ\r\n 3. No. 1 Dies Irae\r\n 4. No. 2 Tuba Mirum\r\n 5. No. 3 Rex Tremendae\r\n 6. No. 4 Recordare\r\n 7. No. 5 Confutatis\r\n 8. No. 6 Lacrimosa\r\n \r\nIV. OFFERTORIUM\r\n 9. No. 1 Domine Jesu\r\n 10. No. 2 Hostias\r\n \r\n11. V. SANCTUS\r\n \r\n12. VI. BENEDICTUS\r\n \r\n13. VII. AGNUS DEI\r\n \r\n14. VIII. COMMUNIO Lux Aeterna",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/XZRIgUiOJ4o/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/XZRIgUiOJ4o/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/XZRIgUiOJ4o/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/XZRIgUiOJ4o/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Classical Music goturhjem2",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Requiem in D minor K.626",
+     "description": "Joannes Chrysostomus Wolfgangus Theophilus Mozart.\r\n\r\nWolfgang Amadeus Mozart: Requiem, K.626. \r\n\r\nHerbert von Karajan , Berlin Philharmonic Orchestra. \r\n\r\nAgnes Baltsa, alt/contralto.\r\nAnna Tomowa-Sintow, soprano. \r\nWerner Krenn, tenor.\r\nJosé van Dam, bass. \r\nWiener Singverein.\r\nRudolf Scholz, organ.\r\n\r\nBetween 1961 and 1986, Herbert von Karajan made three recordings of the Mozart Requiem for Deutsche Grammophon, with little change in his conception of the piece over the years. This recording, from 1975, is, on balance, the best of them. The approach is Romantic, broad, and sustained, marked by a thoroughly homogenized blend of chorus and orchestra, a remarkable richness of tone, striking power, and an almost marmoreal polish. Karajan viewed the Requiem as idealized church music rather than a confessional statement awash in operatic expressiveness. In this account, the orchestra is paramount, followed in importance by the chorus, then the soloists. Not surprisingly, the singing of the solo quartet sounds somewhat reined-in, especially considering these singers' pedigrees. By contrast, the Vienna Singverein, always Karajan's favorite chorus, sings with a huge dynamic range and great intensity, though with an emotional detachment nonetheless. Perfection, if not passion or poignancy, is the watchword. The Berlin orchestra plays majestically, and the sound is pleasingly vivid. \r\n \r\n\r\nTrack listing\r\n \r\n\r\n1. I. INTROITUS Requiem\r\n \r\n2. II. KYRIE\r\n \r\nIII. SEQUENZ\r\n 3. No. 1 Dies Irae\r\n 4. No. 2 Tuba Mirum\r\n 5. No. 3 Rex Tremendae\r\n 6. No. 4 Recordare\r\n 7. No. 5 Confutatis\r\n 8. No. 6 Lacrimosa\r\n \r\nIV. OFFERTORIUM\r\n 9. No. 1 Domine Jesu\r\n 10. No. 2 Hostias\r\n \r\n11. V. SANCTUS\r\n \r\n12. VI. BENEDICTUS\r\n \r\n13. VII. AGNUS DEI\r\n \r\n14. VIII. COMMUNIO Lux Aeterna"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT53M3S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/IeUYD-OxfD_GZ_e_QimGYj79FxM\"",
+   "id": "H0qdRXbVt7E",
+   "snippet": {
+    "publishedAt": "2013-03-12T19:54:28.000Z",
+    "channelId": "UCXt1rezieL5ZFE2aWhN127Q",
+    "title": "Wolfgang Amadeus Mozart - Música Clásica 2",
+    "description": "Wolfgang Amadeus Mozart - Música Clásica para disfrutar de los momentos de relax. Wolfgang Amadeus Mozart - Classical Music to enjoy relaxing moments.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/H0qdRXbVt7E/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/H0qdRXbVt7E/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/H0qdRXbVt7E/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/H0qdRXbVt7E/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Miusica Clasic Ca",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Música Clásica 2",
+     "description": "Wolfgang Amadeus Mozart - Música Clásica para disfrutar de los momentos de relax. Wolfgang Amadeus Mozart - Classical Music to enjoy relaxing moments."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H14M41S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/NnFHAw7ZLK_VAW0M6Ep8bot__1U\"",
+   "id": "h1-zn0QSAB4",
+   "snippet": {
+    "publishedAt": "2013-02-07T17:28:43.000Z",
+    "channelId": "UCAILl3AE11CoqiSVs6rBwBQ",
+    "title": "Wolfgang Amadeus Mozart: Duo for Violin and Viola in G major, K423, Mvt 1",
+    "description": "http://www.cbcmusic.ca\nIn this exclusive performance, Keith Hamm joins Benjamin Bowman on the violin to perform Wolfgang Amadeus Mozart's Duo for Violin and Viola in G major, K423, Mvt 1.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/h1-zn0QSAB4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/h1-zn0QSAB4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/h1-zn0QSAB4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/h1-zn0QSAB4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/h1-zn0QSAB4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "CBC Music",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart: Duo for Violin and Viola in G major, K423, Mvt 1",
+     "description": "http://www.cbcmusic.ca\nIn this exclusive performance, Keith Hamm joins Benjamin Bowman on the violin to perform Wolfgang Amadeus Mozart's Duo for Violin and Viola in G major, K423, Mvt 1."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT7M8S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/034Vs69o9vClhz-zWagHnsACG8o\"",
+   "id": "nr3pSsiX1js",
+   "snippet": {
+    "publishedAt": "2011-10-27T14:15:54.000Z",
+    "channelId": "UCyoYFNMkbkA3QQXjtonJACA",
+    "title": "Wolfgang Amadeus Mozart : Symphony No. 40 in G Minor, K 550 - Molto allegro",
+    "description": "Wolfgang Amadeus Mozart : Symphony No. 40 in G Minor, K 550 - Molto allegro\r\nPerformed by Uberto Pieroni & the Armonie Symphony Orchestra\r\nDownload on iTunes 'Mozart:The Best Of Classical Music' : click here http://itunes.apple.com/fr/album/id282504482?affId=1108120",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/nr3pSsiX1js/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/nr3pSsiX1js/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/nr3pSsiX1js/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/nr3pSsiX1js/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/nr3pSsiX1js/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "ClassicalExperience",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart : Symphony No. 40 in G Minor, K 550 - Molto allegro",
+     "description": "Wolfgang Amadeus Mozart : Symphony No. 40 in G Minor, K 550 - Molto allegro\r\nPerformed by Uberto Pieroni & the Armonie Symphony Orchestra\r\nDownload on iTunes 'Mozart:The Best Of Classical Music' : click here http://itunes.apple.com/fr/album/id282504482?affId=1108120"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT8M13S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/XY_PmnfEETR19fM18KVQ3cYhOls\"",
+   "id": "vkY_3-3Toyc",
+   "snippet": {
+    "publishedAt": "2010-03-02T13:21:29.000Z",
+    "channelId": "UC1Y33ewJvSTXmhiFsb_kZHQ",
+    "title": "Wolfgang Amadeus Mozart - Symphony 40 (best version)",
+    "description": "Mozart Symphony #40 K. 550 in G minor - first movement (Molto Allegro) . Sir Charles Mackerras Orchestra.\r\nFor me, the best tempo for this symphony. Just enjoy it!",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/vkY_3-3Toyc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/vkY_3-3Toyc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/vkY_3-3Toyc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "marnikchoto",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Symphony 40 (best version)",
+     "description": "Mozart Symphony #40 K. 550 in G minor - first movement (Molto Allegro) . Sir Charles Mackerras Orchestra.\r\nFor me, the best tempo for this symphony. Just enjoy it!"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT7M7S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/Frci4l7Frc8rmqqHVFwr-tVSMzQ\"",
+   "id": "f9AK9lIOzIo",
+   "snippet": {
+    "publishedAt": "2008-11-24T16:23:41.000Z",
+    "channelId": "UCVxxs9ecbF3fIR4PG2yxZ3A",
+    "title": "Wolfgang Amadeus Mozart: Türkischer Marsch",
+    "description": "Wolfgang Amadeus Mozart \r\nTürkischer Marsch\r\nEvelyne Dubourg",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/f9AK9lIOzIo/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/f9AK9lIOzIo/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/f9AK9lIOzIo/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "ploercke",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart: Türkischer Marsch",
+     "description": "Wolfgang Amadeus Mozart \r\nTürkischer Marsch\r\nEvelyne Dubourg"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT3M46S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/5-nyU9kxjOU8YNuT1rk0VyFUq3c\"",
+   "id": "8XKYixCyw5M",
+   "snippet": {
+    "publishedAt": "2013-01-27T12:54:13.000Z",
+    "channelId": "UCiSvPy3xS0EYNDuQyNRrnhg",
+    "title": "Wolfgang Amadeus Mozart (1756-1791) - Te Deum",
+    "description": "Autor: Wolfgang Amadeus Mozart (1756-1791)\nObra: Te Deum K. 141\nIntèrprets: Tolzer Knabenchor, European Baroque Soloists, Gerard Schmidt Gaden\n\nPintura: Rudolf von Alt (1819-1905) - Vista de Salzburg 1831-32\n\nMés info: http://www.reciclassicat.com/2013/01/mozart-wolfgang-amadeus-1756-1791-te.html",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/8XKYixCyw5M/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/8XKYixCyw5M/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/8XKYixCyw5M/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/8XKYixCyw5M/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/8XKYixCyw5M/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Pau NG",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart (1756-1791) - Te Deum",
+     "description": "Autor: Wolfgang Amadeus Mozart (1756-1791)\nObra: Te Deum K. 141\nIntèrprets: Tolzer Knabenchor, European Baroque Soloists, Gerard Schmidt Gaden\n\nPintura: Rudolf von Alt (1819-1905) - Vista de Salzburg 1831-32\n\nMés info: http://www.reciclassicat.com/2013/01/mozart-wolfgang-amadeus-1756-1791-te.html"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT6M51S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/m7_TDYZagOVlffIHtmcT5e58y50\"",
+   "id": "nnpLUTxdyOc",
+   "snippet": {
+    "publishedAt": "2012-11-26T20:16:01.000Z",
+    "channelId": "UCFh-b1AmH6l2Lbn91OGp4QQ",
+    "title": "Wolfgang Amadeus Mozart - Concertone for 2 Violins & Orchestra in C major, KV 190",
+    "description": "Anna & Guido Höbling, violin. Slovak Chamber Orchestra, Bohdan Warchal.\nWolfgang Amadeus Mozart - Concertone for 2 Violins & Orchestra in C major, KV 190\nI. Allegro spiritoso\nII. Andantino grazioso\nIII. Tempo di menuetto",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/nnpLUTxdyOc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/nnpLUTxdyOc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/nnpLUTxdyOc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/nnpLUTxdyOc/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/nnpLUTxdyOc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Wolfgang Amadé Mozart",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Concertone for 2 Violins & Orchestra in C major, KV 190",
+     "description": "Anna & Guido Höbling, violin. Slovak Chamber Orchestra, Bohdan Warchal.\nWolfgang Amadeus Mozart - Concertone for 2 Violins & Orchestra in C major, KV 190\nI. Allegro spiritoso\nII. Andantino grazioso\nIII. Tempo di menuetto"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT25M34S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/WSGNhubr5AYnBnuemzNnwDk_lco\"",
+   "id": "lr4Bj2Pjg6I",
+   "snippet": {
+    "publishedAt": "2013-11-13T01:03:22.000Z",
+    "channelId": "UC-vkIGrV_H3PFJZaRqUhr1w",
+    "title": "Wolfgang Amadeus Mozart - Parte 1",
+    "description": "Episódio 1/2 - Documentário sobre Wolfgang Amadeus Mozart, com legendas em Português-Brasil.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/lr4Bj2Pjg6I/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/lr4Bj2Pjg6I/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/lr4Bj2Pjg6I/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/lr4Bj2Pjg6I/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Classical Videos",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Parte 1",
+     "description": "Episódio 1/2 - Documentário sobre Wolfgang Amadeus Mozart, com legendas em Português-Brasil."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H1M30S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/yb4cEjGRdt-M1yvOobN7DpHrh7A\"",
+   "id": "Vwub-9dZLFU",
+   "snippet": {
+    "publishedAt": "2009-06-30T15:09:33.000Z",
+    "channelId": "UCja1W-KD6O87aQyrJHFbjWw",
+    "title": "The Magic Flute: Overture - Wolfgang Amadeus Mozart",
+    "description": "//Song: The Magic Flute: Overture\n//Composer: Wolfgang Amadeus Mozart",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Vwub-9dZLFU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Vwub-9dZLFU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Vwub-9dZLFU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "StarTrekLover1000",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "The Magic Flute: Overture - Wolfgang Amadeus Mozart",
+     "description": "//Song: The Magic Flute: Overture\n//Composer: Wolfgang Amadeus Mozart"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT7M39S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": false
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/lezayXBwnM5pj0_XkkumrzXZEis\"",
+   "id": "1ZZBl_P7u2A",
+   "snippet": {
+    "publishedAt": "2012-12-07T02:21:55.000Z",
+    "channelId": "UCFh-b1AmH6l2Lbn91OGp4QQ",
+    "title": "Wolfgang Amadeus Mozart - Piano Concerto No. 12 in A major, KV 414",
+    "description": "Derek Han, piano. Philharmonia Orchestra, Paul Freeman.\nWolfgang Amadeus Mozart - Piano Concerto No. 12 in A major, KV 414\nI. Allegro\nII. Andante\nIII. Rondeau, allegro",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/1ZZBl_P7u2A/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/1ZZBl_P7u2A/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/1ZZBl_P7u2A/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/1ZZBl_P7u2A/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/1ZZBl_P7u2A/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Wolfgang Amadé Mozart",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Piano Concerto No. 12 in A major, KV 414",
+     "description": "Derek Han, piano. Philharmonia Orchestra, Paul Freeman.\nWolfgang Amadeus Mozart - Piano Concerto No. 12 in A major, KV 414\nI. Allegro\nII. Andante\nIII. Rondeau, allegro"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT23M2S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/v0SPCBrssl7myRq8Qbk_YsQ2FDg\"",
+   "id": "zK5295yEQMQ",
+   "snippet": {
+    "publishedAt": "2012-02-11T06:28:36.000Z",
+    "channelId": "UCVsTE8WlSM8pZPH0rQdOgzQ",
+    "title": "W. A. Mozart - Symphony No. 41 \"Jupiter\" in C major (Harnoncourt)",
+    "description": "W. A. Mozart - Symphony No. 41 \"Jupiter\" in C major, K. 551 (1788):\n1. Allegro vivace, 4/4\n2. Andante cantabile, 3/4 in F major\n3. Menuetto: Allegretto - Trio, 3/4\n4. Molto allegro, 2/2\n\nThe Chamber Orchestra of Europe\nConductor - Nicolaus Harnoncourt\nGrosser Musikvereinsaal Wien",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/zK5295yEQMQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/zK5295yEQMQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/zK5295yEQMQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/zK5295yEQMQ/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Joseph Aknin",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "W. A. Mozart - Symphony No. 41 \"Jupiter\" in C major (Harnoncourt)",
+     "description": "W. A. Mozart - Symphony No. 41 \"Jupiter\" in C major, K. 551 (1788):\n1. Allegro vivace, 4/4\n2. Andante cantabile, 3/4 in F major\n3. Menuetto: Allegretto - Trio, 3/4\n4. Molto allegro, 2/2\n\nThe Chamber Orchestra of Europe\nConductor - Nicolaus Harnoncourt\nGrosser Musikvereinsaal Wien"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT43M46S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/v6snAWwkSRDMWJCA1PsRzAQdoe0\"",
+   "id": "B_QKTEPv0_4",
+   "snippet": {
+    "publishedAt": "2013-01-26T00:40:00.000Z",
+    "channelId": "UCBHZQquiHDTOg99AALj8g1Q",
+    "title": "Wolfgang Amadeus Mozart: Fantasy in D minor, K. 397",
+    "description": "My piano amateur recording of Wolfgang Amadeus Mozart's Fantasy in D minor (K. 397), with the ending by Mitsuko Uchida. The \"conventional\" ending in my opinion is far too shallow to fit to this sombre, serious piece of piano music. I would never take the liberty to alter something that Mozart wrote, but many people are not aware that the conventional ending is not by Mozart himself. Mozart's autograph ends with measure 98. The ending has been added later by a person called August Eberhard Müller (check the Vienna Urtext Edition for further details). I think that Uchida's idea to end the fantasy by how it started makes much more sense. The D major part then becomes more a reminiscence of a once happy past, which has gone by.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/B_QKTEPv0_4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/B_QKTEPv0_4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/B_QKTEPv0_4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/B_QKTEPv0_4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/B_QKTEPv0_4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Tobias Sing",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart: Fantasy in D minor, K. 397",
+     "description": "My piano amateur recording of Wolfgang Amadeus Mozart's Fantasy in D minor (K. 397), with the ending by Mitsuko Uchida. The \"conventional\" ending in my opinion is far too shallow to fit to this sombre, serious piece of piano music. I would never take the liberty to alter something that Mozart wrote, but many people are not aware that the conventional ending is not by Mozart himself. Mozart's autograph ends with measure 98. The ending has been added later by a person called August Eberhard Müller (check the Vienna Urtext Edition for further details). I think that Uchida's idea to end the fantasy by how it started makes much more sense. The D major part then becomes more a reminiscence of a once happy past, which has gone by."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT8M24S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/LWCI1NZV3rwQiBGenyiZPLrMEj8\"",
+   "id": "3h47AWowvhQ",
+   "snippet": {
+    "publishedAt": "2013-03-12T17:37:05.000Z",
+    "channelId": "UCXt1rezieL5ZFE2aWhN127Q",
+    "title": "Wolfgang Amadeus Mozart - Música Clásica",
+    "description": "Wolfgang Amadeus Mozart - Música Clásica",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/3h47AWowvhQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/3h47AWowvhQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/3h47AWowvhQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/3h47AWowvhQ/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/3h47AWowvhQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Miusica Clasic Ca",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Música Clásica",
+     "description": "Wolfgang Amadeus Mozart - Música Clásica"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H3M45S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/KFcrsG3FADqb7yOevjZL3fDfn1E\"",
+   "id": "RDhhQeD85Bk",
+   "snippet": {
+    "publishedAt": "2011-09-06T12:13:44.000Z",
+    "channelId": "UCFh-b1AmH6l2Lbn91OGp4QQ",
+    "title": "Wolfgang Amadeus Mozart - Cantata \"Laut verkünde unsre Freude\" KV 623",
+    "description": "Gottfried Hornik, bass. Peter Schneyder, bass. Chorus Viennensis. Wiener Akademie, Martin Haselböck",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/RDhhQeD85Bk/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/RDhhQeD85Bk/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/RDhhQeD85Bk/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/RDhhQeD85Bk/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/RDhhQeD85Bk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Wolfgang Amadé Mozart",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Cantata \"Laut verkünde unsre Freude\" KV 623",
+     "description": "Gottfried Hornik, bass. Peter Schneyder, bass. Chorus Viennensis. Wiener Akademie, Martin Haselböck"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT12M38S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/Zg4RAseEizd3exfTvXed2zZfxds\"",
+   "id": "KiBSjhMZ4B4",
+   "snippet": {
+    "publishedAt": "2012-01-31T04:41:04.000Z",
+    "channelId": "UCJA3W0kTDpAMq-j2unceLzw",
+    "title": "Johanes Wolfgang Amadeus Mozart: Symphony No.11 in D major, (K  84)",
+    "description": "Álbum: Mozart, Complete Works Vol. 1: Symphonies Complete\nInterprete del álbum: Jaap Ter Linden & Mozart Akademie Amsterdam\nCompositor: Johanes Chrysostomus Wolfgang Amadeus Mozart\nAño: 2002\nGenero: Classics",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/KiBSjhMZ4B4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/KiBSjhMZ4B4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/KiBSjhMZ4B4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/KiBSjhMZ4B4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "vivaldi369",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Johanes Wolfgang Amadeus Mozart: Symphony No.11 in D major, (K  84)",
+     "description": "Álbum: Mozart, Complete Works Vol. 1: Symphonies Complete\nInterprete del álbum: Jaap Ter Linden & Mozart Akademie Amsterdam\nCompositor: Johanes Chrysostomus Wolfgang Amadeus Mozart\nAño: 2002\nGenero: Classics"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT9M46S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/7iZr11411x7uwqtkx7v8HI2Y62c\"",
+   "id": "PaqtaYSWGtw",
+   "snippet": {
+    "publishedAt": "2010-04-02T14:43:07.000Z",
+    "channelId": "UC_guZykySR8Pu2XCDm4QZ5A",
+    "title": "Wolfgang Amadeus Mozart-Marcia alla turca",
+    "description": "Versione completa della marcia alla turca di Mozart...",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/PaqtaYSWGtw/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/PaqtaYSWGtw/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/PaqtaYSWGtw/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Marco97th97th",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart-Marcia alla turca",
+     "description": "Versione completa della marcia alla turca di Mozart..."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT3M58S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/war16MW-JuMiAOk8WEODRz-ZPe4\"",
+   "id": "Y45IPzKMWZ4",
+   "snippet": {
+    "publishedAt": "2012-09-08T22:18:12.000Z",
+    "channelId": "UCLTZHKDjlCI-QYC2s4zVhCQ",
+    "title": "Fantasia  -  Wolfgang Amadeus Mozart",
+    "description": "One of the prevailing theories regarding Mozart's Fantasia in D minor, is that it originally was to have served as the introduction to a sonata in D major rather than as a self-contained work.\n\nTrue to the tradition of the genre, the Fantasia is marked by discrete changing moods and passages of a musing, improvisatory character. It starts with a haunting, arpeggiated Lento introduction with an echo of Baroque gravity, followed by a melancholy, aria-like theme developed in the same turbulent fashion that distinguishes many of the composer's minor-key works. Toward the end, melodrama is replaced with D major cheer. \n\nMozart left the Fantasia incomplete, and the manuscript has been lost. Still, it remains a recital favorite in a \"completed\" version that draws on earlier thematic material to provide the missing final bars-and a nominal sense of closure, even though it is undoubtedly not as satisfying an ending as one the composer himself might have written.\n\nFantasia in D minor\nPerformed by Mitsuko Uchida, Piano",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Y45IPzKMWZ4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Y45IPzKMWZ4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Y45IPzKMWZ4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/Y45IPzKMWZ4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/Y45IPzKMWZ4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Juancitoamericano",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Fantasia  -  Wolfgang Amadeus Mozart",
+     "description": "One of the prevailing theories regarding Mozart's Fantasia in D minor, is that it originally was to have served as the introduction to a sonata in D major rather than as a self-contained work.\n\nTrue to the tradition of the genre, the Fantasia is marked by discrete changing moods and passages of a musing, improvisatory character. It starts with a haunting, arpeggiated Lento introduction with an echo of Baroque gravity, followed by a melancholy, aria-like theme developed in the same turbulent fashion that distinguishes many of the composer's minor-key works. Toward the end, melodrama is replaced with D major cheer. \n\nMozart left the Fantasia incomplete, and the manuscript has been lost. Still, it remains a recital favorite in a \"completed\" version that draws on earlier thematic material to provide the missing final bars-and a nominal sense of closure, even though it is undoubtedly not as satisfying an ending as one the composer himself might have written.\n\nFantasia in D minor\nPerformed by Mitsuko Uchida, Piano"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT7M27S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/4oscN1aCOkKzv_0NU0gECxNez9w\"",
+   "id": "cP-duJAxZFg",
+   "snippet": {
+    "publishedAt": "2013-02-17T19:42:37.000Z",
+    "channelId": "UCJA3W0kTDpAMq-j2unceLzw",
+    "title": "Wolfgang Amadeus Mozart: Suite for Harpsichord in C major, ( KV 399)",
+    "description": "Álbum: Mozart: Keyboard Works Complete\nInterpretes del álbum: Bart van Oort, Klára Würtz, Pieter-Jan Belder,Bruno Canino & Zoltán Kocsis\nCompositor: Wolfgang Amadeus Mozart\nGenero: Clásico Alemán \nAño: 2005",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/cP-duJAxZFg/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/cP-duJAxZFg/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/cP-duJAxZFg/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/cP-duJAxZFg/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "vivaldi369",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart: Suite for Harpsichord in C major, ( KV 399)",
+     "description": "Álbum: Mozart: Keyboard Works Complete\nInterpretes del álbum: Bart van Oort, Klára Würtz, Pieter-Jan Belder,Bruno Canino & Zoltán Kocsis\nCompositor: Wolfgang Amadeus Mozart\nGenero: Clásico Alemán \nAño: 2005"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT11M31S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/wrMvds18hIYMxaBu1sCw0_KcziY\"",
+   "id": "LvXUtcONXek",
+   "snippet": {
+    "publishedAt": "2012-04-18T23:29:16.000Z",
+    "channelId": "UCuZlFcfJkpfooPuc9iqsY-A",
+    "title": "Wolfgang Amadeus Mozart - El Fantasma De La Opera",
+    "description": "Sinfonia de Wolfgang Amadeus Mozart / Symphony of Wolfgang Amadeus Mozart",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/LvXUtcONXek/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/LvXUtcONXek/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/LvXUtcONXek/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/LvXUtcONXek/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "SirFacundo",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - El Fantasma De La Opera",
+     "description": "Sinfonia de Wolfgang Amadeus Mozart / Symphony of Wolfgang Amadeus Mozart"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT9M23S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/cK5Uoa5fXqZ5r_oxTT46kwfBId0\"",
+   "id": "ZHp72XopyHk",
+   "snippet": {
+    "publishedAt": "2013-08-19T04:38:01.000Z",
+    "channelId": "UCCyQeeBKhYOhXWKTPOLBODA",
+    "title": "Fantasia in D minor by Wolfgang Amadeus Mozart",
+    "description": "Fantasia in D minor by Wolfgang Amadeus Mozart\nplayed by Keshav Mann\nThe link to my Facebook Page: https://www.facebook.com/pages/Keshav-Mann/192680727549183\nVideo edited by: Andrew Furmanczyk",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/ZHp72XopyHk/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/ZHp72XopyHk/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/ZHp72XopyHk/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/ZHp72XopyHk/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/ZHp72XopyHk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Keshav Mann",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Fantasia in D minor by Wolfgang Amadeus Mozart",
+     "description": "Fantasia in D minor by Wolfgang Amadeus Mozart\nplayed by Keshav Mann\nThe link to my Facebook Page: https://www.facebook.com/pages/Keshav-Mann/192680727549183\nVideo edited by: Andrew Furmanczyk"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M46S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/yim3C4269muiDlh5hyS5ZK6Rkno\"",
+   "id": "1KDm7MRf63s",
+   "snippet": {
+    "publishedAt": "2011-12-01T17:16:52.000Z",
+    "channelId": "UCDbfPDxdOT9rT3TK7YjyWfQ",
+    "title": "\"Adelaide\" Wolfgang Amadeus Mozart  violin Concerto in D major",
+    "description": "Adelaide\" Wolfgang Amadeus Mozart (1756-1791). Escuela Superior de Música, Auditorio Angélica Morales, 13 de abril de 2011. Mariana Silva Sánchez (violín), Mtra. Leonora Marchissio (piano)",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/1KDm7MRf63s/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/1KDm7MRf63s/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/1KDm7MRf63s/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "gaviotascout",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "\"Adelaide\" Wolfgang Amadeus Mozart  violin Concerto in D major",
+     "description": "Adelaide\" Wolfgang Amadeus Mozart (1756-1791). Escuela Superior de Música, Auditorio Angélica Morales, 13 de abril de 2011. Mariana Silva Sánchez (violín), Mtra. Leonora Marchissio (piano)"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT9M6S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/p3ioHSHBeTPyvc4z5jxJ4H5Sbzs\"",
+   "id": "xvtoqE33iZg",
+   "snippet": {
+    "publishedAt": "2009-09-19T16:59:44.000Z",
+    "channelId": "UC2zb5cQbLabj3U9l3tke1pg",
+    "title": "Mozart, Symphony No. 40 in G minor, first movement",
+    "description": "First movement of Mozart's 40th symphony, accompanied by a scrolling bar-graph score.\nFAQ\n\nQ: What do the colors in the bar-graph score mean?\nA: Each color corresponds to one line in the orchestral score, and therefore to an instrument or group of instruments; here's the key:\n http://www.musanim.com/pdf/MozartK550m1ColorKey.pdf\n\nQ: Where can I see the score for this piece?\nA: Here:\n http://tinyurl.com/moz40m1\n\nQ: How do you align the animation with the music?\nA: Here's a description:\n http://www.musanim.com/ProductionNotes/synchronization.html\n\nQ: What can you tell me about this piece?\nA: You can read about it here:\n http://en.wikipedia.org/wiki/Symphony_No._40_(Mozart)\n\nQ: Could you please do a video of _______?\nA: Please read this:\n http://www.musanim.com/requests/",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/xvtoqE33iZg/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/xvtoqE33iZg/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/xvtoqE33iZg/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "smalin",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Mozart, Symphony No. 40 in G minor, first movement",
+     "description": "First movement of Mozart's 40th symphony, accompanied by a scrolling bar-graph score.\nFAQ\n\nQ: What do the colors in the bar-graph score mean?\nA: Each color corresponds to one line in the orchestral score, and therefore to an instrument or group of instruments; here's the key:\n http://www.musanim.com/pdf/MozartK550m1ColorKey.pdf\n\nQ: Where can I see the score for this piece?\nA: Here:\n http://tinyurl.com/moz40m1\n\nQ: How do you align the animation with the music?\nA: Here's a description:\n http://www.musanim.com/ProductionNotes/synchronization.html\n\nQ: What can you tell me about this piece?\nA: You can read about it here:\n http://en.wikipedia.org/wiki/Symphony_No._40_(Mozart)\n\nQ: Could you please do a video of _______?\nA: Please read this:\n http://www.musanim.com/requests/"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT7M58S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/MzeRSrPSpkwl59kIwo7ejd7wa4Y\"",
+   "id": "rrrD-mN09lc",
+   "snippet": {
+    "publishedAt": "2011-11-10T20:13:54.000Z",
+    "channelId": "UCHzP5S8WVGg8ngRi6NcB4iw",
+    "title": "Wolfgang Amadeus Mozart - Pequeña serenata nocturna",
+    "description": "La historia de \"Eine Kleine Nachtmusik\" - K. 525 (Pequeña serenata nocturna), es un verdadero misterio, pues no se sabe por qué la compuso ni a quién estaba dedicada. Fue escrita en Viena, el verano de 1787, mientras Mozart trabajaba en el segundo acto de su opera \"Don Giovanni\".\nDe acuerdo a las notas personales de Mozart, la serenata contaba con cinco movimientos, pero por razones desconocidas sólo nos han llegado cuatro de ellos. Uno de los \"minuets\" junto con su trio están perdidos.\nOriginalmente la obra estaba pensada para ser tocada por dos violines, viola, violoncelo y contrabajo; un quinteto de cuerdas. Sin embargo, en interpretaciones modernas el número de músicos se ajusta de acuerdo al criterio del director.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/rrrD-mN09lc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/rrrD-mN09lc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/rrrD-mN09lc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/rrrD-mN09lc/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "bychiando",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Pequeña serenata nocturna",
+     "description": "La historia de \"Eine Kleine Nachtmusik\" - K. 525 (Pequeña serenata nocturna), es un verdadero misterio, pues no se sabe por qué la compuso ni a quién estaba dedicada. Fue escrita en Viena, el verano de 1787, mientras Mozart trabajaba en el segundo acto de su opera \"Don Giovanni\".\nDe acuerdo a las notas personales de Mozart, la serenata contaba con cinco movimientos, pero por razones desconocidas sólo nos han llegado cuatro de ellos. Uno de los \"minuets\" junto con su trio están perdidos.\nOriginalmente la obra estaba pensada para ser tocada por dos violines, viola, violoncelo y contrabajo; un quinteto de cuerdas. Sin embargo, en interpretaciones modernas el número de músicos se ajusta de acuerdo al criterio del director."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M39S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "TJ",
+      "HU",
+      "TM",
+      "KZ",
+      "UA",
+      "KG",
+      "UZ",
+      "TR",
+      "MN",
+      "MD",
+      "BY",
+      "AZ",
+      "RU",
+      "PL",
+      "SK",
+      "CZ",
+      "GE",
+      "AM",
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/K1e4GW8Du6o_nweTA8WeYCebS_Q\"",
+   "id": "SBfjGeZm-GU",
+   "snippet": {
+    "publishedAt": "2011-12-10T14:11:18.000Z",
+    "channelId": "UCddKmHOL4NJwiROjkLymCSw",
+    "title": "Wolfgang Amadeus Mozart - A Little Serenade   (Pequena Serenata Noturna)",
+    "description": "Wolfgang Amadeus Mozart - A Little Serenade   (Pequena Serenata Noturna)",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/SBfjGeZm-GU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/SBfjGeZm-GU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/SBfjGeZm-GU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/SBfjGeZm-GU/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/SBfjGeZm-GU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Luis Alves",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - A Little Serenade   (Pequena Serenata Noturna)",
+     "description": "Wolfgang Amadeus Mozart - A Little Serenade   (Pequena Serenata Noturna)"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT6M33S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/aoIoTW1eoRUEZHfebM9xVxAUclg\"",
+   "id": "HPht41pxdWE",
+   "snippet": {
+    "publishedAt": "2014-05-25T01:17:27.000Z",
+    "channelId": "UCfxeYn3puTh4kzo-FHq3MHw",
+    "title": "Wolfgang Amadeus Mozart - Symphonies (Cd No.2)",
+    "description": "(00:00:00 - 00:08:28) Symphony No.26 (Overture) in E flat major (KV 184 / 161a)\nMolto presto (00:00:00  - 00:02:54)\nAndante - (00:02:55 - 00:06:07)\nAllegro (00:06:08 - 00:08:28)\n\n(00:08:29 - 00:24:10) Symphony No.27 in G major (KV 199 / 161b)\nAllegro (00:08:29 - 00:13:14)\nAndantino grazioso (00:13:15 - 00:19:21)\nPresto (00:19:22 - 00:24:10)\n\n(00:24:11 - 00:42:14) Symphony No.28 in C major (KV 200 / 189k)\nAllegro spiritoso (00:24:11 - 00:29:22)\nAndante (00:29:23 - 00:34:34)\n[Menutto (Allegretto) (00:34:35 - 00:38:27)]\nPresto (00:38:28 - 00:42:14)\n\n(00:42:15 - 01:03:38) Symphony No.29 in a major (KV 201 / 186a)\nAllegro moderato (00:42:15 - 00:49:39)\nAndante (00:49:40 - 00:55:31)\nMenuetto (00:55:32 - 00:58:37)\nAllegro con spirito (00:58:38 - 01:03:38)\n\nAcademy of St Martin in the Fields\nConductor: Sir Neville Marriner",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/HPht41pxdWE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/HPht41pxdWE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/HPht41pxdWE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/HPht41pxdWE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/HPht41pxdWE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Nicolás Nicholson",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Symphonies (Cd No.2)",
+     "description": "(00:00:00 - 00:08:28) Symphony No.26 (Overture) in E flat major (KV 184 / 161a)\nMolto presto (00:00:00  - 00:02:54)\nAndante - (00:02:55 - 00:06:07)\nAllegro (00:06:08 - 00:08:28)\n\n(00:08:29 - 00:24:10) Symphony No.27 in G major (KV 199 / 161b)\nAllegro (00:08:29 - 00:13:14)\nAndantino grazioso (00:13:15 - 00:19:21)\nPresto (00:19:22 - 00:24:10)\n\n(00:24:11 - 00:42:14) Symphony No.28 in C major (KV 200 / 189k)\nAllegro spiritoso (00:24:11 - 00:29:22)\nAndante (00:29:23 - 00:34:34)\n[Menutto (Allegretto) (00:34:35 - 00:38:27)]\nPresto (00:38:28 - 00:42:14)\n\n(00:42:15 - 01:03:38) Symphony No.29 in a major (KV 201 / 186a)\nAllegro moderato (00:42:15 - 00:49:39)\nAndante (00:49:40 - 00:55:31)\nMenuetto (00:55:32 - 00:58:37)\nAllegro con spirito (00:58:38 - 01:03:38)\n\nAcademy of St Martin in the Fields\nConductor: Sir Neville Marriner"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H3M39S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/eFdQsS7Z7hKVFqMP41x01Qfk-YU\"",
+   "id": "XEkIwkg_HoY",
+   "snippet": {
+    "publishedAt": "2013-01-26T05:36:22.000Z",
+    "channelId": "UCvvYVO8q5wF66DPaO2rW18Q",
+    "title": "Wolfgang Amadeus Mozart - Violin Sonata No. 22, K. 305 [Complete] (Piano Concerto)",
+    "description": "Violin Sonata No. 22 in A major, K. 305 (293d) is a work composed by Wolfgang Amadeus Mozart in Mannheim 1778. There are two movements:\n0:00 1. Allegro di molto\n4:53 2. Tema. Andante grazioso - Variations I-V - Variation VI. Allegro\nThe first movement is in sonata form. This movement has one of the bounciest happiest melodies to be found in his violin sonatas. The second movement is in a theme and variations form. This movement is more somber than the opening movement, being at a slower tempo and having a more subdued melody.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/XEkIwkg_HoY/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/XEkIwkg_HoY/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/XEkIwkg_HoY/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/XEkIwkg_HoY/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "steven960929",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Violin Sonata No. 22, K. 305 [Complete] (Piano Concerto)",
+     "description": "Violin Sonata No. 22 in A major, K. 305 (293d) is a work composed by Wolfgang Amadeus Mozart in Mannheim 1778. There are two movements:\n0:00 1. Allegro di molto\n4:53 2. Tema. Andante grazioso - Variations I-V - Variation VI. Allegro\nThe first movement is in sonata form. This movement has one of the bounciest happiest melodies to be found in his violin sonatas. The second movement is in a theme and variations form. This movement is more somber than the opening movement, being at a slower tempo and having a more subdued melody."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT14M48S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/l4OPE97eDuM9t8WPB1aAtE1aRyU\"",
+   "id": "nYsYpClyseM",
+   "snippet": {
+    "publishedAt": "2010-03-18T18:15:01.000Z",
+    "channelId": "UCYl3ntZXXV_k1kxDhZ5gIoQ",
+    "title": "Wolfgang Amadeus Mozart - Requiem - Introitus",
+    "description": "Mozart's full HQ Requiem:\r\n\r\nhttp://www.youtube.com/user/JosephKrammer#grid/user/9E112ECC9C6B7ACF\r\n\r\nWolfgang Amadeus Mozart \r\nRequiem \r\nIntroitus\r\n\r\nRequiem aeternam dona eis, Domine,\r\net lux perpetua luceat eis.\r\nTe decet hymnus, Deus, in Sion,\r\net tibi reddetur votum in Jerusalem.\r\nExaudi orationem meam,\r\nad te omnis caro veniet.\r\nRequiem aeternam dona eis, Dimine,\r\net lux perpetua luceat eis.\r\n\r\nTranslation:\r\n\r\nGrant them eternal rest, O Lord,\r\nAnd may perpetual light shine on them.\r\nThou, O God, art praised in Sion,\r\nAnd unto Thee shall the vow\r\nBe performed in Jerusalem.\r\nHear my prayer, unto Thee shall all flesh come.\r\nGrant them eternal rest, O Lord,\r\nAnd may perpetual light shine on them.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/nYsYpClyseM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/nYsYpClyseM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/nYsYpClyseM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/nYsYpClyseM/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/nYsYpClyseM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "JK",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Requiem - Introitus",
+     "description": "Mozart's full HQ Requiem:\r\n\r\nhttp://www.youtube.com/user/JosephKrammer#grid/user/9E112ECC9C6B7ACF\r\n\r\nWolfgang Amadeus Mozart \r\nRequiem \r\nIntroitus\r\n\r\nRequiem aeternam dona eis, Domine,\r\net lux perpetua luceat eis.\r\nTe decet hymnus, Deus, in Sion,\r\net tibi reddetur votum in Jerusalem.\r\nExaudi orationem meam,\r\nad te omnis caro veniet.\r\nRequiem aeternam dona eis, Dimine,\r\net lux perpetua luceat eis.\r\n\r\nTranslation:\r\n\r\nGrant them eternal rest, O Lord,\r\nAnd may perpetual light shine on them.\r\nThou, O God, art praised in Sion,\r\nAnd unto Thee shall the vow\r\nBe performed in Jerusalem.\r\nHear my prayer, unto Thee shall all flesh come.\r\nGrant them eternal rest, O Lord,\r\nAnd may perpetual light shine on them."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M24S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": false
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/7TRVERuhHFwt11LmYTAigrVUV84\"",
+   "id": "8qHWHanI0Ss",
+   "snippet": {
+    "publishedAt": "2014-04-15T01:46:45.000Z",
+    "channelId": "UCfxeYn3puTh4kzo-FHq3MHw",
+    "title": "Wolfgang Amadeus Mozart - Early Symphonies / Frühe Symphonien (Cd No.1)",
+    "description": "(00:00:00 - 00:11:22) Symphony No.1 in E flat major (KV 16)\nAllegro molto (00:00:00 - 00:06:10)\nAndante (00:06:10 - 00:08:59)\nPresto (00:09:00 - 00:11:22)\n\n(00:11:23 - 00:21:47) Symphony No.4 in D major (KV 19)\nAllegro (00:11:23 - 00:16:05)\nAndante (00:16:06 - 00:19:27)\nPresto (00:19:28 - 00:21:47)\n\n(00:21:48 - 00:32:11) Symphony in F major (KV App. 223 / 19a*)\nAllegro assai (00:21:48 - 00:25:37)\nAndante (00:25:38 - 00:29:21)\nPresto (00:29:22 - 00:32:11)\n\n(00:32:12 - 00:39:19) Symphony No.5 in B flat major (KV 22)\nAllegro (00:32:12 - 00:34:45)\nAndante (00:34:46 - 00:37:50)\nAllegro molto (00:37:51 - 00:39:19)\n\n(00:39:20 - 00:52:56) Symphony No.6 in F major (KV 43)\nAllegro (00:39:20 - 00:43:46)\nAndante (00:43:47 - 00:47:30)\nMenuetto (00:47:31 - 00:49:50)\nAllegro (00:49:51 - 00:52:56)\n\n(00:55:48 - 01:04:31) Symphony No.7 in D major (KV 45) - Overture \"La finta semplice\"\nOverture [(Allegro)] (00:52:57 - 00:55:47)\nAndante (00:55:48 - 00:58:31)\nMenuetto (00:58:32 - 01:02:13)\n[(Allegro) (01:02:14 - 01:04:31)]\n\nAcademy of St Martin in the Fields\nConductor: Sir Neville Marriner",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/8qHWHanI0Ss/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/8qHWHanI0Ss/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/8qHWHanI0Ss/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/8qHWHanI0Ss/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/8qHWHanI0Ss/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Nicolás Nicholson",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Early Symphonies / Frühe Symphonien (Cd No.1)",
+     "description": "(00:00:00 - 00:11:22) Symphony No.1 in E flat major (KV 16)\nAllegro molto (00:00:00 - 00:06:10)\nAndante (00:06:10 - 00:08:59)\nPresto (00:09:00 - 00:11:22)\n\n(00:11:23 - 00:21:47) Symphony No.4 in D major (KV 19)\nAllegro (00:11:23 - 00:16:05)\nAndante (00:16:06 - 00:19:27)\nPresto (00:19:28 - 00:21:47)\n\n(00:21:48 - 00:32:11) Symphony in F major (KV App. 223 / 19a*)\nAllegro assai (00:21:48 - 00:25:37)\nAndante (00:25:38 - 00:29:21)\nPresto (00:29:22 - 00:32:11)\n\n(00:32:12 - 00:39:19) Symphony No.5 in B flat major (KV 22)\nAllegro (00:32:12 - 00:34:45)\nAndante (00:34:46 - 00:37:50)\nAllegro molto (00:37:51 - 00:39:19)\n\n(00:39:20 - 00:52:56) Symphony No.6 in F major (KV 43)\nAllegro (00:39:20 - 00:43:46)\nAndante (00:43:47 - 00:47:30)\nMenuetto (00:47:31 - 00:49:50)\nAllegro (00:49:51 - 00:52:56)\n\n(00:55:48 - 01:04:31) Symphony No.7 in D major (KV 45) - Overture \"La finta semplice\"\nOverture [(Allegro)] (00:52:57 - 00:55:47)\nAndante (00:55:48 - 00:58:31)\nMenuetto (00:58:32 - 01:02:13)\n[(Allegro) (01:02:14 - 01:04:31)]\n\nAcademy of St Martin in the Fields\nConductor: Sir Neville Marriner"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H4M32S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/vlv2P0Ix-Y2QoqhK7Lo3BwGWIUs\"",
+   "id": "bQKBLHHLBLo",
+   "snippet": {
+    "publishedAt": "2012-12-07T18:11:55.000Z",
+    "channelId": "UCFh-b1AmH6l2Lbn91OGp4QQ",
+    "title": "Wolfgang Amadeus Mozart - Piano Concerto No. 18 in B flat major, KV 456",
+    "description": "Derek Han, piano. Philharmonia Orchestra, Paul Freeman.\nWolfgang Amadeus Mozart - Piano Concerto No. 18 in B flat major, KV 456\nI. Allegro vivace\nII. Andante un poco sostenuto\nIII. Allegro vivace",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/bQKBLHHLBLo/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/bQKBLHHLBLo/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/bQKBLHHLBLo/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/bQKBLHHLBLo/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Wolfgang Amadé Mozart",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Piano Concerto No. 18 in B flat major, KV 456",
+     "description": "Derek Han, piano. Philharmonia Orchestra, Paul Freeman.\nWolfgang Amadeus Mozart - Piano Concerto No. 18 in B flat major, KV 456\nI. Allegro vivace\nII. Andante un poco sostenuto\nIII. Allegro vivace"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT30M22S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/ZLgD6sYnPr9c1eZCHU1fDGre3bE\"",
+   "id": "LDxBFz99heA",
+   "snippet": {
+    "publishedAt": "2010-10-16T01:05:04.000Z",
+    "channelId": "UCbYizEy-8y97bda5-A68YsA",
+    "title": "Wolfgang Amadeus Mozart - Menuetto",
+    "description": "Una sensible y bella piesa de musica clasica echa e interpretada por uno de los grandes de la antiguedad. Musica clasica, piano, mozart.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/LDxBFz99heA/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/LDxBFz99heA/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/LDxBFz99heA/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "loquetodosdicen",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart - Menuetto",
+     "description": "Una sensible y bella piesa de musica clasica echa e interpretada por uno de los grandes de la antiguedad. Musica clasica, piano, mozart."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M24S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/6Fj4mK7zyeXMQIdFlMkhqp0Lgv4\"",
+   "id": "mVEkBmhs7u4",
+   "snippet": {
+    "publishedAt": "2013-02-07T17:32:58.000Z",
+    "channelId": "UCAILl3AE11CoqiSVs6rBwBQ",
+    "title": "Wolfgang Amadeus Mozart: Duo for Violin and Viola in G major, K423, Mvt 3",
+    "description": "http://www.cbcmusic.ca\nIn this exclusive performance, Keith Hamm joins Benjamin Bowman on the violin to perform Wolfgang Amadeus Mozart's Duo for Violin and Viola in G major, K423, Mvt 3.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/mVEkBmhs7u4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/mVEkBmhs7u4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/mVEkBmhs7u4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/mVEkBmhs7u4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/mVEkBmhs7u4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "CBC Music",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Wolfgang Amadeus Mozart: Duo for Violin and Viola in G major, K423, Mvt 3",
+     "description": "http://www.cbcmusic.ca\nIn this exclusive performance, Keith Hamm joins Benjamin Bowman on the violin to perform Wolfgang Amadeus Mozart's Duo for Violin and Viola in G major, K423, Mvt 3."
+    }
+   },
+   "contentDetails": {
+    "duration": "PT5M43S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": true
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  }
+ ]
+}

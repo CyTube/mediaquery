@@ -2,20 +2,16 @@ var assert = require('assert');
 var fs = require('fs');
 var path = require('path');
 
+var fakerequest = require('./fakerequest');
 var youtube = require('../../lib/provider/youtube');
-
-var API_KEY;
-
-try {
-    API_KEY = fs.readFileSync(path.join(__dirname, '..', 'keys', 'youtube')) + '';
-} catch (e) {
-    console.error('Warning: API_KEY could not be loaded for YouTube, tests will fail!');
-}
 
 describe('YouTube v3', function () {
     beforeEach(function () {
-        youtube.setApiKey(API_KEY);
+        youtube.setApiKey('test');
     });
+
+    before(fakerequest.init);
+    after(fakerequest.reset);
 
     describe('#lookup', function () {
         it('should query a public video', function (done) {
@@ -130,7 +126,6 @@ describe('YouTube v3', function () {
         });
 
         it('should search the next page when provided', function (done) {
-            this.timeout(10000); // lol the API is slow
             var query = 'Mystery Skulls Ghost Animated';
             var firstPage;
             youtube.search(query).then(function (result) {

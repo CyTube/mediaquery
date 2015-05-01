@@ -1,0 +1,66 @@
+HTTP/1.1 200 OK
+
+{
+ "kind": "youtube#videoListResponse",
+ "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/pKhzr6ja4Xjk-MPkDHtnEuiNgtU\"",
+ "pageInfo": {
+  "totalResults": 1,
+  "resultsPerPage": 1
+ },
+ "items": [
+  {
+   "kind": "youtube#video",
+   "etag": "\"9q1s7ES_qbijBujeSlhM344-nAI/R8iCVNJW3Ry65oT4xUEFI08If10\"",
+   "id": "CLlRv1Ja0Pk",
+   "snippet": {
+    "publishedAt": "2011-02-03T15:46:19.000Z",
+    "channelId": "UCvRWNguyUXiXKEWKMazMu7w",
+    "title": "David Benoit  -  Freedom At Midnight",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/CLlRv1Ja0Pk/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/CLlRv1Ja0Pk/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/CLlRv1Ja0Pk/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Ami131531",
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "David Benoit  -  Freedom At Midnight",
+     "description": ""
+    }
+   },
+   "contentDetails": {
+    "duration": "PT4M15S",
+    "dimension": "2d",
+    "definition": "sd",
+    "caption": "false",
+    "licensedContent": false,
+    "regionRestriction": {
+     "blocked": [
+      "DE"
+     ]
+    }
+   },
+   "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  }
+ ]
+}

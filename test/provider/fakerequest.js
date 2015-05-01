@@ -2,17 +2,21 @@ var Promise = require('bluebird');
 var request = require('../../lib/request');
 var fs = require('fs');
 var path = require('path');
+var crypto = require('crypto');
 
 var srcdir = path.resolve(__dirname, '..', 'fixtures');
 
-var urlMatcher;
+function md5(input) {
+    var hash = crypto.createHash('md5');
+    hash.update(input);
+    return hash.digest('hex');
+}
 
 function fakeRequest(url) {
-    var id = urlMatcher(url);
-    var fpath = path.join(srcdir, id + '.txt');
+    var fpath = path.join(srcdir, md5(url) + '.txt');
     var data = (fs.readFileSync(fpath) + '').split('\r\n\r\n');
     var headers = data[0];
-    var status = headers.match(/HTTP\/1\.1 (\d+) ([^\r\n]+)/);
+    var status = headers.match(/HTTP\/1\.\d (\d+) ([^\r\n]+)/);
     var body = data[1];
 
     return new Promise(function (resolve, reject) {
@@ -46,10 +50,11 @@ function fakeGetJSON(url) {
     });
 }
 
-request.__testpatch(fakeRequest);
-
-module.exports = function (matcher) {
-    urlMatcher = matcher;
+module.exports = {
+    init: function () {
+        request.__testpatch(fakeRequest);
+    },
+    reset: function () {
+        request.__untestpatch();
+    }
 };
-
-module.exports.reset = request.__untestpatch;

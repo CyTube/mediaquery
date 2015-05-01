@@ -1,8 +1,12 @@
 var assert = require('assert');
 
+var fakerequest = require('./fakerequest');
 var dailymotion = require('../../lib/provider/dailymotion');
 
 describe('Dailymotion', function () {
+    before(fakerequest.init);
+    after(fakerequest.reset);
+
     describe('#lookup', function () {
         it('should query a public video', function (done) {
             var t = {

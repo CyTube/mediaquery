@@ -2,39 +2,7 @@ urlparse = require 'url'
 
 { getJSON } = require '../request'
 Media = require '../media'
-
-###
-# An itag is an integer value that specifies the codec, quality, and bitrate
-# for a Google-hosted video (for example, 22 is 720p MP4).  Selected values
-# are mapped to their quality level and content type below.
-#
-# From an analysis of over 7,000 Google+ video links (thanks, Xaekai) it appears
-# that only itags 18, 22, 34, 35, and 37 appear in the wild, but it can't hurt
-# to identify more preferable itags when they are available.
-###
-ITAG_QMAP =
-    37: 1080
-    46: 1080
-    22: 720
-    45: 720
-    59: 480
-    44: 480
-    35: 480
-    18: 360
-    43: 360
-    34: 360
-
-ITAG_CMAP =
-    43: 'webm'
-    44: 'webm'
-    45: 'webm'
-    46: 'webm'
-    18: 'mp4'
-    22: 'mp4'
-    37: 'mp4'
-    59: 'mp4'
-    35: 'flv'
-    34: 'flv'
+{ ITAG_QMAP, ITAG_CMAP } = require '../util/itag'
 
 reject = (msg) -> Promise.reject(new Error(msg))
 

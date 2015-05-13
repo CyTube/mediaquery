@@ -71,7 +71,7 @@ exports.lookup = lookup = (id) ->
     )
 
 exports.parseUrl = (url) ->
-    m = url.match(/^gp:(\d+_\d+_\d+)/)
+    m = url.match(/^gp:(\d+_\d+_\d+)$/)
     if m
         return {
             type: 'google+'
@@ -89,7 +89,7 @@ exports.parseUrl = (url) ->
         return {
             type: 'google+'
             kind: 'single'
-            id: m.slice().join('_')
+            id: m.slice(1, 4).join('_')
         }
 
     return null

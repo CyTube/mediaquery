@@ -4,7 +4,6 @@ urlparse = require 'url'
 Promise = require 'bluebird'
 
 exports.request = request = (url) ->
-    console.log url
     return new Promise((resolve, reject) ->
         parsed = urlparse.parse(url)
         if not parsed.protocol?.match(/^https?:$/)

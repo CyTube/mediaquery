@@ -1,13 +1,14 @@
 querystring = require 'querystring'
+urlparse = require 'url'
 
-{ request } = require '../request'
+request = require '../request'
 Media = require '../media'
 { ITAG_QMAP, ITAG_CMAP } = require '../util/itag'
 
 exports.lookup = lookup = (id) ->
     url = "https://docs.google.com/file/d/#{id}/get_video_info?sle=true"
 
-    return request(url).then((res) ->
+    return request.request(url).then((res) ->
         if res.statusCode != 200
             throw new Error("Google Drive lookup failed: #{res.statusMessage}")
 
@@ -55,3 +56,31 @@ exports.lookup = lookup = (id) ->
 
         return new Media(data)
     )
+
+exports.parseUrl = (url) ->
+    m = url.match(/^gd:([\w-]+)$/)
+    if m
+        return {
+            type: 'googledrive'
+            kind: 'single'
+            id: m[1]
+        }
+
+    data = urlparse.parse(url, true)
+
+    if data.hostname not in ['drive.google.com', 'docs.google.com']
+        return null
+
+    m = data.pathname.match(/file\/d\/([\w-]+)/)
+    if not m
+        if data.pathname == '/open'
+            m = data.search.match(/id=([\w-]+)/)
+
+    if m
+        return {
+            type: 'googledrive'
+            kind: 'single'
+            id: m[1]
+        }
+
+    return null

@@ -198,11 +198,6 @@ describe('YouTube v3', function () {
             });
         });
 
-        it('should not parse a vimeo.com link', function () {
-            var result = youtube.parseUrl('https://vimeo.com/59859181');
-            assert.deepEqual(result, null);
-        });
-
         it('should not parse a non-video link', function () {
             var result = youtube.parseUrl('https://www.youtube.com/user/JonTronShow');
             assert.deepEqual(result, null);

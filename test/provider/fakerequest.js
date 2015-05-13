@@ -28,28 +28,6 @@ function fakeRequest(url) {
     });
 }
 
-function fakeGetJSON(url) {
-    return fakeRequest(url).then(function (res) {
-        switch (res.statusCode) {
-            case 400:
-            case 403:
-            case 404:
-            case 500:
-            case 503:
-                throw new Error(res.statusMessage);
-        }
-
-        var data;
-        try {
-            data = JSON.parse(res.data);
-        } catch (e) {
-            throw new Error('Response could not be decoded as JSON');
-        }
-
-        return data;
-    });
-}
-
 module.exports = {
     init: function () {
         request.__testpatch(fakeRequest);

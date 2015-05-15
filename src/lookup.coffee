@@ -2,19 +2,18 @@ fs = require 'fs'
 path = require 'path'
 Promise = require 'bluebird'
 
-PROVIDERS = {}
-fs.readdirSync(path.resolve(__dirname, './provider')).filter((provider) ->
-    provider.match(/\.js$/)
-).map((provider) ->
-    name = provider.replace(/\.js$/, '')
-    PROVIDERS[name] = require "./provider/#{name}"
-)
+PROVIDERS =
+    youtube: require './provider/youtube'
+    vimeo: require './provider/vimeo'
+    dailymotion: require './provider/dailymotion'
+    googledrive: require './provider/googledrive'
+    'google+': require './provider/googleplus'
 
 module.exports = (info) ->
     if not info?
         return Promise.reject(new Error('No information provided'))
 
-    if not info.type of PROVIDERS
+    if info.type not of PROVIDERS
         return Promise.reject(new Error("Unknown provider '#{info.type}'"))
 
     provider = PROVIDERS[info.type]

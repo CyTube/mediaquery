@@ -3,14 +3,16 @@ https = require 'https'
 urlparse = require 'url'
 Promise = require 'bluebird'
 
-exports.request = request = (url) ->
+exports.request = request = (url, headers = null) ->
     return new Promise((resolve, reject) ->
         parsed = urlparse.parse(url)
         if not parsed.protocol?.match(/^https?:$/)
             return reject(new Error("Invalid protocol '#{parsed.protocol}'"))
 
         transport = if parsed.protocol is 'https:' then https else http
-        req = transport.get(url, (res) ->
+        if headers
+            parsed.headers = headers
+        req = transport.get(parsed, (res) ->
             buffer = ''
             res.on('data', (data) ->
                 buffer += data

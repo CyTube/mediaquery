@@ -12,8 +12,13 @@ function md5(input) {
     return hash.digest('hex');
 }
 
-function fakeRequest(url) {
-    var fpath = path.join(srcdir, md5(url) + '.txt');
+function fakeRequest(url, headers) {
+    if (headers) {
+        headers = JSON.stringify(headers);
+    } else {
+        headers = '';
+    }
+    var fpath = path.join(srcdir, md5(url + headers) + '.txt');
     var data = (fs.readFileSync(fpath) + '').split('\r\n\r\n');
     var headers = data[0];
     var status = headers.match(/HTTP\/1\.\d (\d+) ([^\r\n]+)/);

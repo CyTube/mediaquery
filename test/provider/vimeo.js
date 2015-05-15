@@ -1,7 +1,17 @@
 var assert = require('assert');
+var fs = require('fs');
+var path = require('path');
+var Promise = require('bluebird');
 
 var fakerequest = require('./fakerequest');
+var request = require('../../lib/request');
 var vimeo = require('../../lib/provider/vimeo');
+
+function verify(actual, id) {
+    var raw = fs.readFileSync(path.resolve(__dirname, '..', 'fixtures', id + '.json')) + '';
+    var expected = JSON.parse(raw);
+    assert.deepEqual(actual, expected);
+}
 
 describe('Vimeo', function () {
     before(fakerequest.init);
@@ -50,6 +60,45 @@ describe('Vimeo', function () {
                 kind: 'single',
                 id: '59859181'
             });
+        });
+    });
+
+    describe('#lookupAndExtract', function () {
+        it('should look up and extract video data', function (done) {
+            var id = '126820040';
+            vimeo.lookupAndExtract(id).then(function (video) {
+                verify(video, id);
+                done();
+            })
+        });
+    });
+
+    describe('#extract', function () {
+        fakerequest.reset();
+
+        var HEADERS = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0'
+        };
+
+        before(function () {
+            request.__testpatch(function (url, headers) {
+                assert.deepEqual(headers, HEADERS);
+
+                return Promise.resolve({
+                    statusCode: 404
+                });
+            });
+        });
+
+        after(function () {
+            request.__untestpatch();
+        });
+
+        it('should send the correct User-Agent', function (done) {
+            var id = '126820040';
+            vimeo.extract(id).then(function () {
+                done();
+            })
         });
     });
 });

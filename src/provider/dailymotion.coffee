@@ -25,7 +25,8 @@ exports.lookup = lookup = (id) ->
 
     return getJSON(url).then((result) ->
         if not result.allow_embed
-            return Promise.reject(new Error('Video is not embeddable'))
+            return Promise.reject(new Error('The uploader has made this video
+                                             non-embeddable'))
 
         if result.status isnt 'published'
             return Promise.reject(new Error('Video status is not published'))

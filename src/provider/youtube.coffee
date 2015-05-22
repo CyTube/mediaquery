@@ -54,7 +54,7 @@ exports.lookup = lookup = (id) ->
         video = result.items[0]
 
         if not video.status.embeddable
-            throw new Error('Video is not embeddable')
+            throw new Error('The uploader has made this video non-embeddable')
 
         data =
             id: id

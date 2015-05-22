@@ -55,7 +55,7 @@ describe('YouTube v3', function () {
             youtube.lookup('1kIsylLeHHU').then(function (media) {
                 assert.ok(false, 'Should not succeed with non-embeddable video');
             }).catch(function (e) {
-                assert.equal(e.message, 'Video is not embeddable');
+                assert.equal(e.message, 'The uploader has made this video non-embeddable');
                 done();
             });
         });

@@ -23,13 +23,13 @@ exports.ITAG_QMAP =
     34: 360
 
 exports.ITAG_CMAP =
-    43: 'webm'
-    44: 'webm'
-    45: 'webm'
-    46: 'webm'
-    18: 'mp4'
-    22: 'mp4'
-    37: 'mp4'
-    59: 'mp4'
-    35: 'flv'
-    34: 'flv'
+    43: 'video/webm'
+    44: 'video/webm'
+    45: 'video/webm'
+    46: 'video/webm'
+    18: 'video/mp4'
+    22: 'video/mp4'
+    37: 'video/mp4'
+    59: 'video/mp4'
+    35: 'video/flv'
+    34: 'video/flv'

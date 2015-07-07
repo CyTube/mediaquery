@@ -52,17 +52,17 @@ exports.extract = extract = (id) ->
             if 'mobile' of files
                 videos[240].push(
                     link: files.mobile.url
-                    contentType: 'mp4'
+                    contentType: 'video/mp4'
                 )
             if 'sd' of files
                 videos[360].push(
                     link: files.sd.url
-                    contentType: 'mp4'
+                    contentType: 'video/mp4'
                 )
             if 'hd' of files
                 videos[720].push(
                     link: files.hd.url
-                    contentType: 'mp4'
+                    contentType: 'video/mp4'
                 )
 
             return videos

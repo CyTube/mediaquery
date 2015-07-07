@@ -9,19 +9,19 @@
             "240": [
                 {
                     "link": "https://pdlvimeocdn-a.akamaihd.net/26678/137/364673863.mp4?token2=1431711819_f45cfba0073f4c15bf71e34a90a4a25e&aksessionid=55aad78a3b292386",
-                    "contentType": "mp4"
+                    "contentType": "video/mp4"
                 }
             ],
             "360": [
                 {
                     "link": "https://pdlvimeocdn-a.akamaihd.net/89435/711/363484118.mp4?token2=1431711819_2717898f9843123f7e0695c613df9883&aksessionid=4341724643ed49ba",
-                    "contentType": "mp4"
+                    "contentType": "video/mp4"
                 }
             ],
             "720": [
                 {
                     "link": "https://pdlvimeocdn-a.akamaihd.net/28920/159/363484132.mp4?token2=1431711819_c18422afe844e3a26eaedcaf0c3c18c1&aksessionid=699f9e6b27a99578",
-                    "contentType": "mp4"
+                    "contentType": "video/mp4"
                 }
             ]
         }

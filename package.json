@@ -15,6 +15,7 @@
   "dependencies": {
     "bluebird": "^2.9.12",
     "coffee-script": "^1.9.1",
-    "source-map-support": "^0.2.9"
+    "source-map-support": "^0.2.9",
+    "status-message-polyfill": "calzoneman/status-message-polyfill"
   }
 }

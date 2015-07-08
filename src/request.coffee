@@ -2,6 +2,7 @@ http = require 'http'
 https = require 'https'
 urlparse = require 'url'
 Promise = require 'bluebird'
+STATUS_MESSAGES = require './util/status-messages'
 
 exports.request = request = (url, headers = null) ->
     return new Promise((resolve, reject) ->
@@ -32,7 +33,8 @@ exports.request = request = (url, headers = null) ->
 exports.getJSON = getJSON = (url) ->
     return request(url).then((res) ->
         switch res.statusCode
-            when 400, 403, 404, 500, 503 then throw new Error(res.statusMessage)
+            when 400, 403, 404, 500, 503 then throw new Error(
+                    STATUS_MESSAGES[res.statusCode])
 
         try
             data = JSON.parse(res.data)

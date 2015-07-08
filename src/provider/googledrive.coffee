@@ -1,5 +1,6 @@
 querystring = require 'querystring'
 urlparse = require 'url'
+STATUS_MESSAGES = require '../util/status-messages'
 
 request = require '../request'
 Media = require '../media'
@@ -10,7 +11,7 @@ exports.lookup = lookup = (id) ->
 
     return request.request(url).then((res) ->
         if res.statusCode != 200
-            throw new Error("Google Drive lookup failed: #{res.statusMessage}")
+            throw new Error("Google Drive lookup failed: #{STATUS_MESSAGES[res.statusCode]}")
 
         doc = querystring.parse(res.data)
 

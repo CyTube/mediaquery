@@ -1,0 +1,163 @@
+HTTP/1.1 200 OK
+Expires: Sun, 12 Jul 2015 04:03:37 GMT
+Date: Sun, 12 Jul 2015 04:03:37 GMT
+Cache-Control: private, max-age=0, must-revalidate, no-transform
+ETag: "iDqJ1j7zKs4x3o3ZsFlBOwgWAHU/__Vk1SDq_09oVHqN0D1pahQWqVI"
+Vary: Origin
+Vary: X-Origin
+Content-Type: application/json; charset=UTF-8
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 3619
+Server: GSE
+Alternate-Protocol: 443:quic,p=1
+
+{
+ "kind": "youtube#videoListResponse",
+ "etag": "\"iDqJ1j7zKs4x3o3ZsFlBOwgWAHU/__Vk1SDq_09oVHqN0D1pahQWqVI\"",
+ "pageInfo": {
+  "totalResults": 1,
+  "resultsPerPage": 1
+ },
+ "items": [
+  {
+   "kind": "youtube#video",
+   "etag": "\"iDqJ1j7zKs4x3o3ZsFlBOwgWAHU/PGbQ19c00Jr9eH8V93ZjSW0keeM\"",
+   "id": "N8sQqElEaCI",
+   "snippet": {
+    "publishedAt": "2014-06-20T15:51:52.000Z",
+    "channelId": "UCjq36pMYgg6zzdbDjcJeX-Q",
+    "title": "【初音ミク】めめめめめ【オリジナル曲】",
+    "description": "(｀□´)めっ！！！！\n○作曲　：ちんたら\n◎ギター：のら\n●写真　：顔色様\n\n\nニコ動から転載",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/N8sQqElEaCI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/N8sQqElEaCI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/N8sQqElEaCI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/N8sQqElEaCI/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/N8sQqElEaCI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "VocaloidTV",
+    "tags": [
+     "音楽",
+     "VOCALOID",
+     "ボカロ",
+     "鏡音リン",
+     "HIKAKIN",
+     "初音ミク",
+     "AKB48",
+     "ボーカロイド",
+     "喧嘩",
+     "hikakin",
+     "hikakintv",
+     "ヤクザ",
+     "amazon",
+     "オススメ",
+     "ヒカキン",
+     "ひかきん",
+     "vocaloid",
+     "組長",
+     "オリジナル",
+     "オリジナル曲",
+     "DECO*27",
+     "akka",
+     "mirto",
+     "YumaSaito",
+     "ニコ動",
+     "ニコ生",
+     "花葬",
+     "なぎさ",
+     "ひらり",
+     "能面",
+     "ラジコン",
+     "女々しくて",
+     "ゴールデンボンバー",
+     "陸上自衛隊",
+     "自衛隊",
+     "伊東歌詞太郎",
+     "夢の空き地",
+     "歌ってみた",
+     "たるとP",
+     "ハイキックP",
+     "Girls",
+     "MikuMikuDance",
+     "Girls(EasyPop)",
+     "MMDステージ配布あり",
+     "MMD",
+     "巡音ルカ",
+     "Tda式改変ルカ",
+     "ぬけがら",
+     "とあ",
+     "ミクオリジナル曲",
+     "病名恋ワズライ",
+     "鎖那",
+     "HoneyWorks",
+     "IA",
+     "すーぱーぬこわーるど",
+     "IA feat 鏡音リン",
+     "まふまふ",
+     "HY",
+     "てがみ",
+     "天月",
+     "赤ティン",
+     "調味料",
+     "コゲ犬",
+     "maro.",
+     "Mrs.Pumpkinの滑稽な夢",
+     "腐向け",
+     "紙ペラ人生攻略",
+     "クプラ",
+     "cillia",
+     "MEIKO",
+     "MEIKO V3",
+     "純情スペクトラ",
+     "GUMI",
+     "唯我",
+     "コスプレ",
+     "鈴木。"
+    ],
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "【初音ミク】めめめめめ【オリジナル曲】",
+     "description": "(｀□´)めっ！！！！\n○作曲　：ちんたら\n◎ギター：のら\n●写真　：顔色様\n\n\nニコ動から転載"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT3M14S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false
+   },
+   "status": {
+    "uploadStatus": "rejected",
+    "rejectionReason": "uploaderAccountSuspended",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true
+   }
+  }
+ ]
+}

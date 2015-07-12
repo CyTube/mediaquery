@@ -56,6 +56,10 @@ exports.lookup = lookup = (id) ->
         if not video.status.embeddable
             throw new Error('The uploader has made this video non-embeddable')
 
+        switch video.status.uploadStatus
+            when 'deleted' then throw new Error('This video has been deleted')
+            when 'failed', 'rejected' then throw new Error('This video is unavailable')
+
         data =
             id: id
             type: 'youtube'

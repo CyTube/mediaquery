@@ -78,6 +78,15 @@ describe('YouTube v3', function () {
                 done();
             });
         });
+
+        it('should throw an error if the video uploadStatus is rejected', function (done) {
+            youtube.lookup('N8sQqElEaCI').then(function () {
+                assert.ok(false, 'Success callback should not be invoked');
+            }).catch(function (err) {
+                assert.equal(err.message, 'This video is unavailable');
+                done();
+            });
+        });
     });
 
     describe('#lookupMany', function () {

@@ -49,6 +49,10 @@ exports.extract = extract = (id) ->
                 240: []
 
             files = data.request.files.h264
+            if not files
+                console.error("vimeo::extract() was missing files for vi:#{id}")
+                return {}
+
             if 'mobile' of files
                 videos[240].push(
                     link: files.mobile.url
@@ -72,7 +76,7 @@ exports.extract = extract = (id) ->
             else if res.data.indexOf('Because of its privacy settings, this video cannot
                                       be played here') >= 0
                 return {}
-            console.error("vimeo::lookupAndExtract() failed: #{e.stack}")
+            console.error("vimeo::extract() failed for vi:#{id} : #{e.stack}")
             return {}
     )
 

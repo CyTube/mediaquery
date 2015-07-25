@@ -37,6 +37,19 @@
             ],
             "720": [],
             "1080": []
+        },
+        "gdrive_subtitles": {
+            "vid": "0f57604531e7e6af",
+            "available": [
+                {
+                    "lang": "en",
+                    "name": "Demo"
+                },
+                {
+                    "lang": "en",
+                    "name": "English"
+                }
+            ]
         }
     }
 }

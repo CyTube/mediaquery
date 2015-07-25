@@ -66,7 +66,7 @@ exports.lookup = lookup = (id) ->
 
         return exports.getSubtitles(id, extractHexId(doc.ttsurl)).then((subtitles) ->
             if subtitles
-                data.meta.subtitles = subtitles
+                data.meta.gdrive_subtitles = subtitles
             return new Media(data)
         )
     )

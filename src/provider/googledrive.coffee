@@ -93,6 +93,7 @@ exports.getSubtitles = (id, vid) ->
         , parseDom(res.data)).forEach((elem) ->
             subtitles.available.push(
                 lang: elem.attribs.lang_code
+                lang_original: elem.attribs.lang_original
                 name: elem.attribs.name
             )
         )

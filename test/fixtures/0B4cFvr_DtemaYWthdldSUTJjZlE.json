@@ -43,10 +43,12 @@
             "available": [
                 {
                     "lang": "en",
+                    "lang_original": "English",
                     "name": "Demo"
                 },
                 {
                     "lang": "en",
+                    "lang_original": "English",
                     "name": "English"
                 }
             ]

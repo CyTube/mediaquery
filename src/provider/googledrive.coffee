@@ -20,7 +20,7 @@ exports.lookup = lookup = (id) ->
 
     return request.request(url).then((res) ->
         if res.statusCode != 200
-            throw new Error("Google Drive lookup failed: #{res.statusMessage}")
+            throw new Error("Google Drive lookup failed for #{id}: #{res.statusMessage}")
 
         doc = querystring.parse(res.data)
 
@@ -82,7 +82,8 @@ exports.getSubtitles = (id, vid) ->
     url = "https://drive.google.com/timedtext?#{querystring.stringify(params)}"
     return request.request(url).then((res) ->
         if res.statusCode != 200
-            throw new Error("Google Drive subtitle lookup failed: #{res.statusMessage}")
+            throw new Error("Google Drive subtitle lookup failed for #{id}:
+                            #{res.statusMessage} (url: #{url})")
 
         subtitles =
             vid: vid

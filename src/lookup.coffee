@@ -1,28 +1,15 @@
-fs = require 'fs'
-path = require 'path'
 Promise = require 'bluebird'
 
-PROVIDERS =
-    youtube: require './provider/youtube'
-    vimeo: require './provider/vimeo'
-    dailymotion: require './provider/dailymotion'
-    googledrive: require './provider/googledrive'
-    'google+': require './provider/googleplus'
+TYPE_MAP = require './typemap'
+parseUrl = require './parseUrl'
 
-module.exports = (info) ->
-    if not info?
-        return Promise.reject(new Error('No information provided'))
+exports.lookupByParsedInfo = (info, opts = {}) ->
+    constructor = TYPE_MAP[info.type]
+    return new constructor(info.id).fetch(opts)
 
-    if info.type not of PROVIDERS
-        return Promise.reject(new Error("Unknown provider '#{info.type}'"))
+exports.lookupByUrl = (url, opts = {}) ->
+    info = parseUrl(url)
+    if not info
+        return Promise.reject(new Error("Unable to parse URL: #{url}"))
 
-    provider = PROVIDERS[info.type]
-
-    switch info.kind
-        when 'single' then provider.lookup(info.id)
-        when 'playlist'
-            if 'lookupPlaylist' of provider
-                provider.lookupPlaylist(info.id)
-            else
-                Promise.reject(new Error("Provider '#{info.type}' does not support playlists"))
-        else Promise.reject(new Error("Unknown info kind '#{info.kind}'"))
+    return exports.lookupByParsedInfo(info, opts)

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "coffee -cmo lib src",
-    "test": "mocha --recursive"
+    "test": "doctest -m commonjs lib/**/*.js && mocha --recursive"
   },
   "author": "Calvin Montgomery",
   "license": "MIT",
@@ -15,6 +15,7 @@
   "dependencies": {
     "bluebird": "^2.9.12",
     "coffee-script": "^1.9.1",
+    "doctest": "^0.8.0",
     "domutils": "^1.5.1",
     "htmlparser2": "^3.8.3",
     "source-map-support": "^0.2.9",

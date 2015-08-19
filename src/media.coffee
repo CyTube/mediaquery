@@ -1,9 +1,27 @@
+Promise = require 'bluebird'
+
 class Media
-    constructor: (data) ->
-        @id = data.id
-        @type = data.type
-        @title = data.title
-        @duration = data.duration
-        @meta = if data.meta? then data.meta else {}
+    constructor: (@id) ->
+        @title = ''
+        @duration = 0
+        @meta = {}
+        # Copy prototype 'type' field onto this object.
+        # Necessary for this field to show up in JSON.stringify'd object.
+        @type = @type
+
+    type: ''
+
+    fetch: (opts) ->
+        return Promise.resolve(this)
+
+    extract: ->
+        return Promise.resolve(this)
+
+    fromExistingData: (data) ->
+        { @id, @title, @duration, @meta } = data
+        return this
+
+Media.parseUrl = (url) ->
+    return null
 
 module.exports = Media

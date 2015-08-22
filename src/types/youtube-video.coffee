@@ -1,5 +1,6 @@
 querystring = require 'querystring'
 urlparse = require 'url'
+Promise = require 'bluebird'
 
 { getJSON } = require '../request'
 Media = require '../media'

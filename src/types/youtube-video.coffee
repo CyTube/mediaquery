@@ -113,7 +113,7 @@ YouTubeVideo.search = (query, opts = { nextPage: false }) ->
         # Note that it is necessary to perform a second lookup to retrieve
         # useful video metadata.
         # See https://code.google.com/p/gdata-issues/issues/detail?id=4294
-        return exports.lookupMany(
+        return YouTubeVideo.lookupMany(
             result.items.map((item) -> item.id.videoId),
             opts.filterEmbeddable
         ).then((videos) ->
@@ -151,7 +151,7 @@ exports.setRegionRestrictions = (video, meta) ->
 # If a video is private or removed, its information simply doesn't appear in
 # the results.
 ###
-exports.lookupMany = lookupMany = (ids, filterEmbeddable = false) ->
+YouTubeVideo.lookupMany = lookupMany = (ids, filterEmbeddable = false) ->
     if not YouTubeVideo.prototype.apiKey
         return Promise.reject(new Error('API key not set for YouTube v3 API'))
 

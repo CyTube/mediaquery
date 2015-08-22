@@ -4,6 +4,8 @@ typeList = [
     'dailymotion-video'
     'googledrive-video'
     'googleplus-video'
+
+    'youtube-playlist'
 ]
 
 for type in typeList

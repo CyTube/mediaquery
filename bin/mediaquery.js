@@ -3,6 +3,12 @@ var Promise = require('bluebird');
 
 var extract = false;
 var lookups = [];
+try {
+    var apiKeyMap = require('../keys.json');
+    mediaquery.setApiKeys(apiKeyMap);
+} catch (e) {
+    console.error('Warning: Unable to load API keys from keys.json.');
+}
 
 process.argv.slice(2).forEach(function (arg) {
     if (arg === '-e' || arg === '--extract') {

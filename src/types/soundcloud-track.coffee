@@ -80,3 +80,24 @@ module.exports = class SoundcloudTrack extends Media
 
 SoundcloudTrack.setApiKey = (apiKey) ->
     SoundcloudTrack.prototype.apiKey = apiKey
+
+###
+# > SoundcloudTrack.parseUrl('https://soundcloud.com/zedd/bn-greyremix')
+# {id: 'zedd/bn-greyremix', type: 'soundcloud'}
+# > SoundcloudTrack.parseUrl('https://soundcloud.com/')
+# null
+# > SoundcloudTrack.parseUrl('https://developers.soundcloud.com/docs/api')
+# null
+###
+SoundcloudTrack.parseUrl = (url) ->
+    data = urlparse.parse(url)
+    if data.hostname != 'soundcloud.com'
+        return null
+
+    if not /\/[^\/]+\/[^\/]+/.test(data.pathname)
+        return null
+
+    return {
+        type: SoundcloudTrack.prototype.type
+        id: data.pathname.substring(1)
+    }

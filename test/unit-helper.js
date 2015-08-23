@@ -20,18 +20,24 @@ function urlToFilename(url) {
     return data.hostname + '_' + md5(url);
 }
 
-function mockRequest(url, headers) {
+function mockRequest(url) {
     var fpath = path.join(datadir, urlToFilename(url) + '.txt');
     var data = (fs.readFileSync(fpath) + '').split('\r\n\r\n');
     var headers = data[0];
     var status = headers.match(/HTTP\/1\.\d (\d+) ([^\r\n]+)/);
+    var headerMap = {};
+    var m = headers.match(/Location: (.*)/);
+    if (m) {
+        headerMap['location'] = m[1];
+    }
     var body = data[1];
 
     return new Promise(function (resolve, reject) {
         resolve({
             statusCode: parseInt(status[1]),
             statusMessage: status[2],
-            data: body
+            data: body,
+            headers: headerMap
         });
     });
 }
@@ -45,7 +51,7 @@ exports.reset = function () {
 };
 
 exports.runFetchTest = function (type, id, opts, done) {
-    var fpath = path.join(datadir, type + '_' + id + '.json');
+    var fpath = path.join(datadir, type + '_' + id.replace(/\//g, '_') + '.json');
     var expected = JSON.parse(fs.readFileSync(fpath) + '');
     var constructor = TYPE_MAP[type];
     if (constructor.setApiKey) {

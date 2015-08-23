@@ -14,18 +14,28 @@ function md5(input) {
     return hash.digest('hex');
 }
 
-function urlToFilename(url) {
+function replaceApiKey(url) {
     for (var type in apiKeys) {
         url = url.replace(new RegExp(apiKeys[type], 'g'), 'dummy_key');
     }
 
+    return url;
+}
+
+function urlToFilename(url) {
+    url = replaceApiKey(url);
     var data = urlparse.parse(url);
     return data.hostname + '_' + md5(url);
 }
 
 function proxyRequest(url, headers) {
     return actualRequest(url, headers).then(function (res) {
-        var data = 'HTTP/1.1 ' + res.statusCode + ' ' + res.statusMessage + '\r\n\r\n';
+        var data = 'HTTP/1.1 ' + res.statusCode + ' ' + res.statusMessage;
+        if (res.headers['location']) {
+            data += '\r\nLocation: ' + replaceApiKey(res.headers['location']);
+        }
+
+        data += '\r\n\r\n';
         data += res.data;
         var dest = path.resolve(__dirname, '..', 'test_data',
                 urlToFilename(url) + '.txt');
@@ -46,7 +56,8 @@ if (process.argv[4]) {
 }
 
 var constructor = TYPE_MAP[type];
-var dest = path.resolve(__dirname, '..', 'test_data', type + '_' + id + '.json');
+var dest = path.resolve(__dirname, '..', 'test_data', type + '_' + id.replace(/\//g, '_')
+        + '.json');
 
 new constructor(id).fetch(opts).then(function (video) {
     fs.writeFileSync(dest, JSON.stringify(video, null, 4));

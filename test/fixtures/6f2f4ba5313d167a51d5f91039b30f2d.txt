@@ -1,3 +1,0 @@
-HTTP/1.1 200 OK
-
-<?xml version="1.0" encoding="utf-8" ?><transcript_list docid="not important"><format fmt_code="1" default="true"/><format fmt_code="sbv"/><format fmt_code="srt"/><track id="0" name="Demo" lang_code="en" lang_original="English" lang_translated="English" lang_default="true" formats="2"/><track id="2" name="English" lang_code="en" lang_original="English" lang_translated="English"/></transcript_list>

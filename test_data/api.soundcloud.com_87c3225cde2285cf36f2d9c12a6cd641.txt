@@ -1,0 +1,4 @@
+HTTP/1.1 302 Found
+Location: https://api.soundcloud.com/tracks/220283734.json?client_id=dummy_key
+
+{"status":"302 - Found","location":"https://api.soundcloud.com/tracks/220283734.json?client_id=2e0c82ab5a020f3a7509318146128abd"}

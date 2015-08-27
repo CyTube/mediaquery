@@ -6,6 +6,9 @@ typeList = [
     'googleplus-video'
     'soundcloud-track'
 
+    'twitch-stream'
+    'livestream.com-stream'
+
     'youtube-playlist'
 ]
 

@@ -178,6 +178,8 @@ YouTubeVideo.lookupMany = lookupMany = (ids, filterEmbeddable = false) ->
             )
 
             exports.setRegionRestrictions(video, media.meta)
+            if not video.status.embeddable
+                media.meta.notEmbeddable = true
             return media
         )
     )

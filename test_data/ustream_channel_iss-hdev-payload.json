@@ -1,0 +1,9 @@
+{
+    "id": "channel/iss-hdev-payload",
+    "title": "ISS HD Earth Viewing Experiment",
+    "duration": 0,
+    "meta": {
+        "thumbnail": "https://ustvstaticcdn1-a.akamaihd.net/i/channel/live/1_17074538,192x108,b:2015082721.jpg"
+    },
+    "type": "ustream"
+}

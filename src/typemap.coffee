@@ -9,6 +9,7 @@ typeList = [
     'twitch-stream'
     'livestream.com-stream'
     'hitbox-stream'
+    'ustream-stream'
 
     'youtube-playlist'
 ]

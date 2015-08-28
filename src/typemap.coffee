@@ -12,6 +12,7 @@ typeList = [
     'ustream-stream'
 
     'youtube-playlist'
+    'dailymotion-playlist'
 ]
 
 for type in typeList

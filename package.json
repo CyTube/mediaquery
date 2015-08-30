@@ -18,6 +18,7 @@
     "doctest": "^0.8.0",
     "domutils": "^1.5.1",
     "htmlparser2": "^3.8.3",
+    "oauth": "^0.9.13",
     "source-map-support": "^0.2.9",
     "status-message-polyfill": "calzoneman/status-message-polyfill"
   }

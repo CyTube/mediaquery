@@ -191,10 +191,13 @@ module.exports = class FFmpegVideo extends Media
         return this
 
 FFmpegVideo.setFFprobeExecutable = (exe) ->
-    FFmpegVideo.prototype.ffmpegExecutable = exe
+    FFmpegVideo.prototype.ffprobeExecutable = exe
 
 FFmpegVideo.setAcceptedVideoCodecs = (codecs) ->
     FFmpegVideo.prototype.acceptedVideoCodecs = codecs
 
 FFmpegVideo.setAcceptedAudioCodecs = (codecs) ->
     FFmpegVideo.prototype.acceptedAudioCodecs = codecs
+
+FFmpegVideo.setTimeout = (timeout) ->
+    FFmpegVideo.prototype.timeout = timeout

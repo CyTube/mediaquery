@@ -5,6 +5,7 @@ typeList = [
     'googledrive-video'
     'googleplus-video'
     'soundcloud-track'
+    'ffmpeg-video'
 
     'twitch-stream'
     'livestream.com-stream'

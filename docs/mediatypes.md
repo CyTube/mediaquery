@@ -90,6 +90,7 @@ Notes:
         ```javascript
         VimeoVideo.setApiKey(<token>);
         ```
+
 ## DailymotionVideo ##
 
 `type`: `'dailymotion'`
@@ -107,7 +108,7 @@ Option | Description
 Field | Description
 ------|-----------
 `thumbnail` | URL to a thumbnail image for the video
-`notEmbeddable` | If `true`, then this video cannot be embedded outside of vimeo.com
+`notEmbeddable` | If `true`, then this video cannot be embedded outside of dailymotion.com
 
 Accepted URLs:
 

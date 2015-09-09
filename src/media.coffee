@@ -1,3 +1,4 @@
+clone = require 'clone'
 Promise = require 'bluebird'
 
 class Media
@@ -5,11 +6,12 @@ class Media
         @title = ''
         @duration = 0
         @meta = {}
-        # Copy prototype 'type' field onto this object.
-        # Necessary for this field to show up in JSON.stringify'd object.
+        # Copy 'type' field from the prototype onto this object.
         @type = @type
 
     type: ''
+
+    shortCode: ''
 
     fetch: (opts) ->
         return Promise.resolve(this)
@@ -18,10 +20,29 @@ class Media
         return Promise.resolve(this)
 
     fromExistingData: (data) ->
-        { @id, @title, @duration, @meta } = data
+        { @id, @title, @duration } = data
+        @meta = clone(data.meta)
         return this
+
+    toJSON: ->
+        return {
+            id: @id
+            title: @title
+            duration: @duration
+            meta: clone(@meta)
+            type: @type
+        }
 
 Media.parseUrl = (url) ->
     return null
+
+Media.setApiKey = (apiKey) ->
+    return
+
+Media.search = (query, opts) ->
+    return {
+        nextPage: false
+        results: []
+    }
 
 module.exports = Media

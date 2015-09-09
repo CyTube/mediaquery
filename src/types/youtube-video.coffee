@@ -95,8 +95,6 @@ YouTubeVideo.search = (query, opts = { nextPage: false }) ->
     if not YouTubeVideo.prototype.apiKey
         return Promise.reject(new Error('YouTube v3 API requires an API key'))
 
-    query = query.replace(/%20/g, '+')
-
     params =
         key: YouTubeVideo.prototype.apiKey
         part: 'id'
@@ -108,6 +106,7 @@ YouTubeVideo.search = (query, opts = { nextPage: false }) ->
         params.pageToken = nextPage
 
     params = querystring.stringify(params)
+    params = params.replace(/%20/g, '+')
     url = "https://www.googleapis.com/youtube/v3/search?#{params}"
 
     return getJSON(url).then((result) ->
@@ -134,7 +133,7 @@ exports.parseDuration = (duration) ->
     time = 0
     for [regex, scale] in DURATION_SCALE
         if m = duration.match(regex)
-            time += parseInt(m[1]) * scale
+            time += parseInt(m[1], 10) * scale
 
     return time
 

@@ -10,6 +10,8 @@ OAUTH_OLD_REQUEST_TOKEN = 'https://vimeo.com/oauth/request_token'
 OAUTH_OLD_ACCESS_TOKEN = 'https://vimeo.com/oauth/access_token'
 OAUTH_OLD_VERSION = '1.0'
 OAUTH_OLD_SIGNATURE_METHOD = 'HMAC-SHA1'
+ERR_NOT_EMBEDDABLE = 'The uploader has not made this video embeddable.'
+ERR_UNAVAILABLE = 'This video is not available.'
 
 module.exports = class VimeoVideo extends Media
     type: 'vimeo'
@@ -22,6 +24,8 @@ module.exports = class VimeoVideo extends Media
         if @oauth
             if @oauth.useOldAPI
                 return @_fetchOldAPI(opts)
+            else
+                return @_fetchNewAPI(opts)
 
         url = "https://vimeo.com/api/v2/video/#{@id}.json"
         return request.getJSON(url).then((result) =>
@@ -29,6 +33,36 @@ module.exports = class VimeoVideo extends Media
 
             { @title, @duration } = video
             @meta.thumbnail = video.thumbnail_medium
+
+            if opts.extract
+                return @extract()
+
+            return this
+        )
+
+    _fetchNewAPI: (opts = {}) ->
+        url = "https://api.vimeo.com/videos/#{@id}"
+        headers =
+            Authorization: "bearer #{@oauth}"
+
+        return request.request(url, headers).then((res) =>
+            try
+                video = JSON.parse(res.data)
+            catch e
+                throw new Error("Vimeo response could not be decoded as JSON: #{e}")
+
+            if video.privacy.embed isnt 'public'
+                if opts.failNonEmbeddable
+                    throw new Error(ERR_NOT_EMBEDDABLE)
+                else
+                    @meta.notEmbeddable = true
+
+            if video.status isnt 'available'
+                throw new Error(ERR_UNAVAILABLE + " (status: #{video.status})")
+
+            @title = video.name
+            @duration = video.duration
+            @meta.thumbnail = video.pictures[0].link
 
             if opts.extract
                 return @extract()
@@ -64,7 +98,8 @@ module.exports = class VimeoVideo extends Media
                 try
                     data = JSON.parse(data)
                 catch e
-                    return reject(new Error('Decoding vimeo response failed: ' + e))
+                    return reject(
+                        new Error("Vimeo response could not be decoded as JSON: #{e}"))
 
                 if data.stat isnt 'ok'
                     return reject(new Error("Vimeo returned error: #{data.err.msg}"))
@@ -72,7 +107,7 @@ module.exports = class VimeoVideo extends Media
                 video = data.video[0]
                 if video.embed_privacy isnt 'anywhere'
                     if opts.failNonEmbeddable
-                        return reject(new Error('Video is not embeddable'))
+                        return reject(new Error(ERR_NOT_EMBEDDABLE))
                     else
                         @meta.notEmbeddable = true
 
@@ -90,7 +125,6 @@ module.exports = class VimeoVideo extends Media
                 resolve(this)
             )
         )
-
 
     extract: ->
         url = "https://player.vimeo.com/video/#{@id}"

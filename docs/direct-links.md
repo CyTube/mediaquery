@@ -20,7 +20,7 @@ not available for that video).  Each file has the following format:
 
 Google Drive and Google+ files additionally have an `itag` field which specifies
 the numeric ID of the encoding format (see
-https://en.wikipedia.org/wiki/YouTube#Quality\_and\_formats)
+https://en.wikipedia.org/wiki/YouTube#Quality_and_formats)
 
 Example result (Google Drive):
 ```javascript

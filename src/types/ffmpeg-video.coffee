@@ -39,6 +39,8 @@ module.exports = class FFmpegVideo extends Media
         'ogg/vorbis'
     ]
 
+    fileExtensionRegex: /\.(mp4|flv|webm|ogv|mov|mp3|ogg)$/
+
     timeout: 30
 
     ffprobeExecutable: 'ffprobe'
@@ -199,5 +201,27 @@ FFmpegVideo.setAcceptedVideoCodecs = (codecs) ->
 FFmpegVideo.setAcceptedAudioCodecs = (codecs) ->
     FFmpegVideo.prototype.acceptedAudioCodecs = codecs
 
+FFmpegVideo.setFileExtensions = (extensionList) ->
+    FFmpegVideo.prototype.fileExtensionRegex = new RegExp(
+            "\\.(#{extensionList.join('|')})$")
+
 FFmpegVideo.setTimeout = (timeout) ->
     FFmpegVideo.prototype.timeout = timeout
+
+###
+# > FFmpegVideo.parseURL(require('url').parse('http://i.4cdn.org/wsg/1441995931069.webm'))
+# {id: 'http://i.4cdn.org/wsg/1441995931069.webm', type: 'ffmpeg'}
+# > FFmpegVideo.parseURL(require('url').parse('https://youtu.be/asdf'))
+# null
+###
+FFmpegVideo.parseURL = (data) ->
+    if not /^https?:/.test(data.protocol)
+        return null
+
+    if not FFmpegVideo.prototype.fileExtensionRegex.test(data.pathname)
+        return null
+
+    return {
+        type: FFmpegVideo.prototype.type
+        id: data.href
+    }

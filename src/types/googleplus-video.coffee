@@ -70,9 +70,9 @@ module.exports = class GooglePlusVideo extends Media
         return @fetch()
 
 ###
-# > GooglePlusVideo.parseURL('https://plus.google.com/photos/123/albums/456/789/')
+# > GooglePlusVideo.parseURL(require('url').parse('https://plus.google.com/photos/123/albums/456/789/', true))
 # {id: '123_456_789', type: 'googleplus'}
-# > GooglePlusVideo.parseURL('https://plus.google.com/u/1/photos/123/albums/456/789/')
+# > GooglePlusVideo.parseURL(require('url').parse('https://plus.google.com/u/1/photos/123/albums/456/789/', true))
 # {id: '123_456_789', type: 'googleplus'}
 ###
 GooglePlusVideo.parseURL = (url) ->

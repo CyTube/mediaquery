@@ -82,11 +82,11 @@ SoundcloudTrack.setAPIKey = (apiKey) ->
     SoundcloudTrack.prototype.apiKey = apiKey
 
 ###
-# > SoundcloudTrack.parseURL('https://soundcloud.com/zedd/bn-greyremix')
+# > SoundcloudTrack.parseURL(require('url').parse('https://soundcloud.com/zedd/bn-greyremix', true))
 # {id: 'zedd/bn-greyremix', type: 'soundcloud'}
-# > SoundcloudTrack.parseURL('https://soundcloud.com/')
+# > SoundcloudTrack.parseURL(require('url').parse('https://soundcloud.com/', true))
 # null
-# > SoundcloudTrack.parseURL('https://developers.soundcloud.com/docs/api')
+# > SoundcloudTrack.parseURL(require('url').parse('https://developers.soundcloud.com/docs/api', true))
 # null
 ###
 SoundcloudTrack.parseURL = (url) ->

@@ -61,15 +61,15 @@ YouTubeVideo.setAPIKey = (key) ->
     YouTubeVideo.prototype.apiKey = key
 
 ###
-# > YouTubeVideo.parseURL('https://youtu.be/000al7ru3ms')
+# > YouTubeVideo.parseURL(require('url').parse('https://youtu.be/000al7ru3ms', true))
 # {type: 'youtube', id: '000al7ru3ms'}
-# > YouTubeVideo.parseURL('https://www.youtube.com/watch?v=000al7ru3ms')
+# > YouTubeVideo.parseURL(require('url').parse('https://www.youtube.com/watch?v=000al7ru3ms', true))
 # {type: 'youtube', id: '000al7ru3ms'}
-# > YouTubeVideo.parseURL('https://youtube.com/watch?feature=player_embedded&v=000al7ru3ms')
+# > YouTubeVideo.parseURL(require('url').parse('https://youtube.com/watch?feature=player_embedded&v=000al7ru3ms', true))
 # {type: 'youtube', id: '000al7ru3ms'}
-# > YouTubeVideo.parseURL('https://www.youtube.com/user/JonTronShow')
+# > YouTubeVideo.parseURL(require('url').parse('https://www.youtube.com/user/JonTronShow', true))
 # null
-# > YouTubeVideo.parseURL('asdf')
+# > YouTubeVideo.parseURL(require('url').parse('asdf', true))
 # null
 ###
 YouTubeVideo.parseURL = (url) ->

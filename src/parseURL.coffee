@@ -1,5 +1,6 @@
 fs = require 'fs'
 path = require 'path'
+urlparse = require 'url'
 
 TYPE_MAP = require './typemap'
 
@@ -14,8 +15,9 @@ module.exports = (url) ->
             type: TYPE_MAP[m[1]].prototype.type
         }
 
+    parsed = urlparse.parse(url)
     for _, type of TYPE_MAP
-        result = type.parseURL(url)
+        result = type.parseURL(parsed, true)
         if result isnt null
             return result
 

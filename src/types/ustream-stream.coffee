@@ -36,11 +36,11 @@ module.exports = class UstreamStream extends Media
         )
 
 ###
-# > UstreamStream.parseURL('https://ustream.tv/blah')
+# > UstreamStream.parseURL(require('url').parse('https://ustream.tv/blah', true))
 # {id: 'blah', type: 'ustream'}
-# > UstreamStream.parseURL('http://www.ustream.tv/channel/foo')
+# > UstreamStream.parseURL(require('url').parse('http://www.ustream.tv/channel/foo', true))
 # {id: 'channel/foo', type: 'ustream'}
-# > UstreamStream.parseURL('http://ustream.tv/blah/other/thing')
+# > UstreamStream.parseURL(require('url').parse('http://ustream.tv/blah/other/thing', true))
 # null
 ###
 UstreamStream.parseURL = (url) ->

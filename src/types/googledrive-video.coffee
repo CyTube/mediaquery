@@ -111,11 +111,11 @@ module.exports = class GoogleDriveVideo extends Media
         )
 
 ###
-# > GoogleDriveVideo.parseURL('https://drive.google.com/open?id=foo')
+# > GoogleDriveVideo.parseURL(require('url').parse('https://drive.google.com/open?id=foo', true))
 # {id: 'foo', type: 'googledrive'}
-# > GoogleDriveVideo.parseURL('https://drive.google.com/file/d/foo/edit')
+# > GoogleDriveVideo.parseURL(require('url').parse('https://drive.google.com/file/d/foo/edit', true))
 # {id: 'foo', type: 'googledrive'}
-# > GoogleDriveVideo.parseURL('https://docs.google.com/file/d/foo/view')
+# > GoogleDriveVideo.parseURL(require('url').parse('https://docs.google.com/file/d/foo/view', true))
 # {id: 'foo', type: 'googledrive'}
 ###
 GoogleDriveVideo.parseURL = (url) ->

@@ -23,9 +23,9 @@ module.exports = class TwitchStream extends Media
         )
 
 ###
-# > TwitchStream.parseURL('https://www.twitch.tv/somechannel?foo=bar')
+# > TwitchStream.parseURL(require('url').parse('https://www.twitch.tv/somechannel?foo=bar', true))
 # {id: 'somechannel', type: 'twitch'}
-# > TwitchStream.parseURL('http://twitch.tv/foobar')
+# > TwitchStream.parseURL(require('url').parse('http://twitch.tv/foobar', true))
 # {id: 'foobar', type: 'twitch'}
 ###
 TwitchStream.parseURL = (url) ->

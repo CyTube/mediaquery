@@ -53,11 +53,11 @@ YouTubePlaylist.setAPIKey = (apiKey) ->
     YouTubePlaylist.prototype.apiKey = apiKey
 
 ###
-# > YouTubePlaylist.parseURL('https://www.youtube.com/playlist?list=asdf')
+# > YouTubePlaylist.parseURL(require('url').parse('https://www.youtube.com/playlist?list=asdf', true))
 # {id: 'asdf', type: 'youtube-playlist'}
-# > YouTubePlaylist.parseURL('https://www.youtube.com/watch?v=blah&list=asdf')
+# > YouTubePlaylist.parseURL(require('url').parse('https://www.youtube.com/watch?v=blah&list=asdf', true))
 # null
-# > YouTubePlaylist.parseURL('https://youtube.com/playlist?foo=bar&list=asdf')
+# > YouTubePlaylist.parseURL(require('url').parse('https://youtube.com/playlist?foo=bar&list=asdf', true))
 # {id: 'asdf', type: 'youtube-playlist'}
 ###
 YouTubePlaylist.parseURL = (url) ->

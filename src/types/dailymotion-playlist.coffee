@@ -67,7 +67,7 @@ module.exports = class DailymotionPlaylist extends Playlist
         )
 
 ###
-# > DailymotionPlaylist.parseURL('http://www.dailymotion.com/playlist/x1ix36_radiopratica_classical-music/1#video=xn7ce')
+# > DailymotionPlaylist.parseURL(require('url').parse('http://www.dailymotion.com/playlist/x1ix36_radiopratica_classical-music/1#video=xn7ce', true))
 # {id: 'x1ix36', type: 'dailymotion-playlist'}
 ###
 DailymotionPlaylist.parseURL = (url) ->

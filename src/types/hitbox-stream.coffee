@@ -23,9 +23,9 @@ module.exports = class HitboxStream extends Media
         )
 
 ###
-# > HitboxStream.parseURL('http://hitbox.tv/foo')
+# > HitboxStream.parseURL(require('url').parse('http://hitbox.tv/foo', true))
 # {id: 'foo', type: 'hitbox'}
-# > HitboxStream.parseURL('http://www.hitbox.tv/foo')
+# > HitboxStream.parseURL(require('url').parse('http://www.hitbox.tv/foo', true))
 # {id: 'foo', type: 'hitbox'}
 ###
 HitboxStream.parseURL = (url) ->

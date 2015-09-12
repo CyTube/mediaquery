@@ -19,9 +19,9 @@ module.exports = class LivestreamComStream extends Media
         )
 
 ###
-# > LivestreamComStream.parseURL('http://original.livestream.com/asdf?foo=bar')
+# > LivestreamComStream.parseURL(require('url').parse('http://original.livestream.com/asdf?foo=bar', true))
 # {id: 'asdf', type: 'livestream.com'}
-# > LivestreamComStream.parseURL('http://livestream.com/blah')
+# > LivestreamComStream.parseURL(require('url').parse('http://livestream.com/blah', true))
 # {id: 'blah', type: 'livestream.com'}
 ###
 LivestreamComStream.parseURL = (url) ->

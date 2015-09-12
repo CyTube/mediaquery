@@ -186,9 +186,9 @@ VimeoVideo.setAPIKey = (oauth) ->
     VimeoVideo.prototype.oauth = oauth
 
 ###
-# > VimeoVideo.parseURL('https://vimeo.com/59859181')
+# > VimeoVideo.parseURL(require('url').parse('https://vimeo.com/59859181', true))
 # {type: 'vimeo', id: '59859181'}
-# > VimeoVideo.parseURL('https://vimeo.com/staff')
+# > VimeoVideo.parseURL(require('url').parse('https://vimeo.com/staff', true))
 # null
 ###
 VimeoVideo.parseURL = (url) ->

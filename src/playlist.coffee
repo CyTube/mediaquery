@@ -15,5 +15,5 @@ module.exports = class Playlist
         { @id, @totalDuration, @items } = data
         return this
 
-Playlist.parseUrl = (url) ->
+Playlist.parseURL = (url) ->
     return null

@@ -49,18 +49,18 @@ module.exports = class YouTubePlaylist extends Playlist
             )
         )
 
-YouTubePlaylist.setApiKey = (apiKey) ->
+YouTubePlaylist.setAPIKey = (apiKey) ->
     YouTubePlaylist.prototype.apiKey = apiKey
 
 ###
-# > YouTubePlaylist.parseUrl('https://www.youtube.com/playlist?list=asdf')
+# > YouTubePlaylist.parseURL('https://www.youtube.com/playlist?list=asdf')
 # {id: 'asdf', type: 'youtube-playlist'}
-# > YouTubePlaylist.parseUrl('https://www.youtube.com/watch?v=blah&list=asdf')
+# > YouTubePlaylist.parseURL('https://www.youtube.com/watch?v=blah&list=asdf')
 # null
-# > YouTubePlaylist.parseUrl('https://youtube.com/playlist?foo=bar&list=asdf')
+# > YouTubePlaylist.parseURL('https://youtube.com/playlist?foo=bar&list=asdf')
 # {id: 'asdf', type: 'youtube-playlist'}
 ###
-YouTubePlaylist.parseUrl = (url) ->
+YouTubePlaylist.parseURL = (url) ->
     data = urlparse.parse(url, true)
     if data.hostname not in ['www.youtube.com', 'youtube.com']
         return null

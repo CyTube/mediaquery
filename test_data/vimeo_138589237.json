@@ -1,0 +1,19 @@
+{
+    "id": "138589237",
+    "title": "The End Of VX?",
+    "duration": 457,
+    "meta": {
+        "thumbnail": "https://i.vimeocdn.com/video/534204361_200x150.jpg",
+        "direct": {
+            "240": [],
+            "360": [
+                {
+                    "link": "https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/2717/5/138589237/413136127.mp4?token=55f3f017_0xdd5198428d27a872bdb81472ee664ba17759a9e0",
+                    "contentType": "video/mp4"
+                }
+            ],
+            "720": []
+        }
+    },
+    "type": "vimeo"
+}

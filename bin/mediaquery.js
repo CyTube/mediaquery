@@ -5,7 +5,7 @@ var extract = false;
 var lookups = [];
 try {
     var apiKeyMap = require('../keys.json');
-    mediaquery.setApiKeys(apiKeyMap);
+    mediaquery.setAPIKeys(apiKeyMap);
 } catch (e) {
     console.error('Warning: Unable to load API keys from keys.json.');
 }

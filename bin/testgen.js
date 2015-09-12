@@ -6,7 +6,7 @@ var request = require('../lib/request');
 var actualRequest = request.request;
 
 var apiKeys = require('../keys.json');
-require('../index').setApiKeys(apiKeys);
+require('../index').setAPIKeys(apiKeys);
 
 function md5(input) {
     var hash = crypto.createHash('md5');
@@ -14,7 +14,7 @@ function md5(input) {
     return hash.digest('hex');
 }
 
-function replaceApiKey(url) {
+function replaceAPIKey(url) {
     for (var type in apiKeys) {
         url = url.replace(new RegExp(apiKeys[type], 'g'), 'dummy_key');
     }
@@ -23,7 +23,7 @@ function replaceApiKey(url) {
 }
 
 function urlToFilename(url) {
-    url = replaceApiKey(url);
+    url = replaceAPIKey(url);
     var data = urlparse.parse(url);
     return data.hostname + '_' + md5(url);
 }
@@ -32,7 +32,7 @@ function proxyRequest(url, headers) {
     return actualRequest(url, headers).then(function (res) {
         var data = 'HTTP/1.1 ' + res.statusCode + ' ' + res.statusMessage;
         if (res.headers['location']) {
-            data += '\r\nLocation: ' + replaceApiKey(res.headers['location']);
+            data += '\r\nLocation: ' + replaceAPIKey(res.headers['location']);
         }
 
         data += '\r\n\r\n';

@@ -182,16 +182,16 @@ module.exports = class VimeoVideo extends Media
                 return this
         )
 
-VimeoVideo.setApiKey = (oauth) ->
+VimeoVideo.setAPIKey = (oauth) ->
     VimeoVideo.prototype.oauth = oauth
 
 ###
-# > VimeoVideo.parseUrl('https://vimeo.com/59859181')
+# > VimeoVideo.parseURL('https://vimeo.com/59859181')
 # {type: 'vimeo', id: '59859181'}
-# > VimeoVideo.parseUrl('https://vimeo.com/staff')
+# > VimeoVideo.parseURL('https://vimeo.com/staff')
 # null
 ###
-VimeoVideo.parseUrl = (url) ->
+VimeoVideo.parseURL = (url) ->
     data = urlparse.parse(url)
 
     if data.hostname isnt 'vimeo.com'

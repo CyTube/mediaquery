@@ -15,7 +15,7 @@ module.exports = (url) ->
         }
 
     for _, type of TYPE_MAP
-        result = type.parseUrl(url)
+        result = type.parseURL(url)
         if result isnt null
             return result
 

@@ -54,8 +54,8 @@ exports.runFetchTest = function (type, id, opts, done) {
     var fpath = path.join(datadir, type + '_' + id.replace(/\//g, '_') + '.json');
     var expected = JSON.parse(fs.readFileSync(fpath) + '');
     var constructor = TYPE_MAP[type];
-    if (constructor.setApiKey) {
-        constructor.setApiKey('dummy_key');
+    if (constructor.setAPIKey && !opts.noAPIKey) {
+        constructor.setAPIKey('dummy_key');
     }
 
     new constructor(id).fetch(opts).then(function (video) {

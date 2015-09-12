@@ -23,12 +23,12 @@ module.exports = class HitboxStream extends Media
         )
 
 ###
-# > HitboxStream.parseUrl('http://hitbox.tv/foo')
+# > HitboxStream.parseURL('http://hitbox.tv/foo')
 # {id: 'foo', type: 'hitbox'}
-# > HitboxStream.parseUrl('http://www.hitbox.tv/foo')
+# > HitboxStream.parseURL('http://www.hitbox.tv/foo')
 # {id: 'foo', type: 'hitbox'}
 ###
-HitboxStream.parseUrl = (url) ->
+HitboxStream.parseURL = (url) ->
     data = urlparse.parse(url)
 
     if data.hostname in ['hitbox.tv', 'www.hitbox.tv']

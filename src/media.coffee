@@ -33,10 +33,10 @@ class Media
             type: @type
         }
 
-Media.parseUrl = (url) ->
+Media.parseURL = (url) ->
     return null
 
-Media.setApiKey = (apiKey) ->
+Media.setAPIKey = (apiKey) ->
     return
 
 Media.search = (query, opts) ->

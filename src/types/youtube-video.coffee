@@ -57,22 +57,22 @@ module.exports = class YouTubeVideo extends Media
             return this
         )
 
-YouTubeVideo.setApiKey = (key) ->
+YouTubeVideo.setAPIKey = (key) ->
     YouTubeVideo.prototype.apiKey = key
 
 ###
-# > YouTubeVideo.parseUrl('https://youtu.be/000al7ru3ms')
+# > YouTubeVideo.parseURL('https://youtu.be/000al7ru3ms')
 # {type: 'youtube', id: '000al7ru3ms'}
-# > YouTubeVideo.parseUrl('https://www.youtube.com/watch?v=000al7ru3ms')
+# > YouTubeVideo.parseURL('https://www.youtube.com/watch?v=000al7ru3ms')
 # {type: 'youtube', id: '000al7ru3ms'}
-# > YouTubeVideo.parseUrl('https://youtube.com/watch?feature=player_embedded&v=000al7ru3ms')
+# > YouTubeVideo.parseURL('https://youtube.com/watch?feature=player_embedded&v=000al7ru3ms')
 # {type: 'youtube', id: '000al7ru3ms'}
-# > YouTubeVideo.parseUrl('https://www.youtube.com/user/JonTronShow')
+# > YouTubeVideo.parseURL('https://www.youtube.com/user/JonTronShow')
 # null
-# > YouTubeVideo.parseUrl('asdf')
+# > YouTubeVideo.parseURL('asdf')
 # null
 ###
-YouTubeVideo.parseUrl = (url) ->
+YouTubeVideo.parseURL = (url) ->
     data = urlparse.parse(url, true)
 
     if data.hostname is 'youtu.be'

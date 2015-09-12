@@ -53,7 +53,7 @@ module.exports = class SoundcloudTrack extends Media
                         @meta.notEmbeddable = true
 
                 if track.sharing == 'private'
-                    @meta.privateUrl = track.uri
+                    @meta.privateURL = track.uri
 
                 if opts.extract
                     return @extract()
@@ -78,18 +78,18 @@ module.exports = class SoundcloudTrack extends Media
             return this
         )
 
-SoundcloudTrack.setApiKey = (apiKey) ->
+SoundcloudTrack.setAPIKey = (apiKey) ->
     SoundcloudTrack.prototype.apiKey = apiKey
 
 ###
-# > SoundcloudTrack.parseUrl('https://soundcloud.com/zedd/bn-greyremix')
+# > SoundcloudTrack.parseURL('https://soundcloud.com/zedd/bn-greyremix')
 # {id: 'zedd/bn-greyremix', type: 'soundcloud'}
-# > SoundcloudTrack.parseUrl('https://soundcloud.com/')
+# > SoundcloudTrack.parseURL('https://soundcloud.com/')
 # null
-# > SoundcloudTrack.parseUrl('https://developers.soundcloud.com/docs/api')
+# > SoundcloudTrack.parseURL('https://developers.soundcloud.com/docs/api')
 # null
 ###
-SoundcloudTrack.parseUrl = (url) ->
+SoundcloudTrack.parseURL = (url) ->
     data = urlparse.parse(url)
     if data.hostname != 'soundcloud.com'
         return null

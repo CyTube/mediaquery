@@ -40,10 +40,10 @@ module.exports = class DailymotionVideo extends Media
         )
 
 ###
-# > DailymotionVideo.parseUrl('http://www.dailymotion.com/video/x2j9c73_watch-nasa-test-the-largest-most-powerful-rocket-booster-ever-built_travel')
+# > DailymotionVideo.parseURL('http://www.dailymotion.com/video/x2j9c73_watch-nasa-test-the-largest-most-powerful-rocket-booster-ever-built_travel')
 # {id: 'x2j9c73', type: 'dailymotion'}
 ###
-DailymotionVideo.parseUrl = (url) ->
+DailymotionVideo.parseURL = (url) ->
     data = urlparse.parse(url)
 
     if data.hostname not in ['www.dailymotion.com', 'dailymotion.com']

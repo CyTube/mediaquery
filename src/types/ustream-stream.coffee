@@ -36,14 +36,14 @@ module.exports = class UstreamStream extends Media
         )
 
 ###
-# > UstreamStream.parseUrl('https://ustream.tv/blah')
+# > UstreamStream.parseURL('https://ustream.tv/blah')
 # {id: 'blah', type: 'ustream'}
-# > UstreamStream.parseUrl('http://www.ustream.tv/channel/foo')
+# > UstreamStream.parseURL('http://www.ustream.tv/channel/foo')
 # {id: 'channel/foo', type: 'ustream'}
-# > UstreamStream.parseUrl('http://ustream.tv/blah/other/thing')
+# > UstreamStream.parseURL('http://ustream.tv/blah/other/thing')
 # null
 ###
-UstreamStream.parseUrl = (url) ->
+UstreamStream.parseURL = (url) ->
     data = urlparse.parse(url)
 
     if data.hostname not in ['ustream.tv', 'www.ustream.tv']

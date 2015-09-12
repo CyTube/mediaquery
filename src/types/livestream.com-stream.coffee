@@ -19,12 +19,12 @@ module.exports = class LivestreamComStream extends Media
         )
 
 ###
-# > LivestreamComStream.parseUrl('http://original.livestream.com/asdf?foo=bar')
+# > LivestreamComStream.parseURL('http://original.livestream.com/asdf?foo=bar')
 # {id: 'asdf', type: 'livestream.com'}
-# > LivestreamComStream.parseUrl('http://livestream.com/blah')
+# > LivestreamComStream.parseURL('http://livestream.com/blah')
 # {id: 'blah', type: 'livestream.com'}
 ###
-LivestreamComStream.parseUrl = (url) ->
+LivestreamComStream.parseURL = (url) ->
     data = urlparse.parse(url)
 
     if data.hostname in ['livestream.com', 'www.livestream.com', 'original.livestream.com']

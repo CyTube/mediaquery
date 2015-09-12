@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var parseUrl = require('../lib/parseUrl');
+var parseURL = require('../lib/parseURL');
 
 var tests = {
     'https://www.youtube.com/watch?v=000al7ru3ms': {
@@ -21,11 +21,11 @@ var tests = {
     }
 };
 
-describe('parseUrl', function () {
+describe('parseURL', function () {
     for (var url in tests) {
         (function (url) {
             it('should parse ' + url + ' correctly', function () {
-                assert.deepEqual(parseUrl(url), tests[url]);
+                assert.deepEqual(parseURL(url), tests[url]);
             });
         })(url);
     }

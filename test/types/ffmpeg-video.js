@@ -10,7 +10,7 @@ describe('FFmpegVideo', function () {
     describe('#_preTestLink', function () {
         var reqhandler,
             server,
-            dummyUrl = 'http://localhost:' + PORT + '/video.mp4';
+            dummyURL = 'http://localhost:' + PORT + '/video.mp4';
 
         beforeEach(function (done) {
             FFmpegVideo.prototype.__runFFprobe = FFmpegVideo.prototype._runFFprobe;
@@ -33,12 +33,12 @@ describe('FFmpegVideo', function () {
         it('rejects links with too many redirects', function (done) {
             reqhandler = function (req, res) {
                 res.writeHead(301, {
-                    'Location': dummyUrl
+                    'Location': dummyURL
                 });
                 res.end();
             };
 
-            new FFmpegVideo(dummyUrl).fetch().then(function () {
+            new FFmpegVideo(dummyURL).fetch().then(function () {
                 assert.fail('Should not have completed successfully');
             }).catch(function (err) {
                 assert('Error message should be too many redirects',
@@ -55,7 +55,7 @@ describe('FFmpegVideo', function () {
                 res.end();
             };
 
-            new FFmpegVideo(dummyUrl).fetch().then(function () {
+            new FFmpegVideo(dummyURL).fetch().then(function () {
                 assert.fail('Should not have completed successfully');
             }).catch(function (err) {
                 assert('Error message should be wrong content-type',
@@ -72,7 +72,7 @@ describe('FFmpegVideo', function () {
                 res.end();
             };
 
-            new FFmpegVideo(dummyUrl).fetch().then(done);
+            new FFmpegVideo(dummyURL).fetch().then(done);
         });
 
         it('accepts valid audio links', function (done) {
@@ -83,7 +83,7 @@ describe('FFmpegVideo', function () {
                 res.end();
             };
 
-            new FFmpegVideo(dummyUrl).fetch().then(done);
+            new FFmpegVideo(dummyURL).fetch().then(done);
         });
     });
 

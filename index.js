@@ -1,17 +1,23 @@
 require('source-map-support').install();
 
 var lookup = require('./lib/lookup');
-exports.lookupByUrl = lookup.lookupByUrl;
-exports.lookupByParsedInfo = lookup.lookupByParsedInfo;
-exports.lookup = exports.lookupByUrl;
-exports.parseUrl = require('./lib/parseUrl');
+exports.lookupURL = lookup.lookupByURL;
+exports.lookupParsedURL = lookup.lookupByParsedURL;
+exports.lookup = exports.lookupURL;
+exports.parseURL = require('./lib/parseURL');
 exports.Media = require('./lib/media');
+exports.Playlist = require('./lib/playlist');
 
 var TYPE_MAP = require('./lib/typemap');
-exports.setApiKeys = function (keyMap) {
+exports.setAPIKeys = function (keyMap) {
     for (var type in keyMap) {
-        if (typeof TYPE_MAP[type].setApiKey === 'function') {
-            TYPE_MAP[type].setApiKey(keyMap[type]);
+        if (typeof TYPE_MAP[type].setAPIKey === 'function') {
+            TYPE_MAP[type].setAPIKey(keyMap[type]);
         }
     }
+}
+
+exports.types = {};
+for (var type in TYPE_MAP) {
+    exports.types[TYPE_MAP[type].name] = TYPE_MAP[type];
 }

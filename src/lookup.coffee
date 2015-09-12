@@ -12,4 +12,4 @@ exports.lookupByURL = (url, opts = {}) ->
     if not info
         return Promise.reject(new Error("Unable to parse URL: #{url}"))
 
-    return exports.lookupByParsedInfo(info, opts)
+    return exports.lookupByParsedURL(info, opts)

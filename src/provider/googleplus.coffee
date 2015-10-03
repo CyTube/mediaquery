@@ -42,7 +42,7 @@ exports.lookup = lookup = (id) ->
                 return
 
             url = entry.url
-            m = url.match(/itag=(\d+)/) or url.match(/googleusercountent.*m=(\d+)$/)
+            m = url.match(/itag=(\d+)/) or url.match(/googleusercontent.*=m(\d+)$/)
             if m
                 itag = m[1]
             else

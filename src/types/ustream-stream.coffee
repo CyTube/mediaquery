@@ -14,7 +14,7 @@ module.exports = class UstreamStream extends Media
             url = "https://api.ustream.tv/channels/#{id}.json"
             return request.getJSON(url).then((stream) =>
                 @title = stream.channel.title
-                @duration = 0
+                @seconds = 0
                 if stream.channel.thumbnail?.live
                     @meta.thumbnail = stream.channel.thumbnail.live
                 return this
@@ -27,11 +27,11 @@ module.exports = class UstreamStream extends Media
             if res.statusCode != 200
                 return Promise.reject(new Error("Ustream returned HTTP #{res.statusCode}
                                                  #{res.statusMessage}"))
-            
+
             m = res.data.match(/cid=(\d+)/)
             if not m
                 return Promise.reject(new Error('Unable to resolve Ustream channel ID'))
-            
+
             return m[1]
         )
 

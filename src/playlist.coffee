@@ -5,14 +5,14 @@ module.exports = class Playlist
 
     constructor: (@id) ->
         @items = []
-        @totalDuration = 0
+        @totalSeconds = 0
         @type = @type
 
     fetch: (opts) ->
         return Promise.resolve(this)
 
     fromExistingData: (data) ->
-        { @id, @totalDuration, @items } = data
+        { @id, @totalSeconds, @items } = data
         return this
 
 Playlist.parseURL = (url) ->

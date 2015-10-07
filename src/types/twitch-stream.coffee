@@ -17,7 +17,6 @@ module.exports = class TwitchStream extends Media
                 return Promise.reject(new Error("Twitch error: #{result.error}"))
 
             @title = "Twitch.tv - #{@id}"
-            @duration = 0
             @meta.thumbnail = result.video_banner
             return this
         )

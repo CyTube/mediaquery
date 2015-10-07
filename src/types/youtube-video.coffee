@@ -50,8 +50,8 @@ module.exports = class YouTubeVideo extends Media
                     @meta.notEmbeddable = true
 
             @title = video.snippet.title
-            @duration = exports.parseDuration(video.contentDetails.duration)
-            @meta.thumbnail = video.snippet.thumbnails.default.url
+            @seconds = exports.parseDuration(video.contentDetails.duration)
+            @meta.thumbnail = video.snippet.thumbnails.maxres.url
             exports.setRegionRestrictions(video, @meta)
 
             return this
@@ -72,9 +72,7 @@ YouTubeVideo.setAPIKey = (key) ->
 # > YouTubeVideo.parseURL(require('url').parse('asdf', true))
 # null
 ###
-YouTubeVideo.parseURL = (url) ->
-    data = urlparse.parse(url, true)
-
+YouTubeVideo.parseURL = (data) ->
     if data.hostname is 'youtu.be'
         return {
             type: YouTubeVideo.prototype.type
@@ -171,7 +169,7 @@ YouTubeVideo.lookupMany = lookupMany = (ids, filterEmbeddable = false) ->
             media = new YouTubeVideo().fromExistingData(
                 id: video.id
                 title: video.snippet.title
-                duration: exports.parseDuration(video.contentDetails.duration)
+                seconds: exports.parseDuration(video.contentDetails.duration)
                 meta:
                     thumbnail: video.snippet.thumbnails.default.url
             )

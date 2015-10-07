@@ -31,8 +31,9 @@ module.exports = class VimeoVideo extends Media
         return request.getJSON(url).then((result) =>
             video = result[0]
 
-            { @title, @duration } = video
-            @meta.thumbnail = video.thumbnail_medium
+            @title = video.title
+            @seconds = video.duration
+            @meta.thumbnail = video.thumbnail_large
 
             if opts.extract
                 return @extract()
@@ -61,7 +62,7 @@ module.exports = class VimeoVideo extends Media
                 throw new Error(ERR_UNAVAILABLE + " (status: #{video.status})")
 
             @title = video.name
-            @duration = video.duration
+            @seconds = video.duration
             @meta.thumbnail = video.pictures[0].link
 
             if opts.extract
@@ -116,7 +117,7 @@ module.exports = class VimeoVideo extends Media
                 # > returns JSON payload
                 # > everything is a string
                 # ishygddt
-                @duration = parseInt(video.duration, 10)
+                @seconds = parseInt(video.duration, 10)
                 @title = video.title
 
                 if opts.extract

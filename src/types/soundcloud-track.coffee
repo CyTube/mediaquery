@@ -38,7 +38,7 @@ module.exports = class SoundcloudTrack extends Media
     fetch: (opts) ->
         @resolve().then((location) =>
             return request.getJSON(location).then((track) =>
-                @duration = Math.round(track.duration / 1000)
+                @seconds = Math.round(track.duration / 1000)
                 @title = track.title
                 @meta.thumbnail = track.artwork_url
                 @meta.trackId = track.id

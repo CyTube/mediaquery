@@ -7,7 +7,7 @@ Media = require '../media'
 DM_FIELDS = [
     'title'
     'duration'
-    'thumbnail_120_url'
+    'thumbnail_720_url'
     'allow_embed'
     'status'
 ].join(',')
@@ -34,8 +34,9 @@ module.exports = class DailymotionVideo extends Media
                 else
                     @meta.notEmbeddable = true
 
-            { @title, @duration } = result
-            @meta.thumbnail = result.thumbnail_120_url
+            @title = result.title
+            @seconds = result.duration
+            @meta.thumbnail = result.thumbnail_720_url
             return this
         )
 
@@ -43,9 +44,7 @@ module.exports = class DailymotionVideo extends Media
 # > DailymotionVideo.parseURL(require('url').parse('http://www.dailymotion.com/video/x2j9c73_watch-nasa-test-the-largest-most-powerful-rocket-booster-ever-built_travel', true))
 # {id: 'x2j9c73', type: 'dailymotion'}
 ###
-DailymotionVideo.parseURL = (url) ->
-    data = urlparse.parse(url)
-
+DailymotionVideo.parseURL = (data) ->
     if data.hostname not in ['www.dailymotion.com', 'dailymotion.com']
         return null
 

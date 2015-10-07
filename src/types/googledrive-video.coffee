@@ -62,7 +62,7 @@ module.exports = class GoogleDriveVideo extends Media
                 )
 
             @title = doc.title
-            @duration = parseInt(doc.length_seconds, 10)
+            @seconds = parseInt(doc.length_seconds, 10)
             @meta.thumbnail = doc.iurl
 
             if not opts.withSubtitles

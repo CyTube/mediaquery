@@ -22,8 +22,8 @@ module.exports = class DailymotionPlaylist extends Playlist
     fetch: (opts = {}) ->
         return @_fetch(opts).then((videos) =>
             @items = videos
-            @totalDuration = @items.reduce((current, video) ->
-                return current + video.duration
+            @totalSeconds = @items.reduce((current, video) ->
+                return current + video.seconds
             , 0)
             return this
         )
@@ -48,7 +48,7 @@ module.exports = class DailymotionPlaylist extends Playlist
                 media = new DailymotionVideo().fromExistingData(
                     id: video.id
                     title: video.title
-                    duration: video.duration
+                    seconds: video.seconds
                     meta:
                         thumbnail: video.thumbnail_120_url
                 )

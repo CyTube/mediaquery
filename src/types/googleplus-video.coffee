@@ -32,7 +32,7 @@ module.exports = class GooglePlusVideo extends Media
                 return reject('Unable to retrieve video information.  Check that the video
                               exists and is shared publicly')
 
-            @duration = $.gphoto$originalvideo.duration
+            @seconds = $.gphoto$originalvideo.duration
             @title = $.media$group.media$title.$t
             thumbnails = $.media$group.media$thumbnail
             @meta.thumbnail = thumbnails[thumbnails.length - 1].url

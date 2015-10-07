@@ -4,7 +4,7 @@ Promise = require 'bluebird'
 class Media
     constructor: (@id) ->
         @title = ''
-        @duration = 0
+        @seconds = 0
         @meta = {}
         # Copy 'type' field from the prototype onto this object.
         @type = @type
@@ -20,7 +20,7 @@ class Media
         return Promise.resolve(this)
 
     fromExistingData: (data) ->
-        { @id, @title, @duration } = data
+        { @id, @title, @seconds } = data
         @meta = clone(data.meta)
         return this
 
@@ -28,7 +28,7 @@ class Media
         return {
             id: @id
             title: @title
-            duration: @duration
+            seconds: @seconds
             meta: clone(@meta)
             type: @type
         }

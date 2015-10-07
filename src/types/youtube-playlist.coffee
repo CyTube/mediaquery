@@ -35,15 +35,15 @@ module.exports = class YouTubePlaylist extends Playlist
                     opts.nextPage = result.nextPageToken
                     return @fetch(opts).then((videos) =>
                         @items = @items.concat(videos)
-                        @totalDuration = @items.reduce((current, video) ->
-                            current + video.duration
+                        @totalSeconds = @items.reduce((current, video) ->
+                            current + video.seconds
                         , 0)
                         return this
                     )
                 else
                     @items = videos
                     @totalDuration = videos.reduce((current, video) ->
-                        current + video.duration
+                        current + video.seconds
                     , 0)
                     return this
             )

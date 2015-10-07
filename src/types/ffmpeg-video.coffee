@@ -164,7 +164,7 @@ module.exports = class FFmpegVideo extends Media
         duration = parseInt(data.format.duration, 10)
         if isNaN(duration)
             throw new Error(ERR_INVALID_DURATION)
-        @duration = Math.ceil(duration)
+        @seconds = Math.ceil(duration)
 
         # Bitrate is converted from bps to Kbps
         bitrate = Math.ceil(parseInt(data.format.bit_rate, 10) / 1000)

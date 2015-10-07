@@ -13,7 +13,6 @@ module.exports = class LivestreamComStream extends Media
         url = "http://x#{@id}x.api.channel.livestream.com/2.0/info.json"
         return getJSON(url).then((result) =>
             @title = "Livestream.com - #{result.channel.title}"
-            @duration = 0
             @meta.thumbnail = "https://thumbnail.api.livestream.com/thumbnail?name=#{@id}"
             return this
         )

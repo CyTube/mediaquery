@@ -40,25 +40,26 @@ module.exports = class GoogleDriveVideo extends Media
 
                 throw new Error(reason)
 
-            @meta.direct =
-                1080: []
-                720: []
-                480: []
-                360: []
+            if opts.extract
+                @meta.direct =
+                    1080: []
+                    720: []
+                    480: []
+                    360: []
 
-            doc.fmt_stream_map.split(',').forEach((source) =>
-                [itag, url] = source.split('|')
-                itag = parseInt(itag, 10)
+                doc.fmt_stream_map.split(',').forEach((source) =>
+                    [itag, url] = source.split('|')
+                    itag = parseInt(itag, 10)
 
-                if itag not of ITAG_QMAP
-                    return
+                    if itag not of ITAG_QMAP
+                        return
 
-                @meta.direct[ITAG_QMAP[itag]].push(
-                    itag: itag
-                    contentType: ITAG_CMAP[itag]
-                    link: url
+                    @meta.direct[ITAG_QMAP[itag]].push(
+                        itag: itag
+                        contentType: ITAG_CMAP[itag]
+                        link: url
+                    )
                 )
-            )
 
             @title = doc.title
             @duration = parseInt(doc.length_seconds, 10)

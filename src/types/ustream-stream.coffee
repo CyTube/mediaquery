@@ -43,9 +43,7 @@ module.exports = class UstreamStream extends Media
 # > UstreamStream.parseURL(require('url').parse('http://ustream.tv/blah/other/thing', true))
 # null
 ###
-UstreamStream.parseURL = (url) ->
-    data = urlparse.parse(url)
-
+UstreamStream.parseURL = (data) ->
     if data.hostname not in ['ustream.tv', 'www.ustream.tv']
         return null
 

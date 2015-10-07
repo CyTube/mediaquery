@@ -60,8 +60,7 @@ YouTubePlaylist.setAPIKey = (apiKey) ->
 # > YouTubePlaylist.parseURL(require('url').parse('https://youtube.com/playlist?foo=bar&list=asdf', true))
 # {id: 'asdf', type: 'youtube-playlist'}
 ###
-YouTubePlaylist.parseURL = (url) ->
-    data = urlparse.parse(url, true)
+YouTubePlaylist.parseURL = (data) ->
     if data.hostname not in ['www.youtube.com', 'youtube.com']
         return null
 

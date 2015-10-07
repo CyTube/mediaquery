@@ -119,9 +119,7 @@ module.exports = class GoogleDriveVideo extends Media
 # > GoogleDriveVideo.parseURL(require('url').parse('https://docs.google.com/file/d/foo/view', true))
 # {id: 'foo', type: 'googledrive'}
 ###
-GoogleDriveVideo.parseURL = (url) ->
-    data = urlparse.parse(url, true)
-
+GoogleDriveVideo.parseURL = (data) ->
     if data.hostname not in ['drive.google.com', 'docs.google.com']
         return null
 

@@ -89,8 +89,7 @@ SoundcloudTrack.setAPIKey = (apiKey) ->
 # > SoundcloudTrack.parseURL(require('url').parse('https://developers.soundcloud.com/docs/api', true))
 # null
 ###
-SoundcloudTrack.parseURL = (url) ->
-    data = urlparse.parse(url)
+SoundcloudTrack.parseURL = (data) ->
     if data.hostname != 'soundcloud.com'
         return null
 

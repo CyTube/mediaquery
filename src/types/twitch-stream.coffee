@@ -27,9 +27,7 @@ module.exports = class TwitchStream extends Media
 # > TwitchStream.parseURL(require('url').parse('http://twitch.tv/foobar', true))
 # {id: 'foobar', type: 'twitch'}
 ###
-TwitchStream.parseURL = (url) ->
-    data = urlparse.parse(url, true)
-
+TwitchStream.parseURL = (data) ->
     if data.hostname in ['twitch.tv', 'www.twitch.tv']
         return {
             type: TwitchStream.prototype.type

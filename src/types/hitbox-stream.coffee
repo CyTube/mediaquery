@@ -28,9 +28,7 @@ module.exports = class HitboxStream extends Media
 # > HitboxStream.parseURL(require('url').parse('http://www.hitbox.tv/foo', true))
 # {id: 'foo', type: 'hitbox'}
 ###
-HitboxStream.parseURL = (url) ->
-    data = urlparse.parse(url)
-
+HitboxStream.parseURL = (data) ->
     if data.hostname in ['hitbox.tv', 'www.hitbox.tv']
         return {
             type: HitboxStream.prototype.type

@@ -70,9 +70,7 @@ module.exports = class DailymotionPlaylist extends Playlist
 # > DailymotionPlaylist.parseURL(require('url').parse('http://www.dailymotion.com/playlist/x1ix36_radiopratica_classical-music/1#video=xn7ce', true))
 # {id: 'x1ix36', type: 'dailymotion-playlist'}
 ###
-DailymotionPlaylist.parseURL = (url) ->
-    data = urlparse.parse(url)
-
+DailymotionPlaylist.parseURL = (data) ->
     if data.hostname not in ['www.dailymotion.com', 'dailymotion.com']
         return null
 

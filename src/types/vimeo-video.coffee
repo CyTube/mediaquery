@@ -192,9 +192,7 @@ VimeoVideo.setAPIKey = (oauth) ->
 # > VimeoVideo.parseURL(require('url').parse('https://vimeo.com/staff', true))
 # null
 ###
-VimeoVideo.parseURL = (url) ->
-    data = urlparse.parse(url)
-
+VimeoVideo.parseURL = (data) ->
     if data.hostname isnt 'vimeo.com'
         return null
 

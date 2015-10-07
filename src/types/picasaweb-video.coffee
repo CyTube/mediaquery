@@ -75,9 +75,7 @@ module.exports = class PicasawebVideo extends Media
 # > PicasawebVideo.parseURL(require('url').parse('https://plus.google.com/u/1/photos/123/albums/456/789/', true))
 # {id: '123_456_789', type: 'picasaweb'}
 ###
-PicasawebVideo.parseURL = (url) ->
-    data = urlparse.parse(url, true)
-
+PicasawebVideo.parseURL = (data) ->
     # Currently only Google+ links are supported
     if data.hostname isnt 'plus.google.com'
         return null

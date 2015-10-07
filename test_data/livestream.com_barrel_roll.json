@@ -1,9 +1,0 @@
-{
-    "id": "barrel_roll",
-    "title": "Livestream.com - Barrel Roll",
-    "duration": 0,
-    "meta": {
-        "thumbnail": "https://thumbnail.api.livestream.com/thumbnail?name=barrel_roll"
-    },
-    "type": "livestream.com"
-}

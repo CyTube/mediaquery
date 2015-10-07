@@ -3,7 +3,7 @@ typeList = [
     'vimeo-video'
     'dailymotion-video'
     'googledrive-video'
-    'googleplus-video'
+    'picasaweb-video'
     'soundcloud-track'
     'ffmpeg-video'
 

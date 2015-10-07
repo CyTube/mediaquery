@@ -6,15 +6,15 @@ Media = require '../media'
 
 reject = (msg) -> Promise.reject(new Error(msg))
 
-module.exports = class GooglePlusVideo extends Media
-    type: 'googleplus'
+module.exports = class PicasawebVideo extends Media
+    type: 'picasaweb'
 
     shortCode: 'gp'
 
     fetch: (opts = {}) ->
         [uid, aid, pid] = @id.split('_')
         if not uid or not aid or not pid
-            return reject('Invalid Google+ video ID')
+            return reject('Invalid Picasaweb video ID')
 
         url = "https://picasaweb.google.com/data/feed/api/user/#{uid}/albumid/#{aid}/\
               photoid/#{pid}?kind=tag&alt=json"
@@ -70,21 +70,22 @@ module.exports = class GooglePlusVideo extends Media
         return @fetch()
 
 ###
-# > GooglePlusVideo.parseURL(require('url').parse('https://plus.google.com/photos/123/albums/456/789/', true))
-# {id: '123_456_789', type: 'googleplus'}
-# > GooglePlusVideo.parseURL(require('url').parse('https://plus.google.com/u/1/photos/123/albums/456/789/', true))
-# {id: '123_456_789', type: 'googleplus'}
+# > PicasawebVideo.parseURL(require('url').parse('https://plus.google.com/photos/123/albums/456/789/', true))
+# {id: '123_456_789', type: 'picasaweb'}
+# > PicasawebVideo.parseURL(require('url').parse('https://plus.google.com/u/1/photos/123/albums/456/789/', true))
+# {id: '123_456_789', type: 'picasaweb'}
 ###
-GooglePlusVideo.parseURL = (url) ->
+PicasawebVideo.parseURL = (url) ->
     data = urlparse.parse(url, true)
 
+    # Currently only Google+ links are supported
     if data.hostname isnt 'plus.google.com'
         return null
 
     m = data.pathname.match(/(?:u\/\d+\/)?photos\/(\d+)\/albums\/(\d+)\/(\d+)/)
     if m
         return {
-            type: GooglePlusVideo.prototype.type
+            type: PicasawebVideo.prototype.type
             id: m.slice(1, 4).join('_')
         }
 

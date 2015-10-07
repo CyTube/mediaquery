@@ -51,7 +51,10 @@ module.exports = class YouTubeVideo extends Media
 
             @title = video.snippet.title
             @seconds = exports.parseDuration(video.contentDetails.duration)
-            @meta.thumbnail = video.snippet.thumbnails.maxres.url
+            for key in ['maxres', 'standard', 'high', 'medium', 'default']
+                if video.snippet.thumbnails.hasOwnProperty(key)
+                    @meta.thumbnail = video.snippet.thumbnails[key].url
+                    break
             exports.setRegionRestrictions(video, @meta)
 
             return this
@@ -139,9 +142,9 @@ exports.setRegionRestrictions = (video, meta) ->
     if video.contentDetails.regionRestriction
         restriction = video.contentDetails.regionRestriction
         if restriction.blocked
-            meta.blockedCountries = restriction.blocked
+            meta.blockedCountries = restriction.blocked.sort()
         if restriction.allowed
-            meta.allowedCountries = restriction.allowed
+            meta.allowedCountries = restriction.allowed.sort()
 
 ###
 # Retrieve metadata for multiple YouTube videos.  As this is intended for use

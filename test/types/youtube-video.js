@@ -1,33 +1,34 @@
-var unitHelper = require('../unit-helper');
+var assert = require('assert');
+var runIntegTest = require('../integtest').runIntegTest;
+var apiKeys = require('../../keys.json');
+var mediaquery = require('../../index');
 
 describe('YouTubeVideo', function () {
     describe('#fetch', function () {
         beforeEach(function () {
-            unitHelper.setUp();
+            mediaquery.setAPIKeys(apiKeys);
         });
 
         afterEach(function () {
-            unitHelper.reset();
+            mediaquery.setAPIKeys({});
         });
 
-        it('processes a video with empty options', function (done) {
-            unitHelper.runFetchTest('youtube', 'TN4kgwzowBY', {}, done);
+        it('retrieves a YouTube video', function () {
+            return runIntegTest('https://www.youtube.com/watch?v=TN4kgwzowBY', {});
         });
 
-        it('processes a video with region restrictions', function (done) {
-            unitHelper.runFetchTest('youtube', 'LHepJeSYr4E', {}, done);
+        it('sets country restrictions', function () {
+            return runIntegTest('https://www.youtube.com/watch?v=1kIsylLeHHU', {});
         });
 
-        it('fails when failNonEmbeddable = true', function (done) {
-            unitHelper.runFetchTest('youtube', '1kIsylLeHHU', {
+        it('rejects when failNonEmbeddable is true and the video is not embeddable', function () {
+            return mediaquery.lookup('yt:6TT19cB0NTM', {
                 failNonEmbeddable: true
-            }, done);
-        });
-
-        it('does not fail when failNonEmbeddable = false', function (done) {
-            unitHelper.runFetchTest('youtube', 'LHLHepJeSYr4E_nonembeddable', {
-                failNonEmbeddable: false
-            }, done);
+            }).then(function () {
+                assert(false, 'Expected error due to non-embeddable video');
+            }).catch(function (err) {
+                assert.equal(err.message, 'The uploader has made this video non-embeddable');
+            });
         });
     });
 });

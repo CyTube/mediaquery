@@ -1,0 +1,11 @@
+{
+  "id": "http://video.webmfiles.org/big-buck-bunny_trailer.webm",
+  "title": "Direct Video",
+  "seconds": 32,
+  "meta": {
+    "bitrate": 534,
+    "codec": "matroska/vp8",
+    "medium": "video"
+  },
+  "type": "ffmpeg"
+}

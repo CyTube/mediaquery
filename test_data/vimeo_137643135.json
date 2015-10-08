@@ -1,0 +1,29 @@
+{
+  "id": "137643135",
+  "title": "This Mountain",
+  "seconds": 351,
+  "meta": {
+    "thumbnail": "https://i.vimeocdn.com/video/533259364_640.jpg",
+    "direct": {
+      "240": [
+        {
+          "link": "MATCH:https://.*\\.mp4",
+          "contentType": "video/mp4"
+        }
+      ],
+      "360": [
+        {
+          "link": "MATCH:https://.*\\.mp4",
+          "contentType": "video/mp4"
+        }
+      ],
+      "720": [
+        {
+          "link": "MATCH:https://.*\\.mp4",
+          "contentType": "video/mp4"
+        }
+      ]
+    }
+  },
+  "type": "vimeo"
+}

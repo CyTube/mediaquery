@@ -35,6 +35,12 @@ module.exports = class VimeoVideo extends Media
             @seconds = video.duration
             @meta.thumbnail = video.thumbnail_large
 
+            if video.embed_privacy isnt 'anywhere'
+                if opts.failNonEmbeddable
+                    throw new Error(ERR_NOT_EMBEDDABLE)
+                else
+                    @meta.notEmbeddable = true
+
             if opts.extract
                 return @extract()
 
@@ -51,6 +57,9 @@ module.exports = class VimeoVideo extends Media
                 video = JSON.parse(res.data)
             catch e
                 throw new Error("Vimeo response could not be decoded as JSON: #{e}")
+
+            if video.error
+                throw new Error("Vimeo returned error: #{video.error}")
 
             if video.privacy.embed isnt 'public'
                 if opts.failNonEmbeddable
@@ -189,6 +198,8 @@ VimeoVideo.setAPIKey = (oauth) ->
 ###
 # > VimeoVideo.parseURL(require('url').parse('https://vimeo.com/59859181', true))
 # {type: 'vimeo', id: '59859181'}
+# > VimeoVideo.parseURL(require('url').parse('https://vimeo.com/channels/staffpicks/59859181', true))
+# {type: 'vimeo', id: '59859181'}
 # > VimeoVideo.parseURL(require('url').parse('https://vimeo.com/staff', true))
 # null
 ###
@@ -196,10 +207,11 @@ VimeoVideo.parseURL = (data) ->
     if data.hostname isnt 'vimeo.com'
         return null
 
-    if not data.pathname.match(/^\/\d+$/)
+    match = /^\/(?:channels\/staffpicks\/)?(\d+)/.exec(data.pathname)
+    if not match
         return null
 
     return {
         type: VimeoVideo.prototype.type
-        id: data.pathname.replace(/^\//, '')
+        id: match[1]
     }

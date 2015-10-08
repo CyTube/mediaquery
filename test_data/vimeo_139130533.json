@@ -1,0 +1,19 @@
+{
+  "id": "139130533",
+  "title": "Underwater Panther animated short - En sub -",
+  "seconds": 248,
+  "meta": {
+    "thumbnail": "https://i.vimeocdn.com/video/538342663_1280.jpg",
+    "direct": {
+      "240": [],
+      "360": [
+        {
+          "link": "MATCH:https://.*\\.mp4",
+          "contentType": "video/mp4"
+        }
+      ],
+      "720": []
+    }
+  },
+  "type": "vimeo"
+}

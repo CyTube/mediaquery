@@ -1,0 +1,29 @@
+{
+  "id": "141479485",
+  "title": "Master/Mind",
+  "seconds": 552,
+  "meta": {
+    "thumbnail": "https://i.vimeocdn.com/video/538494600_1920.jpg",
+    "direct": {
+      "240": [
+        {
+          "link": "MATCH:https://.*\\.mp4",
+          "contentType": "video/mp4"
+        }
+      ],
+      "360": [
+        {
+          "link": "MATCH:https://.*\\.mp4",
+          "contentType": "video/mp4"
+        }
+      ],
+      "720": [
+        {
+          "link": "MATCH:https://.*\\.mp4",
+          "contentType": "video/mp4"
+        }
+      ]
+    }
+  },
+  "type": "vimeo"
+}

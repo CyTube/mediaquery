@@ -13,7 +13,7 @@ if (process.argv[3]) {
 
 mediaquery.lookup(url, opts).then(function (media) {
     var dest = path.resolve(__dirname, '..', 'test_data',
-            media.type + '_' + media.id.replace(/\//g, '_') + '.json');
+            media.type + '_' + media.id.replace(/[\/:]/g, '_') + '.json');
     fs.writeFileSync(dest, JSON.stringify(media, null, 2));
     console.log('Wrote ' + dest);
     process.exit(0);

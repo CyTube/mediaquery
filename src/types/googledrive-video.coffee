@@ -8,6 +8,8 @@ request = require '../request'
 Media = require '../media'
 { ITAG_QMAP, ITAG_CMAP } = require '../util/itag'
 
+ERR_NOT_PUBLIC = 'This video is not shared publicly'
+
 extractHexId = (url) ->
     m = url.match(/vid=([\w-]+)/)
     if m
@@ -30,11 +32,8 @@ module.exports = class GoogleDriveVideo extends Media
             doc = querystring.parse(res.data)
 
             if doc.status isnt 'ok'
-                if doc.reason.match(/Unable to play this video at this time/)
-                    reason = 'Google Drive does not permit videos longer than
-                             1 hour to be played'
-                else if doc.reason.match(/You must be signed in to access/)
-                    reason = 'Google Drive videos must be shared publicly'
+                if doc.reason.match(/You must be signed in to access/)
+                    reason = ERR_NOT_PUBLIC
                 else
                     reason = doc.reason
 
@@ -70,13 +69,13 @@ module.exports = class GoogleDriveVideo extends Media
 
             return @_getSubtitles(extractHexId(doc.ttsurl)).then((subtitles) =>
                 if subtitles
-                    @meta.gdrive_subtitles = subtitles
+                    @meta.googleDriveSubtitles = subtitles
                 return this
             )
         )
 
     extract: ->
-        return @fetch()
+        return @fetch(extract: true)
 
     _getSubtitles: (vid) ->
         params =
@@ -100,8 +99,8 @@ module.exports = class GoogleDriveVideo extends Media
                 return elem.name == 'track'
             , parseDom(res.data)).forEach((elem) ->
                 subtitles.available.push(
-                    lang: elem.attribs.lang_code
-                    lang_original: elem.attribs.lang_original
+                    languageCode: elem.attribs.lang_code
+                    languageDescription: elem.attribs.lang_original
                     name: elem.attribs.name
                 )
             )

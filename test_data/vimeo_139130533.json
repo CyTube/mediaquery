@@ -12,7 +12,12 @@
           "contentType": "video/mp4"
         }
       ],
-      "720": []
+      "720": [
+        {
+          "link": "MATCH:https://.*\\.mp4",
+          "contentType": "video/mp4"
+        }
+      ]
     }
   },
   "type": "vimeo"

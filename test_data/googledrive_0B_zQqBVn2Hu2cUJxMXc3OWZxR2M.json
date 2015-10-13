@@ -1,0 +1,63 @@
+{
+  "id": "0B_zQqBVn2Hu2cUJxMXc3OWZxR2M",
+  "title": "House, M.D. - S04E07 - Ugly.mkv",
+  "seconds": 2628,
+  "meta": {
+    "direct": {
+      "360": [
+        {
+          "itag": 34,
+          "contentType": "video/flv",
+          "link": "MATCH:https://.*"
+        },
+        {
+          "itag": 18,
+          "contentType": "video/mp4",
+          "link": "MATCH:https://.*"
+        },
+        {
+          "itag": 43,
+          "contentType": "video/webm",
+          "link": "MATCH:https://.*"
+        }
+      ],
+      "480": [
+        {
+          "itag": 35,
+          "contentType": "video/flv",
+          "link": "MATCH:https://.*"
+        },
+        {
+          "itag": 59,
+          "contentType": "video/mp4",
+          "link": "MATCH:https://.*"
+        }
+      ],
+      "720": [
+        {
+          "itag": 22,
+          "contentType": "video/mp4",
+          "link": "MATCH:https://.*"
+        }
+      ],
+      "1080": []
+    },
+    "thumbnail": "https://docs.google.com/vt?id=0B_zQqBVn2Hu2cUJxMXc3OWZxR2M",
+    "googleDriveSubtitles": {
+      "vid": "2ae8c948ecc516e1",
+      "available": [
+        {
+          "languageCode": "en",
+          "languageDescription": "English",
+          "name": "EN-US"
+        },
+        {
+          "languageCode": "pt-BR",
+          "languageDescription": "Português (Brasil)",
+          "name": "PT-BR"
+        }
+      ]
+    }
+  },
+  "type": "googledrive"
+}

@@ -6,6 +6,13 @@ Media = require '../media'
 
 reject = (msg) -> Promise.reject(new Error(msg))
 
+ERR_STILL_PROCESSING = 'The video is still being processed'
+ERR_PROCESSING_FAILED = 'Picasaweb failed processing this video'
+ERR_PROCESSED_NOT_ACCESSIBLE = 'The video has been processed but is not yet
+                                accessible'
+ERR_MISSING_DATA = 'Unable to retrieve video information.  Check that the
+                    video exists and is shared publicly'
+
 module.exports = class PicasawebVideo extends Media
     type: 'picasaweb'
 
@@ -22,52 +29,51 @@ module.exports = class PicasawebVideo extends Media
         return getJSON(url).then((result) =>
             $ = result.feed
             switch $.gphoto$videostatus.$t
-                when 'pending' then return reject('The video is still being processed')
-                when 'failed' then return reject('A processing error has occurred')
-                when 'ready' then return reject('The video has been processed but is not yet
-                                                accessible')
+                when 'pending' then return reject(ERR_STILL_PROCESSING)
+                when 'failed' then return reject(ERR_PROCESSING_FAILED)
+                when 'ready' then return reject(ERR_PROCESSED_NOT_ACCESSIBLE)
 
             if not $.gphoto$originalvideo or not $.media$group or not
                     $.media$group.media$title or not $.media$group.media$content
-                return reject('Unable to retrieve video information.  Check that the video
-                              exists and is shared publicly')
+                return reject(ERR_MISSING_DATA)
 
             @seconds = $.gphoto$originalvideo.duration
             @title = $.media$group.media$title.$t
             thumbnails = $.media$group.media$thumbnail
             @meta.thumbnail = thumbnails[thumbnails.length - 1].url
-            @meta.direct =
-                1080: []
-                720: []
-                480: []
-                360: []
+            if opts.extract
+                @meta.direct =
+                    1080: []
+                    720: []
+                    480: []
+                    360: []
 
-            $.media$group.media$content.forEach((entry) =>
-                if entry.medium isnt 'video'
-                    return
+                $.media$group.media$content.forEach((entry) =>
+                    if entry.medium isnt 'video'
+                        return
 
-                url = entry.url
-                m = url.match(/itag=(\d+)/) or url.match(/googleusercontent.*=m(\d+)$/)
-                if m
-                    itag = m[1]
-                else
-                    return
+                    url = entry.url
+                    m = url.match(/itag=(\d+)/) or url.match(/googleusercontent.*=m(\d+)$/)
+                    if m
+                        itag = m[1]
+                    else
+                        return
 
-                if itag not of ITAG_QMAP
-                    return
+                    if itag not of ITAG_QMAP
+                        return
 
-                @meta.direct[ITAG_QMAP[itag]].push(
-                    itag: itag
-                    contentType: ITAG_CMAP[itag]
-                    link: url
+                    @meta.direct[ITAG_QMAP[itag]].push(
+                        itag: itag
+                        contentType: ITAG_CMAP[itag]
+                        link: url
+                    )
                 )
-            )
 
             return this
         )
 
     extract: ->
-        return @fetch()
+        return @fetch(extract: true)
 
 ###
 # > PicasawebVideo.parseURL(require('url').parse('https://plus.google.com/photos/123/albums/456/789/', true))

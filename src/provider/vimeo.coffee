@@ -64,7 +64,7 @@ exports.extract = extract = (id) ->
                     when '270p' then 240
                     else throw new Error("Unrecognized quality #{file.quality}")
 
-                videos[quality] = source
+                videos[quality].push(source)
 
             return videos
         catch e

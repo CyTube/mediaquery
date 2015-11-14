@@ -48,26 +48,23 @@ exports.extract = extract = (id) ->
                 360: []
                 240: []
 
-            files = data.request.files.h264
+            files = data.request.files.progressive
             if not files
                 console.error("vimeo::extract() was missing files for vi:#{id}")
                 return {}
 
-            if 'mobile' of files
-                videos[240].push(
-                    link: files.mobile.url
-                    contentType: 'video/mp4'
-                )
-            if 'sd' of files
-                videos[360].push(
-                    link: files.sd.url
-                    contentType: 'video/mp4'
-                )
-            if 'hd' of files
-                videos[720].push(
-                    link: files.hd.url
-                    contentType: 'video/mp4'
-                )
+            for file in files
+                source =
+                    link: file.url
+                    contentType: file.mime
+
+                quality = switch file.quality
+                    when '720p' then 720
+                    when '360p' then 360
+                    when '270p' then 240
+                    else throw new Error("Unrecognized quality #{file.quality}")
+
+                videos[quality] = source
 
             return videos
         catch e

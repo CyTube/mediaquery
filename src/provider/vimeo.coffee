@@ -26,6 +26,59 @@ lookupAnonymous = (id) ->
 
 exports.lookup = lookup = lookupAnonymous
 
+extractFromH264Object = (fileMap) ->
+    videos =
+        720: []
+        360: []
+        240: []
+
+    if 'mobile' of fileMap
+        videos[240].push(
+            link: fileMap.mobile.url
+            contentType: 'video/mp4'
+        )
+
+    if 'sd' of fileMap
+        videos[360].push(
+            link: fileMap.sd.url
+            contentType: 'video/mp4'
+        )
+
+    if 'hd' of fileMap
+        videos[720].push(
+            link: fileMap.hd.url
+            contentType: 'video/mp4'
+        )
+
+    return videos
+
+extractFromProgressiveList = (fileList) ->
+    videos =
+        720: []
+        360: []
+        480: []
+        240: []
+
+    for file in fileList
+        source =
+            link: file.url
+            contentType: file.mime
+
+        try
+            quality = switch file.quality
+                when '720p' then 720
+                when '480p' then 480
+                when '360p' then 360
+                when '270p' then 240
+                else throw new Error("Unrecognized quality #{file.quality}")
+        catch e
+            console.error("vimeo::extract(): #{e}")
+            continue
+
+        videos[quality].push(source)
+
+    return videos
+
 exports.extract = extract = (id) ->
     url = "https://player.vimeo.com/video/#{id}"
     return request.request(url,
@@ -43,30 +96,14 @@ exports.extract = extract = (id) ->
 
         try
             data = JSON.parse(data)
-            videos =
-                720: []
-                360: []
-                240: []
-
             files = data.request.files.progressive
-            if not files
+            if data.request.files.progressive
+                return extractFromProgressiveList(data.request.files.progressive)
+            else if data.request.files.h264
+                return extractFromH264Object(data.request.files.h264)
+            else
                 console.error("vimeo::extract() was missing files for vi:#{id}")
                 return {}
-
-            for file in files
-                source =
-                    link: file.url
-                    contentType: file.mime
-
-                quality = switch file.quality
-                    when '720p' then 720
-                    when '360p' then 360
-                    when '270p' then 240
-                    else throw new Error("Unrecognized quality #{file.quality}")
-
-                videos[quality].push(source)
-
-            return videos
         catch e
             if res.data.indexOf('This video does not exist.') >= 0
                 return {}

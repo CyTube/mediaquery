@@ -1,6 +1,6 @@
 {
   "name": "cytube-mediaquery",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
     "coffee-script": "^1.9.1",
     "domutils": "^1.5.1",
     "htmlparser2": "^3.8.3",
-    "source-map-support": "^0.2.9",
     "status-message-polyfill": "calzoneman/status-message-polyfill"
   }
 }

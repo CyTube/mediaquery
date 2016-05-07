@@ -16,7 +16,7 @@ extractHexId = (url) ->
         return null
 
 exports.lookup = lookup = (id) ->
-    url = "https://docs.google.com/file/d/#{id}/get_video_info?sle=true"
+    url = "https://docs.google.com/file/d/#{id}/get_video_info?sle=true&hl=en"
 
     return request.request(url).then((res) ->
         if res.statusCode != 200

@@ -4,6 +4,7 @@
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
+    "dev": "coffee -cwmo lib src",
     "postinstall": "coffee -cmo lib src",
     "test": "mocha --recursive"
   },

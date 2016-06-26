@@ -30,10 +30,13 @@ exports.request = request = (url, headers = null) ->
         )
     )
 
-exports.getJSON = getJSON = (url) ->
+exports.getJSON = getJSON = (url, options = {}) ->
     return request(url).then((res) ->
         switch res.statusCode
-            when 400, 403, 404, 500, 503 then throw new Error(res.statusMessage)
+            when 400, 403, 404, 500, 503 then \
+                if not options.skipStatusCheck or
+                        res.statusCode not in options.skipStatusCheck
+                    throw new Error(res.statusMessage)
 
         try
             data = JSON.parse(res.data)

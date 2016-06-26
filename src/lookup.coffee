@@ -8,6 +8,7 @@ PROVIDERS =
     dailymotion: require './provider/dailymotion'
     googledrive: require './provider/googledrive'
     'google+': require './provider/googleplus'
+    vidme: require './provider/vidme'
 
 module.exports = (info) ->
     if not info?

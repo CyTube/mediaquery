@@ -23,7 +23,6 @@ exports.lookup = (id) ->
                 when /webm/.test(key) then 'video/webm'
                 else null
 
-            console.log contentType
             if contentType is null
                 continue
 

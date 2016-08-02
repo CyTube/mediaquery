@@ -9,6 +9,7 @@ PROVIDERS =
     googledrive: require './provider/googledrive'
     'google+': require './provider/googleplus'
     vidme: require './provider/vidme'
+    streamable: require './provider/streamable'
 
 module.exports = (info) ->
     if not info?

@@ -82,7 +82,8 @@ extractFromProgressiveList = (fileList) ->
 exports.extract = extract = (id) ->
     url = "https://player.vimeo.com/video/#{id}"
     return request.request(url,
-        'User-Agent': USER_AGENT
+        headers:
+            'User-Agent': USER_AGENT
     ).then((res) ->
         if res.statusCode != 200
             return {}

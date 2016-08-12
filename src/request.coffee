@@ -4,15 +4,15 @@ urlparse = require 'url'
 Promise = require 'bluebird'
 require 'status-message-polyfill'
 
-exports.request = request = (url, headers = null) ->
+exports.request = request = (url, options = {}) ->
     return new Promise((resolve, reject) ->
         parsed = urlparse.parse(url)
         if not parsed.protocol?.match(/^https?:$/)
             return reject(new Error("Invalid protocol '#{parsed.protocol}'"))
 
         transport = if parsed.protocol is 'https:' then https else http
-        if headers
-            parsed.headers = headers
+        for key, val of options
+            parsed[key] = val
         req = transport.get(parsed, (res) ->
             buffer = ''
             res.on('data', (data) ->

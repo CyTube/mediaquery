@@ -8,7 +8,7 @@ request = require '../request'
 Media = require '../media'
 { ITAG_QMAP, ITAG_CMAP } = require '../util/itag'
 
-HTML5_HACK_ENABLED = true
+HTML5_HACK_ENABLED = false
 
 extractHexId = (url) ->
     m = url.match(/vid=([\w-]+)/)

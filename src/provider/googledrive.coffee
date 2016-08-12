@@ -8,6 +8,8 @@ request = require '../request'
 Media = require '../media'
 { ITAG_QMAP, ITAG_CMAP } = require '../util/itag'
 
+HTML5_HACK_ENABLED = false
+
 extractHexId = (url) ->
     m = url.match(/vid=([\w-]+)/)
     if m
@@ -15,10 +17,13 @@ extractHexId = (url) ->
     else
         return null
 
-exports.lookup = lookup = (id) ->
+exports.setHTML5HackEnabled = (enabled) ->
+    HTML5_HACK_ENABLED = enabled
+
+fetchAndParse = (id, options = {}) ->
     url = "https://docs.google.com/file/d/#{id}/get_video_info?sle=true&hl=en"
 
-    return request.request(url).then((res) ->
+    return request.request(url, options).then((res) ->
         if res.statusCode != 200
             throw new Error("Google Drive lookup failed for #{id}: #{res.statusMessage}")
 
@@ -64,10 +69,33 @@ exports.lookup = lookup = (id) ->
                 thumbnail: doc.iurl
                 direct: videos
 
-        return exports.getSubtitles(id, extractHexId(doc.ttsurl)).then((subtitles) ->
-            if subtitles
-                data.meta.gdrive_subtitles = subtitles
+        if options.fetchSubtitles
+            return exports.getSubtitles(id, extractHexId(doc.ttsurl)).then((subtitles) ->
+                if subtitles
+                    data.meta.gdrive_subtitles = subtitles
+                return new Media(data)
+            )
+        else
             return new Media(data)
+    )
+
+exports.lookup = lookup = (id) ->
+    if not HTML5_HACK_ENABLED
+        return fetchAndParse(id, fetchSubtitles: true)
+
+    return fetchAndParse(id,
+        fetchSubtitles: true
+        family: 6
+    ).then((media6) ->
+        return fetchAndParse(id,
+            family: 4
+        ).then((media4) ->
+            media6.meta.html5hack = true
+            for quality in [1080, 720, 480, 360]
+                media6.meta.direct[quality] = media6.meta.direct[quality].concat(
+                    media4.meta.direct[quality]
+                )
+            return media6
         )
     )
 

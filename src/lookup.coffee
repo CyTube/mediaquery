@@ -10,6 +10,7 @@ PROVIDERS =
     'google+': require './provider/googleplus'
     vidme: require './provider/vidme'
     streamable: require './provider/streamable'
+    twitchvod: require './provider/twitch-vod'
 
 module.exports = (info) ->
     if not info?

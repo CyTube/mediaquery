@@ -3,8 +3,16 @@ urlparse = require 'url'
 request = require '../request'
 Media = require '../media'
 
+CLIENT_ID = null
+
 exports.lookup = (id) ->
-    return request.getJSON("https://api.twitch.tv/kraken/videos/#{id}").then((result) ->
+    if not CLIENT_ID
+        return Promise.reject(new Error('Client ID not set for Twitch API'))
+
+    return request.getJSON("https://api.twitch.tv/kraken/videos/#{id}",
+        headers:
+            'Client-ID': CLIENT_ID
+    ).then((result) ->
         media = new Media(
             id: id
             title: result.title
@@ -42,3 +50,6 @@ exports.parseUrl = (url) ->
         }
 
     return null
+
+exports.setClientID = (clientID) ->
+    CLIENT_ID = clientID

@@ -31,7 +31,7 @@ exports.request = request = (url, options = {}) ->
     )
 
 exports.getJSON = getJSON = (url, options = {}) ->
-    return request(url).then((res) ->
+    return request(url, options).then((res) ->
         switch res.statusCode
             when 400, 403, 404, 500, 503 then \
                 if not options.skipStatusCheck or

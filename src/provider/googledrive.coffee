@@ -21,7 +21,7 @@ exports.setHTML5HackEnabled = (enabled) ->
     HTML5_HACK_ENABLED = enabled
 
 fetchAndParse = (id, options = {}) ->
-    url = "https://docs.google.com/file/d/#{id}/get_video_info?sle=true&hl=en"
+    url = "https://docs.google.com/get_video_info?authuser=&docid=#{id}&sle=true&hl=en"
 
     return request.request(url, options).then((res) ->
         if res.statusCode != 200

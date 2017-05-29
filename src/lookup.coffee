@@ -11,6 +11,7 @@ PROVIDERS =
     vidme: require './provider/vidme'
     streamable: require './provider/streamable'
     twitchvod: require './provider/twitch-vod'
+    twitchclip: require './provider/twitch-clip'
 
 module.exports = (info) ->
     if not info?

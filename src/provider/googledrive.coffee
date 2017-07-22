@@ -8,6 +8,7 @@ Media = require '../media'
 { ITAG_QMAP, ITAG_CMAP } = require '../util/itag'
 
 HTML5_HACK_ENABLED = false
+LOGGER = require('@calzoneman/jsli')('mediaquery/googledrive')
 
 extractHexId = (url) ->
     m = url.match(/vid=([\w-]+)/)
@@ -128,7 +129,7 @@ exports.getSubtitles = (id, vid) ->
 
         return subtitles
     ).catch((err) ->
-        console.error(err.stack)
+        LOGGER.error("Failed to retrieve subtitles: %s", err.stack)
     )
 
 exports.parseUrl = (url) ->

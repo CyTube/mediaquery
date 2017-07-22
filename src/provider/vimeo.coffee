@@ -5,6 +5,7 @@ request = require '../request'
 Media = require '../media'
 
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0'
+LOGGER = require('@calzoneman/jsli')('mediaquery/vimeo')
 
 ###
 # Retrieves video data from Vimeo anonymously.
@@ -60,19 +61,18 @@ extractFromProgressiveList = (fileList) ->
             link: file.url
             contentType: file.mime
 
-        try
-            quality = switch file.quality
-                when '2160p' then 2160
-                when '1440p' then 1440
-                when '1080p' then 1080
-                when '720p' then 720
-                when '540p' then 540
-                when '480p' then 480
-                when '360p' then 360
-                when '270p' then 240
-                else throw new Error("Unrecognized quality #{file.quality}")
-        catch e
-            console.error("vimeo::extract(): #{e}")
+        quality = switch file.quality
+            when '2160p' then 2160
+            when '1440p' then 1440
+            when '1080p' then 1080
+            when '720p' then 720
+            when '540p' then 540
+            when '480p' then 480
+            when '360p' then 360
+            when '270p' then 240
+            else null
+        if quality is null
+            LOGGER.warn("Unrecognized quality %s", file.quality)
             continue
 
         if quality not of videos
@@ -105,7 +105,7 @@ exports.extract = extract = (id) ->
             else if data.request.files.h264
                 return extractFromH264Object(data.request.files.h264)
             else
-                console.error("vimeo::extract() was missing files for vi:#{id}")
+                LOGGER.error("Missing files for vi:%s", id)
                 return {}
         catch e
             if res.data.indexOf('This video does not exist.') >= 0
@@ -113,7 +113,7 @@ exports.extract = extract = (id) ->
             else if res.data.indexOf('Because of its privacy settings, this video cannot
                                       be played here') >= 0
                 return {}
-            console.error("vimeo::extract() failed for vi:#{id} : #{e.stack}")
+            LOGGER.error("Extract failed for vi:%s : %s", id, e.stack)
             return {}
     )
 

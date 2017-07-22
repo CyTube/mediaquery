@@ -7,7 +7,6 @@ request = require '../request'
 Media = require '../media'
 { ITAG_QMAP, ITAG_CMAP } = require '../util/itag'
 
-HTML5_HACK_ENABLED = false
 LOGGER = require('@calzoneman/jsli')('mediaquery/googledrive')
 
 extractHexId = (url) ->
@@ -16,9 +15,6 @@ extractHexId = (url) ->
         return m[1]
     else
         return null
-
-exports.setHTML5HackEnabled = (enabled) ->
-    HTML5_HACK_ENABLED = enabled
 
 fetchAndParse = (id, options = {}) ->
     url = "https://docs.google.com/get_video_info?authuser=&docid=#{id}&sle=true&hl=en"
@@ -80,24 +76,7 @@ fetchAndParse = (id, options = {}) ->
     )
 
 exports.lookup = lookup = (id) ->
-    if not HTML5_HACK_ENABLED
-        return fetchAndParse(id, fetchSubtitles: true)
-
-    return fetchAndParse(id,
-        fetchSubtitles: true
-        family: 6
-    ).then((media6) ->
-        return fetchAndParse(id,
-            family: 4
-        ).then((media4) ->
-            media6.meta.html5hack = true
-            for quality in [1080, 720, 480, 360]
-                media6.meta.direct[quality] = media6.meta.direct[quality].concat(
-                    media4.meta.direct[quality]
-                )
-            return media6
-        )
-    )
+    return fetchAndParse(id, fetchSubtitles: true)
 
 exports.getSubtitles = (id, vid) ->
     params =

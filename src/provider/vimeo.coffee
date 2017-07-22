@@ -53,11 +53,7 @@ extractFromH264Object = (fileMap) ->
     return videos
 
 extractFromProgressiveList = (fileList) ->
-    videos =
-        720: []
-        360: []
-        480: []
-        240: []
+    videos = {}
 
     for file in fileList
         source =
@@ -66,7 +62,11 @@ extractFromProgressiveList = (fileList) ->
 
         try
             quality = switch file.quality
+                when '2160p' then 2160
+                when '1440p' then 1440
+                when '1080p' then 1080
                 when '720p' then 720
+                when '540p' then 540
                 when '480p' then 480
                 when '360p' then 360
                 when '270p' then 240
@@ -75,6 +75,8 @@ extractFromProgressiveList = (fileList) ->
             console.error("vimeo::extract(): #{e}")
             continue
 
+        if quality not of videos
+            videos[quality] = []
         videos[quality].push(source)
 
     return videos

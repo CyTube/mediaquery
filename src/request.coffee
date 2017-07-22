@@ -2,7 +2,6 @@ http = require 'http'
 https = require 'https'
 urlparse = require 'url'
 Promise = require 'bluebird'
-require 'status-message-polyfill'
 
 exports.request = request = (url, options = {}) ->
     return new Promise((resolve, reject) ->

@@ -2,7 +2,6 @@ domutils = require 'domutils'
 { parseDom } = require '../util/xmldom'
 querystring = require 'querystring'
 urlparse = require 'url'
-require 'status-message-polyfill'
 
 request = require '../request'
 Media = require '../media'

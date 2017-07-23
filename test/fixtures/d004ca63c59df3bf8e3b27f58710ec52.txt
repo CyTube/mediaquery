@@ -1,3 +1,0 @@
-HTTP/1.1 200 OK
-
-{"title":"These People Just Passed Net Neutrality And Saved The Internet","duration":27,"thumbnail_120_url":"http:\/\/s1.dmcdn.net\/JJV8i\/x120-KRb.jpg","allow_embed":true,"status":"published"}

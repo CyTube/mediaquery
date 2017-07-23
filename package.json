@@ -1,23 +1,43 @@
 {
   "name": "cytube-mediaquery",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
-    "dev": "coffee -cwmo lib src",
-    "postinstall": "coffee -cmo lib src",
+    "dev": "babel -D --watch --source-maps --out-dir lib/ src/",
+    "postinstall": "babel -D --source-maps --out-dir lib/ src/",
     "test": "mocha --recursive"
   },
   "author": "Calvin Montgomery",
   "license": "MIT",
-  "devDependencies": {
-    "mocha": "^2.1.0"
-  },
   "dependencies": {
     "@calzoneman/jsli": "^2.0.1",
     "bluebird": "^2.9.12",
-    "coffee-script": "^1.9.1",
     "domutils": "^1.5.1",
     "htmlparser2": "^3.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "mocha": "^3.2.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "6"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-async-to-generator",
+      "add-module-exports"
+    ]
   }
 }

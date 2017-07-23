@@ -7,7 +7,6 @@ PROVIDERS =
     vimeo: require './provider/vimeo'
     dailymotion: require './provider/dailymotion'
     googledrive: require './provider/googledrive'
-    'google+': require './provider/googleplus'
     vidme: require './provider/vidme'
     streamable: require './provider/streamable'
     twitchvod: require './provider/twitch-vod'

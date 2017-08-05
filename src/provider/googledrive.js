@@ -30,13 +30,10 @@ function fetchAndParse(id, options = {}) {
 
         if (doc.status !== 'ok') {
             let reason;
-            if (doc.reason.match(/Unable to play this video at this time/)) {
-                reason =
-                    'Google Drive does not permit videos longer than 1 hour to be played';
-            } else if (doc.reason.match(/You must be signed in to access/)) {
+            if (doc.reason.match(/You must be signed in to access/)) {
                 reason = 'Google Drive videos must be shared publicly';
             } else {
-                reason = doc.reason;
+                reason = `Google Drive flagged this video as unplayable: ${doc.reason}`;
             }
 
             throw new Error(reason);

@@ -15,6 +15,13 @@ const LOGGER = require('@calzoneman/jsli')('mediaquery/vimeo');
 export function lookupAnonymous(id) {
     return getJSON(`https://vimeo.com/api/v2/video/${id}.json`).then(result => {
         const video = result[0];
+
+        if (video.embed_privacy !== 'anywhere') {
+            throw new Error(
+                'The uploader has restricted this video from being embedded'
+            );
+        }
+
         return new Media({
             id,
             title: video.title,

@@ -23,7 +23,19 @@ export function lookup(id) {
                     contentType: 'video/mp4',
                     link: stream.uri
                 }];
+            } else if (stream.type === 'hls') {
+                // Newer vid.me uploads only include HLS/DASH manifests
+                streams.auto = [{
+                    contentType: 'application/x-mpegURL',
+                    link: stream.uri
+                }];
             }
+        }
+
+        if (Object.keys(streams).length === 0) {
+            throw new Error('No compatible sources returned.  This could be ' +
+                            'an issue with Vidme or the video may not have ' +
+                            'finished processing yet.');
         }
 
         return new Media({

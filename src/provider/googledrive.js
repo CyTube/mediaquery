@@ -46,11 +46,18 @@ function fetchAndParse(id, options = {}) {
             360: []
         };
 
+        if (!doc.fmt_stream_map) {
+            throw new Error(
+                'Google has removed the video streams associated with' +
+                ' this item.  It can no longer be played.'
+            );
+        }
+
         doc.fmt_stream_map.split(',').forEach(source => {
             let [itag, url] = source.split('|');
             itag = parseInt(itag, 10);
 
-            if (ITAG_QMAP.hasOwnProperty(itag)) {
+            if (!ITAG_QMAP.hasOwnProperty(itag)) {
                 return;
             }
 

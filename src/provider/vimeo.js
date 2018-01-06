@@ -67,10 +67,23 @@ function extractFromH264Object(fileMap) {
     return videos;
 };
 
-function extractFromProgressiveList(fileList) {
+function extractFromProgressiveList(fileList, codecs) {
+    const hevc = new Set();
+
+    if (codecs.hevc) {
+        codecs.hevc.hdr.forEach(id => hevc.add(id));
+        codecs.hevc.sdr.forEach(id => hevc.add(id));
+    }
+
     const videos = {};
 
     for (let file of fileList) {
+        // HEVC doesn't work on my machine on Firefox or Chromium...
+        if (hevc.has(file.id)) {
+            LOGGER.debug('Skipping HEVC: %s', file.url);
+            continue;
+        }
+
         const source = {
             link: file.url,
             contentType: file.mime
@@ -123,7 +136,7 @@ export function extract(id) {
             data = JSON.parse(data);
             const files = data.request.files.progressive;
             if (data.request.files.progressive) {
-                return extractFromProgressiveList(data.request.files.progressive);
+                return extractFromProgressiveList(data.request.files.progressive, data.video.file_codecs);
             } else if (data.request.files.h264) {
                 return extractFromH264Object(data.request.files.h264);
             } else {

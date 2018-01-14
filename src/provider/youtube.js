@@ -66,8 +66,35 @@ export function lookup(id) {
             case 'deleted':
                 throw new Error('This video has been deleted');
             case 'failed':
+                throw new Error(
+                    'This video is unavailable: ' +
+                    video.status.failureReason
+                );
             case 'rejected':
-                throw new Error('This video is unavailable');
+                throw new Error(
+                    'This video is unavailable: ' +
+                    video.status.rejectionReason
+                );
+            case 'processed':
+                break;
+            case 'uploaded':
+                // For VODs, we must wait for 'processed' before the video
+                // metadata is correct.  For livestreams, the status is
+                // 'uploaded' while the stream is live, and the metadata
+                // is presumably correct (we don't care about duration
+                // for livestreams anyways)
+                // See calzoneman/sync#710
+                if (video.snippet.liveBroadcastContent !== 'live') {
+                    throw new Error(
+                        'This video has not been processed yet.'
+                    );
+                }
+                break;
+            default:
+                throw new Error(
+                    'This video is not available ' +
+                    `(status=${video.status.uploadStatus})`
+                );
         }
 
         const data = {

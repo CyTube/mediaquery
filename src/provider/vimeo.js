@@ -130,10 +130,21 @@ export function extract(id) {
         }
 
         const end = res.data.indexOf('};', start);
-        let data = res.data.substring(start, end+1);
+        const buf = res.data.substring(start, end+1);
 
         try {
-            data = JSON.parse(data);
+            const data = JSON.parse(buf);
+
+            if (!data.request || !data.request.files) {
+                if (/private video/i.test(buf)) {
+                    LOGGER.warn('Detected passworded Vimeo video: %d', id);
+                } else {
+                    LOGGER.warn('Vimeo extract missing data: %d', id);
+                }
+
+                return {};
+            }
+
             const files = data.request.files.progressive;
             if (data.request.files.progressive) {
                 return extractFromProgressiveList(data.request.files.progressive, data.video.file_codecs);

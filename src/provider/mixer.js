@@ -15,19 +15,24 @@ export function lookup(id) {
             'Client-ID': CLIENT_ID
         }
     }).then(result => {
+        const meta = {
+            mixer: {
+                channelId: result.id,
+                channelToken: result.token
+            }
+        };
+
+        if (result.thumbnail) {
+            meta.thumbnail = result.thumbnail.url;
+        }
+
         const titlePrefix = `${result.token} on Mixer - `;
         const media = new Media({
             id: String(result.id),
             title: `${titlePrefix}${result.name.substring(0, 100-titlePrefix.length)}`,
             duration: 0,
             type: 'mixer',
-            meta: {
-                mixer: {
-                    channelId: result.id,
-                    channelToken: result.token
-                },
-                thumbnail: result.thumbnail.url
-            }
+            meta
         });
 
         return media;

@@ -1,6 +1,6 @@
 {
   "name": "cytube-mediaquery",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
@@ -17,10 +17,9 @@
     "htmlparser2": "^3.8.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.5.2",
     "mocha": "^3.2.0"
   },
@@ -30,13 +29,12 @@
         "env",
         {
           "targets": {
-            "node": "6"
+            "node": "8"
           }
         }
       ]
     ],
     "plugins": [
-      "transform-async-to-generator",
       "add-module-exports"
     ]
   }

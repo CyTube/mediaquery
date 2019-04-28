@@ -5,6 +5,8 @@ import urlparse from 'url';
 import { getJSON } from '../request';
 import Media from '../media';
 
+const LOGGER = require('@calzoneman/jsli')('mediaquery/youtube');
+
 let API_KEY = null;
 
 // https://en.wikipedia.org/wiki/ISO_8601#Durations
@@ -57,6 +59,11 @@ export function lookup(id) {
         }
 
         const video = result.items[0];
+
+        if (!video.status || !video.contentDetails || !video.snippet) {
+            LOGGER.info('Incomplete video; assuming deleted video with id=%s', video.id);
+            throw new Error('This video is unavailable');
+        }
 
         if (!video.status.embeddable) {
             throw new Error('The uploader has made this video non-embeddable');
@@ -143,7 +150,14 @@ export function lookupMany(ids) {
     const url = `https://www.googleapis.com/youtube/v3/videos?${params}`;
 
     return getJSON(url).then(result => {
-        return result.items.filter(video => video.status.embeddable).map(video => {
+        return result.items.filter(video => {
+            if (!video.status || !video.contentDetails || !video.snippet) {
+                LOGGER.info('Incomplete video; assuming deleted video with id=%s', video.id);
+                return false;
+            }
+
+            return video.status.embeddable
+        }).map(video => {
             const data = {
                 id: video.id,
                 type: 'youtube',

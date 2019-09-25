@@ -12,7 +12,8 @@ export function lookup(id) {
 
     return getJSON(`https://api.twitch.tv/kraken/videos/${id}`, {
         headers: {
-            'Client-ID': CLIENT_ID
+            'Client-ID': CLIENT_ID,
+            'Accept': 'application/vnd.twitchtv.v5+json'
         }
     }).then(result => {
         const media = new Media({
@@ -53,6 +54,15 @@ export function parseUrl(url) {
             type: 'twitchvod',
             kind: 'single',
             id: m[1] + m[2]
+        };
+    }
+
+    m = data.pathname.match(/^\/videos\/(\d+)/);
+    if (m) {
+        return {
+            type: 'twitchvod',
+            kind: 'single',
+            id: 'v' + m[1]
         };
     }
 

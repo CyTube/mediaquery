@@ -4,7 +4,7 @@ import Promise from 'bluebird';
 import { request, getJSON } from '../request';
 import Media from '../media';
 
-const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0';
+const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0';
 const LOGGER = require('@calzoneman/jsli')('mediaquery/vimeo');
 
 /*
@@ -99,6 +99,7 @@ function extractFromProgressiveList(fileList, codecs) {
             case '480p': quality = 480; break;
             case '360p': quality = 360; break;
             case '270p': quality = 240; break;
+            case '240p': quality = 240; break;
             default:
                 LOGGER.warn("Unrecognized quality %s", file.quality);
                 continue;
@@ -147,7 +148,7 @@ export function extract(id) {
 
             const files = data.request.files.progressive;
             if (data.request.files.progressive) {
-                return extractFromProgressiveList(data.request.files.progressive, data.video.file_codecs);
+                return extractFromProgressiveList(data.request.files.progressive, data.request.file_codecs);
             } else if (data.request.files.h264) {
                 return extractFromH264Object(data.request.files.h264);
             } else {

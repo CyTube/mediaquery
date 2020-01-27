@@ -29,27 +29,6 @@ export function lookup(id) {
         }
 
         return media;
-    }).then(media => {
-        return getJSON(`https://clips.twitch.tv/api/v2/clips/${id}/status`).then(result => {
-            const videos = {
-                1080: [],
-                720: [],
-                480: [],
-                360: []
-            };
-
-            result.quality_options.forEach(opt => {
-                if (videos.hasOwnProperty(opt.quality)) {
-                    videos[opt.quality].push({
-                        link: opt.source,
-                        contentType: 'video/mp4'
-                    });
-                }
-            });
-
-            media.meta.direct = videos;
-            return media;
-        });
     });
 }
 
@@ -65,11 +44,16 @@ export function parseUrl(url) {
 
     const data = urlparse.parse(url, true);
 
-    if (!['clips.twitch.tv'].includes(data.hostname)) {
+    if (!['clips.twitch.tv', 'www.twitch.tv'].includes(data.hostname)) {
         return null;
     }
 
-    m = data.pathname.match(/^\/([A-Za-z]+)$/);
+    if (data.hostname === 'www.twitch.tv') {
+        m = data.pathname.match(/^\/.*\/clip\/([A-Za-z]+)/)
+    } else {
+        m = data.pathname.match(/^\/([A-Za-z]+)$/);
+    }
+
     if (m) {
         return {
             type: 'twitchclip',

@@ -1,6 +1,6 @@
 {
   "name": "cytube-mediaquery",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "@calzoneman/jsli": "^2.0.1",
     "bluebird": "^2.9.12",
     "domutils": "^1.5.1",
-    "htmlparser2": "^3.8.3"
+    "htmlparser2": "^3.8.3",
+    "prom-client": "^10.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -29,7 +30,7 @@
         "@babel/env",
         {
           "targets": {
-            "node": "8"
+            "node": "10"
           }
         }
       ]

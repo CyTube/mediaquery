@@ -2,12 +2,15 @@ import Promise from 'bluebird';
 import querystring from 'querystring';
 import urlparse from 'url';
 
-import { getJSON } from '../request';
+import { getJSON, request } from '../request';
 import Media from '../media';
+
+import { Counter } from 'prom-client';
 
 const LOGGER = require('@calzoneman/jsli')('mediaquery/youtube');
 
 let API_KEY = null;
+let CACHE = null;
 
 // https://en.wikipedia.org/wiki/ISO_8601#Durations
 const DURATION_SCALE = [
@@ -34,12 +37,51 @@ function parseDuration(duration) {
     return time;
 };
 
+const cacheAttemptCount = new Counter({
+    name: 'cytube_yt_cache_attempt_count',
+    help: 'Number of video lookups eligible for YouTube cache'
+});
+const cacheFoundCount = new Counter({
+    name: 'cytube_yt_cache_found_count',
+    help: 'Number of video lookups with a result in the cache'
+});
+const cacheHitCount = new Counter({
+    name: 'cytube_yt_cache_hit_count',
+    help: 'Number of video lookups served using the cached result'
+});
+
 /*
  * Retrieve metadata for a single YouTube video.
  *
  * Returns a Media object
  */
-export function lookup(id) {
+export async function lookup(id) {
+    let cached = null;
+    if (CACHE !== null) {
+        try {
+            cacheAttemptCount.inc();
+            cached = await CACHE.get(id, 'yt');
+            if (cached !== null) {
+                cacheFoundCount.inc();
+            }
+        } catch (error) {
+            LOGGER.error('Error retrieving cached metadata for yt:%s - %s', id, error.stack);
+        }
+    }
+
+    let media = await _lookupInternal(id, cached);
+    if (CACHE !== null) {
+        try {
+            await CACHE.put(media);
+        } catch (error) {
+            LOGGER.error('Error updating cached metadata for yt:%s - %s', id, error.stack);
+        }
+    }
+
+    return media;
+}
+
+function _lookupInternal(id, cached) {
     if (!API_KEY) {
         return Promise.reject(new Error('API key not set for YouTube v3 API'));
     }
@@ -51,8 +93,45 @@ export function lookup(id) {
     });
 
     const url = `https://www.googleapis.com/youtube/v3/videos?${params}`;
+    let headers = {};
+    if (cached !== null && cached.meta.etag) {
+        headers = {
+            'If-None-Match': cached.meta.etag
+        };
+    }
 
-    return getJSON(url).then(result => {
+    return request(url, { headers }).then(res => {
+        switch (res.statusCode) {
+            case 304:
+                cacheHitCount.inc();
+                return cached;
+            case 400:
+                LOGGER.error('YouTube API returned Bad Request: %s', res.data);
+                throw new Error('Error calling YouTube API: Bad Request');
+            case 403:
+                LOGGER.error('YouTube API returned Forbidden: %s', res.data);
+                throw new Error('Unable to access YouTube API');
+            case 500:
+            case 503:
+                throw new Error('YouTube API is unavailable.  Please try again later.');
+            default:
+                if (res.statusCode !== 200) {
+                    throw new Error(`Error calling YouTube API: HTTP ${res.statusCode}`);
+                }
+                break;
+        }
+
+        let result;
+        try {
+            result = JSON.parse(res.data);
+        } catch (error) {
+            LOGGER.error(
+                'YouTube API returned non-JSON response: %s',
+                String(res.data).substring(0, 1000)
+            );
+            throw new Error('Error calling YouTube API: could not decode response as JSON');
+        }
+
         // Sadly, as of the v3 API, YouTube doesn't tell you *why* the request failed.
         if (result.items.length === 0) {
             throw new Error('Video does not exist or is private');
@@ -110,7 +189,8 @@ export function lookup(id) {
             title: video.snippet.title,
             duration: parseDuration(video.contentDetails.duration),
             meta: {
-                thumbnail: video.snippet.thumbnails.default.url
+                thumbnail: video.snippet.thumbnails.default.url,
+                etag: result.etag
             }
         };
 
@@ -327,5 +407,9 @@ export function parseUrl(url) {
 }
 
 export function setApiKey(key) {
-    return API_KEY = key;
+    API_KEY = key;
+}
+
+export function setCache(cache) {
+    CACHE = cache;
 }

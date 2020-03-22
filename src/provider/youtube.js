@@ -81,6 +81,39 @@ export async function lookup(id) {
     return media;
 }
 
+function getErrorReason(body) {
+    try {
+        body = JSON.parse(body);
+    } catch (error) {
+        return null;
+    }
+
+    if (!body.error || !body.error.errors) return null;
+
+    return body.error.errors[0].reason;
+}
+
+function map403Error(body) {
+    switch (getErrorReason(body)) {
+        case 'dailyLimitExceeded':
+        case 'quotaExceeded':
+            return new Error(
+                'YouTube videos are temporarily unavailable due to the website ' +
+                'exceeding the YouTube API quota.  ' +
+                'Quota resets daily at midnight Pacific Time'
+            );
+        case 'accessNotConfigured':
+            return new Error(
+                'The YouTube API is not properly configured for this website.  ' +
+                'See https://console.developers.google.com/apis/api/youtube.googleapis.com/overview'
+            );
+        default:
+            return new Error(
+                'Unable to access YouTube API'
+            );
+    }
+}
+
 function _lookupInternal(id, cached) {
     if (!API_KEY) {
         return Promise.reject(new Error('API key not set for YouTube v3 API'));
@@ -110,7 +143,7 @@ function _lookupInternal(id, cached) {
                 throw new Error('Error calling YouTube API: Bad Request');
             case 403:
                 LOGGER.error('YouTube API returned Forbidden: %s', res.data);
-                throw new Error('Unable to access YouTube API');
+                throw map403Error(res.data);
             case 500:
             case 503:
                 throw new Error('YouTube API is unavailable.  Please try again later.');

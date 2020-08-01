@@ -9,8 +9,7 @@ const PROVIDERS = {
     googledrive: require('./provider/googledrive'),
     streamable: require('./provider/streamable'),
     twitchvod: require('./provider/twitch-vod'),
-    twitchclip: require('./provider/twitch-clip'),
-    mixer: require('./provider/mixer')
+    twitchclip: require('./provider/twitch-clip')
 };
 
 export default function lookup(info) {

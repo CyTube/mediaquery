@@ -1,5 +1,5 @@
 {
-  "name": "cytube-mediaquery",
+  "name": "@cytube/mediaquery",
   "version": "0.0.22",
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
@@ -30,7 +30,7 @@
         "@babel/env",
         {
           "targets": {
-            "node": "10"
+            "node": "12"
           }
         }
       ]
@@ -38,5 +38,23 @@
     "plugins": [
       "add-module-exports"
     ]
-  }
+  },
+  "bin": {
+    "mediaquery": "mediaquery.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyTube/mediaquery.git"
+  },
+  "keywords": [
+    "CyTube"
+  ],
+  "bugs": {
+    "url": "https://github.com/CyTube/mediaquery/issues"
+  },
+  "homepage": "https://github.com/CyTube/mediaquery#readme"
 }

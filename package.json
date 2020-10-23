@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "babel -D --watch --source-maps --out-dir lib/ src/",
-    "postinstall": "babel -D --source-maps --out-dir lib/ src/",
+    "prepublish": "babel -D --source-maps --out-dir lib/ src/",
     "test": "mocha --recursive"
   },
   "author": "Calvin Montgomery",

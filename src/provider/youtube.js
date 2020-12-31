@@ -237,6 +237,14 @@ function _lookupInternal(id, cached) {
             }
         }
 
+        if (video.contentDetails.contentRating) {
+            const rating = video.contentDetails.contentRating;
+
+            if (rating.ytRating) {
+                data.meta.ytRating = rating.ytRating;
+            }
+        }
+
         return new Media(data);
     });
 }

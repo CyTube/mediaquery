@@ -7,6 +7,7 @@ const PROVIDERS = {
     vimeo: require('./provider/vimeo'),
     dailymotion: require('./provider/dailymotion'),
     googledrive: require('./provider/googledrive'),
+    peertube: require('./provider/peertube'),
     streamable: require('./provider/streamable'),
     twitchvod: require('./provider/twitch-vod'),
     twitchclip: require('./provider/twitch-clip')

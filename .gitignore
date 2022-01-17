@@ -2,3 +2,4 @@ test/keys/*
 node_modules
 lib
 *.swp
+*.patch

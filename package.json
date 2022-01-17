@@ -1,12 +1,13 @@
 {
   "name": "cytube-mediaquery",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
     "dev": "babel -D --watch --source-maps --out-dir lib/ src/",
     "postinstall": "babel -D --source-maps --out-dir lib/ src/",
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "generate-peertubelist": "node ./lib/util/peertube-hosts.js"
   },
   "author": "Calvin Montgomery",
   "license": "MIT",
@@ -15,7 +16,8 @@
     "bluebird": "^2.9.12",
     "domutils": "^1.5.1",
     "htmlparser2": "^3.8.3",
-    "prom-client": "^10.0.2"
+    "prom-client": "^10.0.2",
+    "short-uuid": "^4.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",

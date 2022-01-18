@@ -1,4 +1,3 @@
-import querystring from 'querystring';
 import urlparse from 'url';
 
 import { getJSON } from '../request';
@@ -17,7 +16,7 @@ const DM_FIELDS = [
  *
  * Returns a Media object
  */
-function lookup(id) {
+export function lookup(id) {
     id = id.split('_')[0];
 
     const params = `?fields=${DM_FIELDS}`;

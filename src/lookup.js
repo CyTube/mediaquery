@@ -3,14 +3,15 @@ import path from 'path';
 import Promise from 'bluebird';
 
 const PROVIDERS = {
-    youtube: require('./provider/youtube'),
-    vimeo: require('./provider/vimeo'),
+    bitchute:    require('./provider/bitchute'),
     dailymotion: require('./provider/dailymotion'),
     googledrive: require('./provider/googledrive'),
-    peertube: require('./provider/peertube'),
-    streamable: require('./provider/streamable'),
-    twitchvod: require('./provider/twitch-vod'),
-    twitchclip: require('./provider/twitch-clip')
+    peertube:    require('./provider/peertube'),
+    streamable:  require('./provider/streamable'),
+    twitchclip:  require('./provider/twitch-clip'),
+    twitchvod:   require('./provider/twitch-vod'),
+    vimeo:       require('./provider/vimeo'),
+    youtube:     require('./provider/youtube'),
 };
 
 export default function lookup(info) {

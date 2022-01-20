@@ -3,6 +3,7 @@ import path from 'path';
 import Promise from 'bluebird';
 
 const PROVIDERS = {
+    bandcamp:    require('./provider/bandcamp'),
     bitchute:    require('./provider/bitchute'),
     dailymotion: require('./provider/dailymotion'),
     googledrive: require('./provider/googledrive'),

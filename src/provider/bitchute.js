@@ -1,8 +1,6 @@
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
-
 import urlparse from 'url';
 import Media from '../media';
+import { ytdl, getDuration }  from '../scraper';
 
 /*
  * Retrieves video data for a BitChute video
@@ -11,15 +9,10 @@ import Media from '../media';
  *
  */
 export function lookup(id) {
-    const ffpar = '-v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1'
     const url = `https://www.bitchute.com/video/${id}/`;
 
-    return exec(`yt-dlp -j ${url}`).then((result)=>{
-        const info = JSON.parse(result.stdout);
-
-        return exec(`ffprobe ${ffpar} ${info.url}`).then((result)=>{
-            const duration = Math.floor(result.stdout);
-
+    return ytdl(url).then((info)=>{
+        return getDuration(info.url).then((duration)=>{
             const data = {
                 id: info.id,
                 type: 'bitchute',
@@ -38,16 +31,18 @@ export function lookup(id) {
 
             return new Media(data);
         });
+    }).catch((err)=>{
+        throw err;
     });
 }
 
 /*
  * Attempts to parse a BitChute URL of the forms:
- *   bc:id
- *   bitchute.com/video/${id}
+ *   bc:%id%
+ *   bitchute.com/video/%id%
  *
  * Returns {
- *           id:   id
+ *           id:   %id%
  *           kind: 'single'
  *           type: 'bitchute'
  *         }
@@ -73,9 +68,13 @@ export function parseUrl(url) {
         return null;
     }
 
+    const id = data.pathname.slice(7).split('/').shift();
+    if(!id.match(/^[-_0-9a-zA-Z]{11,12}$/)){
+        return null
+    }
     return {
         type: 'bitchute',
         kind: 'single',
-        id: data.pathname.slice(7).split('/').shift()
+        id: id
     };
 }

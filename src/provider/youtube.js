@@ -1,4 +1,3 @@
-import Promise from 'bluebird';
 import querystring from 'querystring';
 import urlparse from 'url';
 

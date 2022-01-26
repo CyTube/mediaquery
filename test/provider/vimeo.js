@@ -1,7 +1,6 @@
 var assert = require('assert');
 var fs = require('fs');
 var path = require('path');
-var Promise = require('bluebird');
 
 var vimeo = require('../../lib/provider/vimeo');
 

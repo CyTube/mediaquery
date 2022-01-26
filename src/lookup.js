@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import Promise from 'bluebird';
 
 const PROVIDERS = {
     bandcamp:    require('./provider/bandcamp'),

@@ -1,7 +1,6 @@
 import { get as httpGet } from 'http';
 import { get as httpsGet } from 'https';
 import { parse as urlParse } from 'url';
-import Promise from 'bluebird';
 
 const DEFAULT_OPTS = {
     timeout: 30000

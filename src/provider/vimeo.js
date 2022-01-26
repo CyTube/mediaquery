@@ -1,5 +1,4 @@
 import urlparse from 'url';
-import Promise from 'bluebird';
 
 import { request, getJSON } from '../request';
 import Media from '../media';

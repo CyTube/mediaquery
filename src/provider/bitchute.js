@@ -2,38 +2,62 @@ import urlparse from 'url';
 import Media from '../media';
 import { ytdl, getDuration }  from '../scraper';
 
+const LOGGER = require('@calzoneman/jsli')('mediaquery/bitchute');
+
+let CACHE = null;
+const MAX_AGE = 60 * 60 * 8;
+
 /*
  * Retrieves video data for a BitChute video
  *
  * Returns a Media object
  *
  */
-export function lookup(id) {
+export async function lookup(id) {
+    let cached = null;
+    if (CACHE !== null) {
+        try {
+            cached = await CACHE.get(id, 'bc');
+            if (cached !== null && cached.meta.cacheAge < MAX_AGE) {
+                return cached;
+            }
+        } catch (error) {
+            LOGGER.error('Error retrieving cached metadata for yt:%s - %s', id, error.stack);
+        }
+    }
+
     const url = `https://www.bitchute.com/video/${id}/`;
+    try {
+        const info = await ytdl(url);
+        const duration = await getDuration(info.url);
 
-    return ytdl(url).then((info)=>{
-        return getDuration(info.url).then((duration)=>{
-            const data = {
-                id: info.id,
-                type: 'bitchute',
-                title: info.title,
-                duration: duration,
-                meta: {
-                    direct: {
-                        480: [{
-                            contentType: 'video/mp4',
-                            link: info.url
-                        }]
-                    },
-                    thumbnail: info.thumbnail,
-                }
-            };
+        const media = {
+            id: info.id,
+            type: 'bitchute',
+            title: info.title,
+            duration: duration,
+            meta: {
+                direct: {
+                    480: [{
+                        contentType: 'video/mp4',
+                        link: info.url
+                    }]
+                },
+                thumbnail: info.thumbnail,
+            }
+        };
 
-            return new Media(data);
-        });
-    }).catch((err)=>{
+        if (CACHE !== null) {
+            try {
+                await CACHE.put(new Media(media));
+            } catch (error) {
+                LOGGER.error('Error updating cached metadata for yt:%s - %s', id, error.stack);
+            }
+        }
+        return new Media(media);
+    } catch(err) {
         throw err;
-    });
+    }
 }
 
 /*
@@ -77,4 +101,8 @@ export function parseUrl(url) {
         kind: 'single',
         id: id
     };
+}
+
+export function setCache(cache) {
+    CACHE = cache;
 }

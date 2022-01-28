@@ -6,6 +6,7 @@ const PROVIDERS = {
     bitchute:    require('./provider/bitchute'),
     dailymotion: require('./provider/dailymotion'),
     googledrive: require('./provider/googledrive'),
+    odysee:      require('./provider/odysee'),
     peertube:    require('./provider/peertube'),
     streamable:  require('./provider/streamable'),
     twitchclip:  require('./provider/twitch-clip'),

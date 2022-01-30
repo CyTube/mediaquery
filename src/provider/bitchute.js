@@ -1,10 +1,15 @@
 import Media from '../media';
+import { findAll } from 'domutils';
+import { request } from '../request';
+import { parseDom } from '../util/xmldom';
 import { ytdl, getDuration }  from '../scraper';
 
 const LOGGER = require('@calzoneman/jsli')('mediaquery/bitchute');
 
 let CACHE = null;
 const MAX_AGE = 60 * 60 * 8;
+
+const source = process.env.MQ_BITCHUTE || 'native';
 
 /*
  * Retrieves video data for a BitChute video
@@ -21,10 +26,81 @@ export async function lookup(id) {
                 return cached;
             }
         } catch (error) {
-            LOGGER.error('Error retrieving cached metadata for yt:%s - %s', id, error.stack);
+            LOGGER.error('Error retrieving cached metadata for bc:%s - %s', id, error.stack);
         }
     }
 
+    switch(source.toLowerCase()) {
+        case 'native':
+            return _lookupNative(id);
+        case 'external':
+            return _lookupExternal(id);
+        default:
+            throw new Error('Invalid Bitchute lookup source.');
+    }
+}
+
+async function _lookupNative(id) {
+    const url = `https://www.bitchute.com/video/${id}/`;
+
+    try {
+        const res = await request(url);
+        if (res.statusCode !== 200) {
+            throw new Error(`Bitchute lookup failed for ${id}: ${res.statusMessage}`);
+        }
+
+        const info = {
+            title: '',
+            thumbnail: '',
+            url: '',
+        }
+        findAll(elem => ['title','video','source'].includes(elem.name), parseDom(res.data))
+            .forEach(elem => {
+                switch(elem.name){
+                    case 'title':
+                        info.title = (elem.children[0].data);
+                        break;
+                    case 'video':
+                        info.thumbnail = elem.attribs.poster;
+                        break;
+                    case 'source':
+                        info.url = elem.attribs.src;
+                        break;
+                }
+            });
+
+        const duration = await getDuration(info.url);
+
+        const media = {
+            id,
+            type: 'bitchute',
+            title: info.title,
+            duration: duration,
+            meta: {
+                direct: {
+                    480: [{
+                        contentType: 'video/mp4',
+                        link: info.url
+                    }]
+                },
+                thumbnail: info.thumbnail,
+            }
+        };
+
+        if (CACHE !== null) {
+            try {
+                await CACHE.put(new Media(media));
+            } catch (error) {
+                LOGGER.error('Error updating cached metadata for bc:%s - %s', id, error.stack);
+            }
+        }
+        return new Media(media);
+    } catch (err) {
+        throw err;
+    }
+}
+
+async function _lookupExternal(id) {
     const url = `https://www.bitchute.com/video/${id}/`;
     try {
         const info = await ytdl(url);
@@ -50,7 +126,7 @@ export async function lookup(id) {
             try {
                 await CACHE.put(new Media(media));
             } catch (error) {
-                LOGGER.error('Error updating cached metadata for yt:%s - %s', id, error.stack);
+                LOGGER.error('Error updating cached metadata for bc:%s - %s', id, error.stack);
             }
         }
         return new Media(media);

@@ -1,6 +1,6 @@
 {
   "name": "cytube-mediaquery",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,9 @@
   "license": "MIT",
   "dependencies": {
     "@calzoneman/jsli": "^2.0.1",
-    "domutils": "^1.5.1",
-    "htmlparser2": "^3.8.3",
+    "domutils": "^2.8.0",
+    "domhandler": "^4.3.0",
+    "htmlparser2": "^7.2.0",
     "prom-client": "^13.1.0",
     "short-uuid": "^4.2.0"
   },

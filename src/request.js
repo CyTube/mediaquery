@@ -1,28 +1,24 @@
 import { get as httpGet } from 'http';
 import { get as httpsGet } from 'https';
-import { parse as urlParse } from 'url';
 
 const DEFAULT_OPTS = {
     timeout: 30000
 };
 
-export function request(url, opts = {}) {
+export async function request(url, opts = {}) {
+    const options = {};
+    Object.assign(options, DEFAULT_OPTS, opts);
     return new Promise((resolve, reject) => {
-        const options = {};
-
-        Object.assign(options, parseURL(url), DEFAULT_OPTS, opts);
-
-        if (!/^https?:$/.test(options.protocol)) {
-            reject(new Error(
-                `Unacceptable protocol "${options.protocol}"`
+        const link = new URL(url);
+        if (!/^https?:$/.test(link.protocol)) {
+            return reject(new Error(
+                `Unacceptable protocol "${link.protocol}"`
             ));
-
-            return;
         }
 
         // this is fucking stupid
-        const get = options.protocol === 'https:' ? httpsGet : httpGet;
-        const req = get(options);
+        const get = link.protocol === 'https:' ? httpsGet : httpGet;
+        const req = get(link, options);
 
         req.setTimeout(options.timeout, () => {
             const error = new Error('Request timed out');
@@ -55,37 +51,26 @@ export function request(url, opts = {}) {
     });
 }
 
-export function getJSON(url, options = {}) {
-    return request(url, options).then(function(res) {
-        switch (res.statusCode) {
-            // TODO: replace with generic 4xx/5xx detector, remove logic from here
-            case 400:
-            case 403:
-            case 404:
-            case 500:
-            case 503:
-                if (!options.skipStatusCheck
-                        || !options.skipStatusCheck.includes(res.statusCode)) {
-                    throw new Error(res.statusMessage);
-                }
-                break;
-        }
+export async function getJSON(url, options = {}) {
+    const res = await request(url, options);
 
-        try {
-            return JSON.parse(res.data);
-        } catch (e) {
-            throw new Error('Response could not be decoded as JSON');
-        }
-    });
-}
-
-function parseURL(urlstring) {
-    const url = urlParse(urlstring);
-
-    // legacy url.parse doesn't check this
-    if (url.protocol == null || url.host == null) {
-        throw new Error(`Invalid URL "${urlstring}"`);
+    switch (res.statusCode) {
+        // TODO: replace with generic 4xx/5xx detector, remove logic from here
+        case 400:
+        case 403:
+        case 404:
+        case 500:
+        case 503:
+            if (!options.skipStatusCheck
+                    || !options.skipStatusCheck.includes(res.statusCode)) {
+                throw new Error(res.statusMessage);
+            }
+            break;
     }
 
-    return url;
+    try {
+        return JSON.parse(res.data);
+    } catch (e) {
+        throw new Error('Response could not be decoded as JSON');
+    }
 }

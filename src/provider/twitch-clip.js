@@ -1,5 +1,3 @@
-import urlparse from 'url';
-
 import { getJSON } from '../request';
 import Media from '../media';
 
@@ -42,16 +40,16 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url, true);
+    const link = new URL(url);
 
-    if (!['clips.twitch.tv', 'www.twitch.tv'].includes(data.hostname)) {
+    if (!['clips.twitch.tv', 'www.twitch.tv'].includes(link.hostname)) {
         return null;
     }
 
-    if (data.hostname === 'www.twitch.tv') {
-        m = data.pathname.match(/^\/.*\/clip\/([A-Za-z]+)/)
+    if (link.hostname === 'www.twitch.tv') {
+        m = link.pathname.match(/^\/.*\/clip\/([A-Za-z]+)/)
     } else {
-        m = data.pathname.match(/^\/([A-Za-z]+)$/);
+        m = link.pathname.match(/^\/([A-Za-z]+)$/);
     }
 
     if (m) {

@@ -1,6 +1,3 @@
-import querystring from 'querystring';
-import urlparse from 'url';
-
 import { getJSON, request } from '../request';
 import Media from '../media';
 
@@ -118,13 +115,13 @@ function _lookupInternal(id, cached) {
         return Promise.reject(new Error('API key not set for YouTube v3 API'));
     }
 
-    const params = querystring.stringify({
+    const url = new URL('https://www.googleapis.com/youtube/v3/videos');
+    url.search = new URLSearchParams({
         key: API_KEY,
         part: 'contentDetails,status,snippet',
         id
     });
 
-    const url = `https://www.googleapis.com/youtube/v3/videos?${params}`;
     let headers = {};
     if (cached !== null && cached.meta.etag) {
         headers = {
@@ -261,13 +258,12 @@ export function lookupMany(ids) {
         return Promise.reject(new Error('API key not set for YouTube v3 API'));
     }
 
-    const params = querystring.stringify({
+    const url = new URL('https://www.googleapis.com/youtube/v3/videos');
+    url.search = new URLSearchParams({
         key: API_KEY,
         part: 'contentDetails,status,snippet',
         id: ids.join(',')
     });
-
-    const url = `https://www.googleapis.com/youtube/v3/videos?${params}`;
 
     return getJSON(url).then(result => {
         return result.items.filter(video => {
@@ -314,23 +310,14 @@ export function search(query, nextPage = false) {
         return Promise.reject(new Error('API key not set for YouTube v3 API'));
     }
 
-    query = query.replace(/%20/g, '+');
-
-    let params = {
+    const url = new URL('https://www.googleapis.com/youtube/v3/search');
+    url.search = new URLSearchParams(Object.assign({
         key: API_KEY,
         part: 'id',
         maxResults: 25,
-        q: query,
+        q: query.replace(/%20/g, '+'),
         type: 'video'
-    };
-
-    if (nextPage) {
-        params.pageToken = nextPage;
-    }
-
-    params = querystring.stringify(params);
-
-    const url = `https://www.googleapis.com/youtube/v3/search?${params}`;
+    }, nextPage ? { pageToken: nextPage } : null));
 
     return getJSON(url).then(result => {
         // https://code.google.com/p/gdata-issues/issues/detail?id=4294
@@ -354,20 +341,13 @@ export function lookupPlaylist(id, nextPage = false) {
         return Promise.reject(new Error('API key not set for YouTube v3 API'));
     }
 
-    let params = {
+    const url = new URL('https://www.googleapis.com/youtube/v3/playlistItems');
+    url.search = new URLSearchParams(Object.assign({
         key: API_KEY,
         part: 'contentDetails',
         maxResults: 50,
         playlistId: id
-    };
-
-    if (nextPage) {
-        params.pageToken = nextPage;
-    }
-
-    params = querystring.stringify(params);
-
-    const url = `https://www.googleapis.com/youtube/v3/playlistItems?${params}`;
+    }, nextPage ? { pageToken: nextPage } : null));
 
     return getJSON(url).then(result => {
         return lookupMany(result.items.map(item => item.contentDetails.videoId))
@@ -417,29 +397,29 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url, true);
+    const link = new URL(url);
 
-    if (data.hostname === 'youtu.be') {
+    if (link.hostname === 'youtu.be') {
         return {
             type: 'youtube',
             kind: 'single',
-            id: data.pathname.replace(/^\//, '')
+            id: link.pathname.replace(/^\//, '')
         };
-    } else if (!['www.youtube.com', 'youtube.com'].includes(data.hostname)) {
+    } else if (!['www.youtube.com', 'youtube.com'].includes(link.hostname)) {
         return null;
     }
 
-    if (data.pathname === '/watch') {
+    if (link.pathname === '/watch') {
         return {
             type: 'youtube',
             kind: 'single',
-            id: data.query.v
+            id: link.searchParams.get('v')
         };
-    } else if (data.pathname === '/playlist') {
+    } else if (link.pathname === '/playlist') {
         return {
             type: 'youtube',
             kind: 'playlist',
-            id: data.query.list
+            id: link.searchParams.get('list')
         };
     } else {
         return null;

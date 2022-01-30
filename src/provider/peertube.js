@@ -1,4 +1,3 @@
-import urlparse from 'url';
 import { getJSON } from '../request';
 import Media from '../media';
 
@@ -31,20 +30,18 @@ function convertToShort(UUID){
  *       The lack of the presence of shortUUID in the result indicates an older instance.
  *
  */
-export function lookup(id) {
-    var [domain, UUID] = id.split(';');
+export async function lookup(id) {
+    const [domain, UUID] = id.split(';');
     const shortUUID = [32,36].includes(UUID.length) ? convertToShort(UUID) : UUID;
-
     const url = `https://${domain}/api/v1/videos/${translator.toUUID(shortUUID)}`;
 
-    return getJSON(url).then(result => {
+    try {
+        const result = await getJSON(url);
         if (result.privacy.id !== 1 && result.privacy.id !== 2) {
-            return Promise.reject(
-                    new Error(`The uploader has made this video unavailable`));
+            throw new Error('The uploader has made this video unavailable');
         }
-
         if (result.state.label !== 'Published') {
-            return Promise.reject(new Error('Video status is not published'));
+            throw new Error('Video status is not published');
         }
 
         const hostname = result?.channel?.host || domain;
@@ -66,7 +63,9 @@ export function lookup(id) {
         };
 
         return new Media(data);
-    });
+    } catch(e) {
+        throw e;
+    }
 }
 
 
@@ -93,24 +92,24 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url);
+    const link = new URL(url);
     const regLong = [8, 4, 4, 4, 12].map(x => `[0-9a-f]{${x}}`).join('-');
     const regShort = '[a-zA-Z0-9]{22}';
     const pattern = new RegExp(`(?:/w/|/videos/watch/)(?:(?<short>${regShort})|(?<long>${regLong}))`);
 
-    m = data.pathname.match(pattern);
+    m = link.pathname.match(pattern);
     if (!m) {
         return null;
     }
 
-    if (!domains.includes(data.hostname)) {
+    if (!domains.includes(link.hostname)) {
         return null;
     }
 
     const shortUUID = m.groups.short ? m.groups.short : translator.fromUUID(m.groups.long);
 
     return {
-        id: `${data.hostname};${shortUUID}`,
+        id: `${link.hostname};${shortUUID}`,
         kind: 'single',
         type: 'peertube'
     };

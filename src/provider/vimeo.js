@@ -1,5 +1,3 @@
-import urlparse from 'url';
-
 import { request, getJSON } from '../request';
 import Media from '../media';
 
@@ -197,19 +195,19 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url);
+    const link = new URL(url);
 
-    if (data.hostname !== 'vimeo.com') {
+    if (link.hostname !== 'vimeo.com') {
         return null;
     }
 
-    if (!data.pathname.match(/^\/\d+$/)) {
+    if (!link.pathname.match(/^\/\d+$/)) {
         return null;
     }
 
     return {
         type: 'vimeo',
         kind: 'single',
-        id: data.pathname.replace(/^\//, '')
+        id: link.pathname.replace(/^\//, '')
     };
 }

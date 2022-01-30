@@ -1,8 +1,5 @@
 import domutils from 'domutils';
 import { parseDom } from '../util/xmldom';
-import querystring from 'querystring';
-import urlparse from 'url';
-
 import { request } from '../request';
 import Media from '../media';
 import { ITAG_QMAP, ITAG_CMAP } from '../util/itag';
@@ -26,7 +23,7 @@ function fetchAndParse(id, options = {}) {
             throw new Error(`Google Drive lookup failed for ${id}: ${res.statusMessage}`);
         }
 
-        const doc = querystring.parse(res.data);
+        const doc = Object.fromEntries(new URLSearchParams(res.data));
 
         if (doc.status !== 'ok') {
             let reason;
@@ -97,15 +94,15 @@ export function lookup(id) {
 }
 
 export function getSubtitles(id, vid) {
-    const params = {
+    const url = new URL('https://drive.google.com/timedtext');
+    url.search = new URLSearchParams({
         id,
         v: id,
         vid,
         type: 'list',
         hl: 'en-US'
-    };
+    });
 
-    const url = `https://drive.google.com/timedtext?${querystring.stringify(params)}`;
     return request(url).then(res => {
         if (res.statusCode !== 200) {
             throw new Error(`Google Drive subtitle lookup failed for ${id}: \
@@ -142,16 +139,16 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url, true);
+    const link = new URL(url);
 
-    if (!['drive.google.com', 'docs.google.com'].includes(data.hostname)) {
+    if (!['drive.google.com', 'docs.google.com'].includes(link.hostname)) {
         return null;
     }
 
-    m = data.pathname.match(/file\/d\/([\w-]+)/);
+    m = link.pathname.match(/file\/d\/([\w-]+)/);
     if (!m) {
-        if (data.pathname === '/open') {
-            m = data.search.match(/id=([\w-]+)/);
+        if (link.pathname === '/open') {
+            m = link.search.match(/id=([\w-]+)/);
         }
     }
 

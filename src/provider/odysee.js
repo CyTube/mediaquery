@@ -1,4 +1,3 @@
-import urlparse from 'url';
 import Media from '../media';
 import { ytdl } from '../scraper';
 

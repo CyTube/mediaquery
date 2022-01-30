@@ -1,4 +1,3 @@
-import urlparse from 'url';
 import Media from '../media';
 import { ytdl, getDuration }  from '../scraper';
 
@@ -82,17 +81,17 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url.replace('www.',''));
+    const link = new URL(url.replace('www.',''));
 
-    if (data.hostname !== 'bitchute.com') {
+    if (link.hostname !== 'bitchute.com') {
         return null;
     }
 
-    if (!data.pathname.startsWith('/video/')) {
+    if (!link.pathname.startsWith('/video/')) {
         return null;
     }
 
-    const id = data.pathname.slice(7).split('/').shift();
+    const id = link.pathname.slice(7).split('/').shift();
     if(!id.match(/^[-_0-9a-zA-Z]{11,12}$/)){
         return null
     }

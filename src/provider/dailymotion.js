@@ -1,5 +1,3 @@
-import urlparse from 'url';
-
 import { getJSON } from '../request';
 import Media from '../media';
 
@@ -66,13 +64,13 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url);
+    const link = new URL(url);
 
-    if (!['www.dailymotion.com', 'dailymotion.com'].includes(data.hostname)) {
+    if (!['www.dailymotion.com', 'dailymotion.com'].includes(link.hostname)) {
         return null;
     }
 
-    m = data.pathname.match(/^\/video\/([a-zA-Z0-9]+)/);
+    m = link.pathname.match(/^\/video\/([a-zA-Z0-9]+)/);
     if (!m) {
         return null;
     }

@@ -1,5 +1,3 @@
-import urlparse from 'url';
-
 import { getJSON } from '../request';
 import Media from '../media';
 
@@ -46,13 +44,13 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url, true);
+    const link = new URL(url);
 
-    if (!['streamable.com'].includes(data.hostname)) {
+    if (!['streamable.com'].includes(link.hostname)) {
         return null;
     }
 
-    m = data.pathname.match(/^\/(?:e\/)?([\w-]+)/);
+    m = link.pathname.match(/^\/(?:e\/)?([\w-]+)/);
     if (m) {
         return {
             type: 'streamable',

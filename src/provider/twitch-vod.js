@@ -1,5 +1,3 @@
-import urlparse from 'url';
-
 import { getJSON } from '../request';
 import Media from '../media';
 
@@ -42,13 +40,13 @@ export function parseUrl(url) {
         };
     }
 
-    const data = urlparse.parse(url, true);
+    const link = new URL(url);
 
-    if (!['www.twitch.tv', 'twitch.tv'].includes(data.hostname)) {
+    if (!['www.twitch.tv', 'twitch.tv'].includes(link.hostname)) {
         return null;
     }
 
-    m = data.pathname.match(/^\/(?:.*?)\/([cv])\/(\d+)/);
+    m = link.pathname.match(/^\/(?:.*?)\/([cv])\/(\d+)/);
     if (m) {
         return {
             type: 'twitchvod',
@@ -57,7 +55,7 @@ export function parseUrl(url) {
         };
     }
 
-    m = data.pathname.match(/^\/videos\/(\d+)/);
+    m = link.pathname.match(/^\/videos\/(\d+)/);
     if (m) {
         return {
             type: 'twitchvod',

@@ -84,7 +84,7 @@ describe('request', () => {
             }).catch(error => {
                 assert.strictEqual(
                     error.message,
-                    'Invalid URL "not valid"'
+                    'Invalid URL'
                 );
             });
         });

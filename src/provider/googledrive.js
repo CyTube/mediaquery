@@ -1,4 +1,4 @@
-import domutils from 'domutils';
+import { findAll } from 'domutils';
 import { parseDom } from '../util/xmldom';
 import { request } from '../request';
 import Media from '../media';
@@ -114,7 +114,7 @@ ${res.statusMessage} (url: ${url})`);
             available: []
         };
 
-        domutils.findAll(elem => elem.name === 'track', parseDom(res.data))
+        findAll(elem => elem.name === 'track', parseDom(res.data))
                 .forEach(elem => {
             subtitles.available.push({
                 lang: elem.attribs.lang_code,

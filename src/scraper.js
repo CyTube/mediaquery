@@ -1,6 +1,9 @@
 const util = require('util');
 const execFile = util.promisify(require('child_process').execFile);
 
+const ytdlbin = process.env.MQ_YTDL || 'yt-dlp';
+const ffprbin = process.env.MQ_FFPR || 'ffprobe';
+
 /*
  * Retrieves video data from a youtube-dl supported source
  *
@@ -9,7 +12,7 @@ const execFile = util.promisify(require('child_process').execFile);
  */
 export async function ytdl(url) {
     const command = {
-        bin: 'yt-dlp',
+        bin: ytdlbin,
         par: '-j',
     };
 
@@ -45,7 +48,7 @@ export async function getDuration(url) {
 
 async function ffprobe({ params = null, url }) {
     const command = {
-        bin: 'ffprobe',
+        bin: ffprbin,
         par: [
             '-loglevel', 'error',
             '-show_entries', 'stream:format',

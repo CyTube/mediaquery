@@ -3,15 +3,20 @@ import Media from '../media';
 
 const short = require('short-uuid');
 const translator = short();
-let domains = [];
 
-try {
-    domains = require('../util/peers.json');
-} catch (e) {
-    console.error('Error: Unable to load PeerTube domain list.');
-    console.error('You need to generate it with:');
-    console.error('  npm run-script generate-peertubelist');
-    process.exit(1);
+let DOMAINS = [];
+
+export function setDomains(domains) {
+    DOMAINS = domains;
+}
+
+export async function fetchPeertubeDomains() {
+    // May need to account for paginated results in the future
+    const url = 'https://instances.joinpeertube.org/api/v1/instances' +
+        '?start=0&count=1000&sort=-totalLocalVideos';
+
+    let res = await getJSON(url);
+    return res.data.map(peer => peer.host);
 }
 
 function convertToShort(UUID){
@@ -32,16 +37,32 @@ function convertToShort(UUID){
  */
 export async function lookup(id) {
     const [domain, UUID] = id.split(';');
+    if (!DOMAINS.includes(domain)) {
+        throw new Error(
+            `Unrecognized peertube host ${domain}; ask an administrator to regenerate the peertube domain list`
+        );
+    }
+    if (UUID === undefined) {
+        throw new Error(`Invalid peertube ID ${id}`);
+    }
+
     const shortUUID = [32,36].includes(UUID.length) ? convertToShort(UUID) : UUID;
     const url = `https://${domain}/api/v1/videos/${translator.toUUID(shortUUID)}`;
 
     try {
         const result = await getJSON(url);
+        console.log(require('util').inspect(result, { depth: 10 }));
         if (result.privacy.id !== 1 && result.privacy.id !== 2) {
             throw new Error('The uploader has made this video unavailable');
         }
         if (result.state.label !== 'Published') {
             throw new Error('Video status is not published');
+        }
+
+        let thumbnail = result.previewPath;
+        if (/^\//.test(thumbnail)) {
+            // Convert relative path to absolute
+            thumbnail = `https://${domain}${thumbnail}`;
         }
 
         const hostname = result?.channel?.host || domain;
@@ -51,7 +72,7 @@ export async function lookup(id) {
             title: result.name,
             duration: result.duration,
             meta: {
-                thumbnail: result.previewPath,
+                thumbnail,
                 embed: {
                     tag: 'iframe',
                     domain: hostname,

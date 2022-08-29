@@ -1,8 +1,8 @@
 import Media from '../media';
 import { ytdl } from '../scraper';
 import { request } from '../request';
-import { findAll } from 'domutils';
-import { parseDom } from '../util/xmldom';
+import { parseDom, mustFindOne } from '../util/xmldom';
+import { parseDuration } from '../util/isoduration';
 
 const source = process.env.MQ_BANDCAMP || 'native';
 
@@ -29,47 +29,61 @@ async function _lookupNative(id) {
 
     try {
         const res = await request(trackURL);
+
         if (res.statusCode !== 200) {
             throw new Error(`Bandcamp lookup failed for ${id}: ${res.statusMessage}`);
         }
-        const info = {
-            title: '',
-            duration: '',
-            thumbnail: '',
-            url: '',
+
+        const dom = parseDom(res.data);
+
+        const trackLd = JSON.parse(mustFindOne(
+            elem =>
+                elem.name === 'script' &&
+                elem.attribs.type === 'application/ld+json',
+            dom
+        ).children[0].data);
+
+        if (trackLd['@type'] !== 'MusicRecording') {
+            throw new Error(`Internal error parsing bandcamp data for ${id}`);
         }
-        findAll(elem => elem.name === 'script', parseDom(res.data))
-            .filter(elem => {
-                return elem.attribs.type ==='application/ld+json' || elem.attribs['data-tralbum'];
-            })
-            .forEach(elem => {
-                if(elem.attribs.type ==='application/ld+json'){
-                    // Get text content and parse it
-                    const data = JSON.parse(elem.children[0].data);
-                    info.thumbnail = data.image;
-                } else {
-                    const data = JSON.parse(elem.attribs['data-tralbum']);
-                    const trackinfo = data.trackinfo.pop();
-                    info.title = `${data.artist} - ${trackinfo.title}`;
-                    info.duration = trackinfo.duration;
-                    info.url = trackinfo.file['mp3-128'];
-                }
-            });
+
+        const tralbum = JSON.parse(mustFindOne(
+            elem => !!elem.attribs['data-tralbum'],
+            dom
+        ).attribs['data-tralbum']);
+
+        const trackinfo = tralbum.trackinfo.pop();
+        const {
+            file: {
+                'mp3-128': mp3url
+            }
+        } = trackinfo;
+
+        const {
+            image,
+            name: trackName,
+            duration: isoDuration,
+            byArtist: {
+                name: artistName
+            },
+        } = trackLd;
+
+        const duration = parseDuration(isoDuration);
 
         const media = {
             id: `${artist};${track}`,
             type: 'bandcamp',
-            title: info.title,
-            duration: Math.floor(info.duration),
+            title: `${artistName} - ${trackName}`,
+            duration,
             meta: {
                 direct: {
                     '480': [{
                         contentType: 'audio/mp3',
-                        link: info.url,
+                        link: mp3url,
                         quality: '480'
                     }]
                 },
-                thumbnail: info.thumbnail,
+                thumbnail: image,
             }
         };
 
@@ -110,7 +124,7 @@ async function _lookupExternal(id) {
 
 /*
  * Attempts to parse a Bandcamp URL of the forms:
- *   bc:(artist);(track)
+ *   bn:(artist);(track)
  *   https://(artist).bandcamp.com/track/(track)
  *
  * Returns {
@@ -121,7 +135,7 @@ async function _lookupExternal(id) {
  * or null if the URL is invalid
  */
 export function parseUrl(url) {
-    let m = url.match(/^bc:([^.]+;[^/?#&]+)/);
+    let m = url.match(/^bn:([^.]+;[^/?#&]+)/);
     if (m) {
         return {
             type: 'bandcamp',

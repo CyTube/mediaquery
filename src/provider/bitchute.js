@@ -1,7 +1,7 @@
 import Media from '../media';
-import { findAll } from 'domutils';
 import { request } from '../request';
-import { parseDom } from '../util/xmldom';
+import { parseDom, mustFindOne } from '../util/xmldom';
+import { findOne } from 'domutils';
 import { ytdl, getDuration }  from '../scraper';
 
 const LOGGER = require('@calzoneman/jsli')('mediaquery/bitchute');
@@ -41,7 +41,7 @@ export async function lookup(id) {
 }
 
 async function _lookupNative(id) {
-    const url = `https://www.bitchute.com/video/${id}/`;
+    const url = `https://www.bitchute.com/embed/${id}/`;
 
     try {
         const res = await request(url);
@@ -49,41 +49,29 @@ async function _lookupNative(id) {
             throw new Error(`Bitchute lookup failed for ${id}: ${res.statusMessage}`);
         }
 
-        const info = {
-            title: '',
-            thumbnail: '',
-            url: '',
+        const dom = parseDom(res.data);
+        const video = findOne(elem => elem.name === 'video', dom);
+        if (video === null) {
+            throw new Error(`No video found for ${id}, it may have been taken down`);
         }
-        findAll(elem => ['title','video','source'].includes(elem.name), parseDom(res.data))
-            .forEach(elem => {
-                switch(elem.name){
-                    case 'title':
-                        info.title = (elem.children[0].data);
-                        break;
-                    case 'video':
-                        info.thumbnail = elem.attribs.poster;
-                        break;
-                    case 'source':
-                        info.url = elem.attribs.src;
-                        break;
-                }
-            });
-
-        const duration = await getDuration(info.url);
+        const thumbnail = video.attribs.poster;
+        const title = mustFindOne(elem => elem.name === 'title', dom).children[0].data;
+        const link = mustFindOne(elem => elem.name === 'source', dom).attribs.src;
+        const duration = await getDuration(link);
 
         const media = {
             id,
             type: 'bitchute',
-            title: info.title,
-            duration: duration,
+            title,
+            duration,
             meta: {
                 direct: {
                     480: [{
                         contentType: 'video/mp4',
-                        link: info.url
+                        link
                     }]
                 },
-                thumbnail: info.thumbnail,
+                thumbnail,
             }
         };
 

@@ -18,7 +18,14 @@ export async function ytdl(url) {
 
     try {
         const link = new URL(url);
-        const { stdout } = await execFile(command.bin, [command.par, link.href]);
+        const { stdout } = await execFile(
+            command.bin,
+            [command.par, link.href],
+            {
+                timeout: 30_000,
+                killSignal: 'SIGKILL'
+            }
+        );
         const info = JSON.parse(stdout);
         return info;
     } catch(err) {
@@ -58,7 +65,14 @@ async function ffprobe({ params = null, url }) {
 
     try {
         const link = new URL(url);
-        const { stdout } = await execFile(command.bin, [...(params || command.par), link.href]);
+        const { stdout } = await execFile(
+            command.bin,
+            [...(params || command.par), link.href],
+            {
+                timeout: 30_000,
+                killSignal: 'SIGKILL'
+            }
+        );
         return stdout
     } catch(err) {
         throw err;

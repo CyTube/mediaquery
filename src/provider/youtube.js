@@ -179,7 +179,7 @@ function _lookupInternal(id, cached) {
                 // Sometimes, Youtube fails to set the status of a stream
                 // to live. However, we can check if 'actualStartTime' is
                 // present in the stream details to know it has started.
-                if (video.snippet.liveBroadcastContent !== 'live' && !video.liveStreamingDetails.actualStartTime) {
+                if (video.snippet.liveBroadcastContent !== 'live' && !video.liveStreamingDetails?.actualStartTime) {
                     throw new Error(
                         'This video has not been processed yet.'
                     );

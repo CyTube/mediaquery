@@ -94,7 +94,7 @@ function _lookupInternal(id, cached) {
     const url = new URL('https://www.googleapis.com/youtube/v3/videos');
     url.search = new URLSearchParams({
         key: API_KEY,
-        part: 'contentDetails,status,snippet',
+        part: 'contentDetails,status,snippet,liveStreamingDetails',
         id
     });
 
@@ -175,7 +175,11 @@ function _lookupInternal(id, cached) {
                 // is presumably correct (we don't care about duration
                 // for livestreams anyways)
                 // See calzoneman/sync#710
-                if (video.snippet.liveBroadcastContent !== 'live') {
+                //
+                // Sometimes, Youtube fails to set the status of a stream
+                // to live. However, we can check if 'actualStartTime' is
+                // present in the stream details to know it has started.
+                if (video.snippet.liveBroadcastContent !== 'live' && !video.liveStreamingDetails.actualStartTime) {
                     throw new Error(
                         'This video has not been processed yet.'
                     );

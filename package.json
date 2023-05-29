@@ -1,6 +1,6 @@
 {
   "name": "cytube-mediaquery",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Media provider metadata queries for CyTube",
   "main": "index.js",
   "scripts": {

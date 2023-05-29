@@ -12,8 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "@calzoneman/jsli": "^2.0.1",
-    "domutils": "^2.8.0",
     "domhandler": "^4.3.0",
+    "domutils": "^2.8.0",
     "htmlparser2": "^7.2.0",
     "prom-client": "^13.1.0",
     "short-uuid": "^4.2.0"
@@ -23,7 +23,7 @@
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "babel-plugin-add-module-exports": "^1.0.4",
-    "mocha": "^8.4.0"
+    "mocha": "^10.2.0"
   },
   "babel": {
     "presets": [

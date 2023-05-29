@@ -23,6 +23,7 @@ export async function request(url, opts = {}) {
         req.setTimeout(options.timeout, () => {
             const error = new Error('Request timed out');
             error.code = 'ETIMEDOUT';
+            req.abort();
             reject(error);
         });
 

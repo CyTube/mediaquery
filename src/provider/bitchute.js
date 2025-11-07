@@ -40,52 +40,70 @@ export async function lookup(id) {
     }
 }
 
+
 async function _lookupNative(id) {
     const url = `https://www.bitchute.com/embed/${id}/`;
 
-    try {
-        const res = await request(url);
-        if (res.statusCode !== 200) {
-            throw new Error(`Bitchute lookup failed for ${id}: ${res.statusMessage}`);
-        }
-
-        const dom = parseDom(res.data);
-        const video = findOne(elem => elem.name === 'video', dom);
-        if (video === null) {
-            throw new Error(`No video found for ${id}, it may have been taken down`);
-        }
-        const thumbnail = video.attribs.poster;
-        const title = mustFindOne(elem => elem.name === 'title', dom).children[0].data;
-        const link = mustFindOne(elem => elem.name === 'source', dom).attribs.src;
-        const duration = await getDuration(link);
-
-        const media = {
-            id,
-            type: 'bitchute',
-            title,
-            duration,
-            meta: {
-                direct: {
-                    480: [{
-                        contentType: 'video/mp4',
-                        link
-                    }]
-                },
-                thumbnail,
-            }
-        };
-
-        if (CACHE !== null) {
-            try {
-                await CACHE.put(new Media(media));
-            } catch (error) {
-                LOGGER.error('Error updating cached metadata for bc:%s - %s', id, error.stack);
-            }
-        }
-        return new Media(media);
-    } catch (err) {
-        throw err;
+    const res = await request(url);
+    if (res.statusCode !== 200) {
+        throw new Error(`Bitchute lookup failed for ${id}: ${res.statusMessage}`);
     }
+
+    const html = res.data;
+    const dom = parseDom(html);
+
+    const videoEl = findOne(elem => elem.name === 'video', dom);
+    if (!videoEl) {
+        throw new Error(`No video element found for ${id}, it may have been taken down`);
+    }
+
+    let title = videoEl.attribs['data-matomo-title']?.trim();
+
+    if (!title) {
+        const jsTitleMatch = html.match(/var\s+video_name\s*=\s*["']([^"']+)["']/);
+        title = jsTitleMatch ? jsTitleMatch[1].trim() : null;
+    }
+
+    if (!title) {
+        try { title = mustFindOne(elem => elem.name === 'title', dom).children?.[0]?.data?.trim(); }
+        catch (_) { /* ignore */ }
+    }
+
+    title = title || 'Untitled';
+
+    const poster = videoEl.attribs.poster?.trim();
+    const thumbMatch = html.match(/var\s+thumbnail_url\s*=\s*['"]([^'"]+)['"]/);
+    const thumbnail = thumbMatch ? thumbMatch[1] : poster;
+
+    const mediaUrlMatch = html.match(/var\s+media_url\s*=\s*['"]([^'"]+)['"]/);
+    if (!mediaUrlMatch) {
+        throw new Error(`Could not find media_url for ${id}`);
+    }
+    const link = mediaUrlMatch[1];
+
+    const duration = await getDuration(link);
+
+    const media = {
+        id,
+        type: 'bitchute',
+        title,
+        duration,
+        meta: {
+            direct: {
+                480: [{
+                    contentType: 'video/mp4',
+                    link
+                }]
+            },
+            thumbnail,
+        }
+    };
+
+    if (CACHE !== null) {
+        try { await CACHE.put(new Media(media)); }
+        catch (e) { LOGGER.error('Error updating cached metadata for bc:%s - %s', id, e.stack); }
+    }
+    return new Media(media);
 }
 
 async function _lookupExternal(id) {

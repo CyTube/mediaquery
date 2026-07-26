@@ -69,7 +69,7 @@ function fetchAndParse(id, options = {}) {
             id,
             type: 'googledrive',
             title: doc.title,
-            duration: parseInt(doc.length_seconds, 10),
+            duration: extractDuration(doc),
             meta: {
                 thumbnail: doc.iurl,
                 direct: videos

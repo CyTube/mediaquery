@@ -6,128 +6,134 @@ import { ITAG_QMAP, ITAG_CMAP } from '../util/itag';
 
 const LOGGER = require('@calzoneman/jsli')('mediaquery/googledrive');
 
-const extractHexId = function(url) {
-    const m = url.match(/vid=([\w-]+)/);
-    if (m) {
-        return m[1];
-    } else {
-        return null;
-    }
+// Official-ish internal API used by Google Drive player / yt-dlp (2025-2026)
+const PLAYBACK_API = (id) =>
+    `https://content-workspacevideo-pa.googleapis.com/v1/drive/media/${id}/playback?key=AIzaSyDVQw45DwoYh632gvsP5vPDqEKvb-Ywnb8`;
+
+const DEFAULT_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    'Accept': 'application/json',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Referer': 'https://drive.google.com/',
+    'Origin': 'https://drive.google.com'
 };
 
-function fetchAndParse(id, options = {}) {
-    const url = `https://drive.google.com/get_video_info?authuser=&docid=${id}&sle=true&hl=en`;
+function extractHexId(url) {
+    if (!url) return null;
+    const m = url.match(/vid=([\w-]+)/);
+    return m ? m[1] : null;
+}
 
-    return request(url, options).then(function(res) {
-        if (res.statusCode !== 200) {
-            throw new Error(`Google Drive lookup failed for ${id}: ${res.statusMessage}`);
-        }
+function mapHeightToQuality(height) {
+    if (height >= 1080) return 1080;
+    if (height >= 720)  return 720;
+    if (height >= 480)  return 480;
+    return 360;
+}
 
-        const doc = Object.fromEntries(new URLSearchParams(res.data));
+function parseDuration(durationStr) {
+    if (!durationStr) return 0;
+    // Format is usually like "45.069s" or ISO-8601
+    const match = String(durationStr).match(/([\d.]+)/);
+    if (match) {
+        const secs = parseFloat(match[1]);
+        if (!Number.isNaN(secs) && secs > 0) return Math.round(secs);
+    }
+    return 0;
+}
 
-        if (doc.status !== 'ok') {
-            let reason;
-            if (doc.reason.match(/You must be signed in to access/)) {
-                reason = 'Google Drive videos must be shared publicly';
-            } else {
-                reason = `Google Drive flagged this video as unplayable: ${doc.reason}`;
-            }
+async function fetchAndParse(id, options = {}) {
+    const url = PLAYBACK_API(id);
 
-            throw new Error(reason);
-        }
-
-        const videos = {
-            1080: [],
-            720: [],
-            480: [],
-            360: []
-        };
-
-        if (!doc.fmt_stream_map) {
-            throw new Error(
-                'Google has removed the video streams associated with' +
-                ' this item.  It can no longer be played.'
-            );
-        }
-
-        doc.fmt_stream_map.split(',').forEach(source => {
-            let [itag, url] = source.split('|');
-            itag = parseInt(itag, 10);
-
-            if (!ITAG_QMAP.hasOwnProperty(itag)) {
-                return;
-            }
-
-            return videos[ITAG_QMAP[itag]].push({
-                itag,
-                contentType: ITAG_CMAP[itag],
-                link: url
-            });
-        });
-
-        const data = {
-            id,
-            type: 'googledrive',
-            title: doc.title,
-            duration: extractDuration(doc),
-            meta: {
-                thumbnail: doc.iurl,
-                direct: videos
-            }
-        };
-
-        if (options.fetchSubtitles) {
-            return getSubtitles(id, extractHexId(doc.ttsurl)).then(subtitles => {
-                if (subtitles) {
-                    data.meta.gdrive_subtitles = subtitles;
-                }
-                return new Media(data);
-            });
-        } else {
-            return new Media(data);
+    const res = await request(url, {
+        ...options,
+        headers: {
+            ...DEFAULT_HEADERS,
+            ...(options.headers || {})
         }
     });
-};
 
-function extractDuration(doc) {
-    // 1. Preferred (when present)
-    if (doc.length_seconds) {
-        const secs = parseInt(doc.length_seconds, 10);
-        if (!Number.isNaN(secs) && secs > 0) return secs;
+    if (res.statusCode !== 200) {
+        throw new Error(`Google Drive lookup failed for ${id}: HTTP ${res.statusCode} ${res.statusMessage}`);
     }
 
-    // 2. From player_response JSON
-    if (doc.player_response) {
+    let data;
+    try {
+        data = JSON.parse(res.data);
+    } catch (e) {
+        throw new Error(`Google Drive lookup failed for ${id}: invalid JSON response`);
+    }
+
+    // Build quality buckets (same structure the rest of the system expects)
+    const videos = {
+        1080: [],
+        720: [],
+        480: [],
+        360: []
+    };
+
+    const progressive = data.mediaStreamingData?.formatStreamingData?.progressiveTranscodes || [];
+    const adaptive    = data.mediaStreamingData?.formatStreamingData?.adaptiveTranscodes || [];
+    const allStreams  = [...progressive, ...adaptive];
+
+    for (const stream of allStreams) {
+        const link = stream.url;
+        if (!link) continue;
+
+        const meta = stream.transcodeMetadata || {};
+        const height = meta.height || 0;
+        const quality = mapHeightToQuality(height);
+        const itag = stream.itag || 0;
+        const contentType = meta.mimeType || 'video/mp4';
+
+        videos[quality].push({
+            itag,
+            contentType,
+            link,
+            width: meta.width || null,
+            height: height || null
+        });
+    }
+
+    // Fallback: if no progressive/adaptive streams were found
+    if (Object.values(videos).every(arr => arr.length === 0)) {
+        throw new Error(
+            'Google has removed the video streams associated with this item. ' +
+            'It can no longer be played.'
+        );
+    }
+
+    const title = data.mediaMetadata?.title || null;
+    const duration = parseDuration(data.mediaMetadata?.duration);
+    const thumbnail = data.thumbnails?.[0]?.url || null;
+
+    const mediaData = {
+        id,
+        type: 'googledrive',
+        title,
+        duration,
+        meta: {
+            thumbnail,
+            direct: videos
+        }
+    };
+
+    if (options.fetchSubtitles) {
+        // Try to extract a video id suitable for the timedtext endpoint
+        const timedTextBase = data.timedTextDetails?.timedTextBaseUrl;
+        const vid = extractHexId(timedTextBase) || id;
+
         try {
-            const pr = JSON.parse(doc.player_response);
-            const formats = [
-                ...(pr.streamingData?.adaptiveFormats || []),
-                ...(pr.streamingData?.formats || [])
-            ];
-            for (const f of formats) {
-                if (f.approxDurationMs) {
-                    const ms = parseInt(f.approxDurationMs, 10);
-                    if (!Number.isNaN(ms) && ms > 0) {
-                        return Math.round(ms / 1000);
-                    }
-                }
+            const subtitles = await getSubtitles(id, vid);
+            if (subtitles) {
+                mediaData.meta.gdrive_subtitles = subtitles;
             }
-        } catch (e) {
-            // ignore parse errors
+        } catch (err) {
+            LOGGER.error('Failed to retrieve subtitles for %s: %s', id, err.stack || err);
         }
     }
 
-    // 3. From any stream URL that contains dur=
-    const maps = [doc.fmt_stream_map, doc.url_encoded_fmt_stream_map].filter(Boolean);
-    for (const map of maps) {
-        const m = map.match(/[?&]dur=([\d.]+)/);
-        if (m) {
-            const secs = Math.round(parseFloat(m[1]));
-            if (!Number.isNaN(secs) && secs > 0) return secs;
-        }
-    }
-
-    return 0; // or throw if you prefer
+    return new Media(mediaData);
 }
 
 export function lookup(id) {
@@ -140,34 +146,37 @@ export function getSubtitles(id, vid) {
     url.search = new URLSearchParams({
         id,
         v: id,
-        vid,
+        vid: vid || id,
         type: 'list',
         hl: 'en-US'
     });
 
-    return request(url).then(res => {
+    return request(url.toString()).then(res => {
         if (res.statusCode !== 200) {
-            throw new Error(`Google Drive subtitle lookup failed for ${id}: \
-${res.statusMessage} (url: ${url})`);
+            throw new Error(
+                `Google Drive subtitle lookup failed for ${id}: ` +
+                `${res.statusMessage} (url: ${url})`
+            );
         }
 
         const subtitles = {
-            vid,
+            vid: vid || id,
             available: []
         };
 
         findAll(elem => elem.name === 'track', parseDom(res.data))
-                .forEach(elem => {
-            subtitles.available.push({
-                lang: elem.attribs.lang_code,
-                lang_original: elem.attribs.lang_original,
-                name: elem.attribs.name
+            .forEach(elem => {
+                subtitles.available.push({
+                    lang: elem.attribs.lang_code,
+                    lang_original: elem.attribs.lang_original,
+                    name: elem.attribs.name
+                });
             });
-        });
 
         return subtitles;
     }).catch(err => {
-        LOGGER.error("Failed to retrieve subtitles: %s", err.stack)
+        LOGGER.error('Failed to retrieve subtitles: %s', err.stack || err);
+        return null;
     });
 }
 
@@ -181,16 +190,21 @@ export function parseUrl(url) {
         };
     }
 
-    const link = new URL(url);
+    let link;
+    try {
+        link = new URL(url);
+    } catch (e) {
+        return null;
+    }
 
-    if (!['drive.google.com', 'docs.google.com'].includes(link.hostname)) {
+    if (!['drive.google.com', 'docs.google.com', 'drive.usercontent.google.com'].includes(link.hostname)) {
         return null;
     }
 
     m = link.pathname.match(/file\/d\/([\w-]+)/);
     if (!m) {
-        if (link.pathname === '/open') {
-            m = link.search.match(/id=([\w-]+)/);
+        if (link.pathname === '/open' || link.pathname === '/uc' || link.pathname === '/download') {
+            m = link.search.match(/[?&]id=([\w-]+)/);
         }
     }
 

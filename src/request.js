@@ -1,13 +1,22 @@
 import { get as httpGet } from 'http';
 import { get as httpsGet } from 'https';
 
+const { version } = require('../package.json');
+const DEFAULT_USER_AGENT = `cytube-mediaquery/${version}`;
+
 const DEFAULT_OPTS = {
-    timeout: 30000
+    timeout: 30000,
+    headers: {
+        'User-Agent': DEFAULT_USER_AGENT
+    }
 };
 
 export async function request(url, opts = {}) {
     const options = {};
-    Object.assign(options, DEFAULT_OPTS, opts);
+    Object.assign(options, DEFAULT_OPTS, opts, {
+        // Preserve the default UA unless the caller overrides it.
+        headers: Object.assign({}, DEFAULT_OPTS.headers, opts.headers)
+    });
     return new Promise((resolve, reject) => {
         const link = new URL(url);
         if (!/^https?:$/.test(link.protocol)) {

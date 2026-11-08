@@ -6,6 +6,11 @@ import { ITAG_QMAP, ITAG_CMAP } from '../util/itag';
 
 const LOGGER = require('@calzoneman/jsli')('mediaquery/googledrive');
 
+// Public web-client key used by Google Drive's own video player / yt-dlp.
+const PLAYBACK_API_KEY = 'AIzaSyDVQw45DwoYh632gvsP5vPDqEKvb-Ywnb8';
+const PLAYBACK_API =
+    'https://content-workspacevideo-pa.googleapis.com/v1/drive/media';
+
 const extractHexId = function(url) {
     const m = url.match(/vid=([\w-]+)/);
     if (m) {
@@ -15,69 +20,140 @@ const extractHexId = function(url) {
     }
 };
 
-function fetchAndParse(id, options = {}) {
-    const url = `https://docs.google.com/get_video_info?authuser=&docid=${id}&sle=true&hl=en`;
+function parseDurationSeconds(duration) {
+    if (typeof duration === 'number' && Number.isFinite(duration)) {
+        return Math.floor(duration);
+    }
+    if (typeof duration !== 'string') {
+        return 0;
+    }
+    const seconds = parseFloat(duration);
+    return Number.isFinite(seconds) ? Math.floor(seconds) : 0;
+}
 
-    return request(url, options).then(function(res) {
-        if (res.statusCode !== 200) {
-            throw new Error(`Google Drive lookup failed for ${id}: ${res.statusMessage}`);
+function mapProgressiveStreams(progressiveTranscodes) {
+    const videos = {
+        1080: [],
+        720: [],
+        480: [],
+        360: []
+    };
+
+    for (const fmt of progressiveTranscodes || []) {
+        const itag = parseInt(fmt.itag, 10);
+        if (!ITAG_QMAP.hasOwnProperty(itag) || !fmt.url) {
+            continue;
         }
 
-        const doc = Object.fromEntries(new URLSearchParams(res.data));
+        const meta = fmt.transcodeMetadata || {};
+        videos[ITAG_QMAP[itag]].push({
+            itag,
+            contentType: meta.mimeType || ITAG_CMAP[itag],
+            link: fmt.url
+        });
+    }
 
-        if (doc.status !== 'ok') {
-            let reason;
-            if (doc.reason.match(/You must be signed in to access/)) {
-                reason = 'Google Drive videos must be shared publicly';
-            } else {
-                reason = `Google Drive flagged this video as unplayable: ${doc.reason}`;
+    return videos;
+}
+
+function hasAnyStream(videos) {
+    return Object.keys(videos).some(q => videos[q].length > 0);
+}
+
+function localizeApiError(body) {
+    try {
+        const err = typeof body === 'string' ? JSON.parse(body) : body;
+        const details = err && err.error && err.error.details;
+        if (Array.isArray(details)) {
+            const localized = details.find(
+                d => d && d.message && /LocalizedMessage/.test(d['@type'] || '')
+            );
+            if (localized && localized.message) {
+                return localized.message;
             }
+        }
+        if (err && err.error && err.error.message) {
+            return err.error.message;
+        }
+    } catch (_e) {
+        // fall through
+    }
+    return null;
+}
 
-            throw new Error(reason);
+function fetchAndParse(id, options = {}) {
+    const url = `${PLAYBACK_API}/${encodeURIComponent(id)}/playback?key=${PLAYBACK_API_KEY}`;
+
+    return request(url, {
+        headers: {
+            Referer: 'https://drive.google.com/'
+        }
+    }).then(function(res) {
+        if (res.statusCode !== 200) {
+            const localized = localizeApiError(res.data);
+            if (res.statusCode === 404) {
+                throw new Error(
+                    localized ||
+                    'Google Drive video not found, or it is not shared publicly'
+                );
+            }
+            if (res.statusCode === 401 || res.statusCode === 403) {
+                throw new Error(
+                    localized ||
+                    'Google Drive videos must be shared publicly'
+                );
+            }
+            throw new Error(
+                localized ||
+                `Google Drive lookup failed for ${id}: HTTP ${res.statusCode}`
+            );
         }
 
-        const videos = {
-            1080: [],
-            720: [],
-            480: [],
-            360: []
-        };
+        let doc;
+        try {
+            doc = JSON.parse(res.data);
+        } catch (e) {
+            throw new Error('Google Drive playback response was not valid JSON');
+        }
 
-        if (!doc.fmt_stream_map) {
+        if (doc.error) {
+            throw new Error(
+                localizeApiError(doc) ||
+                'Google Drive flagged this video as unplayable'
+            );
+        }
+
+        const formatData = doc.mediaStreamingData
+            && doc.mediaStreamingData.formatStreamingData;
+        const progressive = formatData && formatData.progressiveTranscodes;
+        const videos = mapProgressiveStreams(progressive);
+
+        if (!hasAnyStream(videos)) {
             throw new Error(
                 'Google has removed the video streams associated with' +
                 ' this item.  It can no longer be played.'
             );
         }
 
-        doc.fmt_stream_map.split(',').forEach(source => {
-            let [itag, url] = source.split('|');
-            itag = parseInt(itag, 10);
-
-            if (!ITAG_QMAP.hasOwnProperty(itag)) {
-                return;
-            }
-
-            return videos[ITAG_QMAP[itag]].push({
-                itag,
-                contentType: ITAG_CMAP[itag],
-                link: url
-            });
-        });
+        const meta = doc.mediaMetadata || {};
+        const thumbs = doc.thumbnails || [];
+        const thumbnail = (thumbs[0] && thumbs[0].url) || undefined;
+        const timedTextBaseUrl = doc.timedTextDetails
+            && doc.timedTextDetails.timedTextBaseUrl;
 
         const data = {
             id,
             type: 'googledrive',
-            title: doc.title,
-            duration: parseInt(doc.length_seconds, 10),
+            title: meta.title || id,
+            duration: parseDurationSeconds(meta.duration),
             meta: {
-                thumbnail: doc.iurl,
+                thumbnail,
                 direct: videos
             }
         };
 
         if (options.fetchSubtitles) {
-            return getSubtitles(id, extractHexId(doc.ttsurl)).then(subtitles => {
+            return getSubtitles(id, extractHexId(timedTextBaseUrl || '')).then(subtitles => {
                 if (subtitles) {
                     data.meta.gdrive_subtitles = subtitles;
                 }
@@ -94,6 +170,10 @@ export function lookup(id) {
 }
 
 export function getSubtitles(id, vid) {
+    if (!vid) {
+        return Promise.resolve(null);
+    }
+
     const url = new URL('https://drive.google.com/timedtext');
     url.search = new URLSearchParams({
         id,
